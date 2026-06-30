@@ -1,0 +1,14 @@
+/* Portfolio scoped reset — neutralizes globals.css body bg */
+.port-root {
+  background: #f0e8d9;
+  color: #151515;
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+.port-root .font-serif {
+  font-family: "DM Serif Display", ui-serif, Georgia, serif;
+}
+
+html { scroll-behavior: smooth; }

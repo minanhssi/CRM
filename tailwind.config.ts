@@ -7,6 +7,8 @@ const config: Config = {
       fontFamily: {
         sans: ["Roboto", "sans-serif"],
         display: ["Montserrat", "Roboto", "sans-serif"],
+        inter: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        serif: ['"DM Serif Display"', "ui-serif", "Georgia", "serif"],
       },
       boxShadow: {
         "landing-md": "0 2px 4px -1px rgba(0,0,0,0.06), 0 4px 6px -1px rgba(0,0,0,0.10)",
@@ -69,6 +71,19 @@ const config: Config = {
           9: "#434343", 10: "#262626", 11: "#141414", 12: "#000000",
         },
         sidebar: { bg: "#1a3a5c", active: "#2a4f7a", hover: "#234872" },
+        port: {
+          blue: "#2D39CF",
+          "blue-dark": "#181F8A",
+          cream: "#F0E8D9",
+          "cream-light": "#F7F2E8",
+          ink: "#151515",
+          body: "#2D2D2D",
+          muted: "#666666",
+          accent: "#F37B23",
+          "accent-soft": "#FDF1E5",
+          yellow: "#FFD52D",
+          border: "#E5E5EA",
+        },
       },
     },
   },

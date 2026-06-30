@@ -1,0 +1,224 @@
+import Link from "next/link";
+import { Header } from "./_components/Header";
+import { Footer } from "./_components/Footer";
+import { Eyebrow } from "./_components/Eyebrow";
+import { Marquee } from "./_components/Marquee";
+import { Reveal } from "./_components/Reveal";
+
+const PROJECTS = [
+  {
+    n: "01",
+    slug: "klbp",
+    badge: "FLAGSHIP",
+    badgeColor: "bg-port-blue text-white",
+    title: "KienlongBank Pay",
+    summary:
+      "Multi-module back-office for a payment gateway: partner approval, employee management, transaction tracking, and configurable cash-flow workflows.",
+    tags: ["Enterprise CMS", "Workflow design", "Design system", "Multi-role", "Banking"],
+  },
+  {
+    n: "02",
+    slug: "ewa",
+    badge: "FINTECH × HR",
+    badgeColor: "bg-[#4F5BD5] text-white",
+    title: "Earned Wage Access",
+    summary:
+      "End-to-end design across 3 platforms — worker web, company admin portal, and worker mobile app — letting employees draw earned wages 24/7.",
+    tags: ["Admin portal", "Mobile app", "Responsive", "User testing", "Payroll"],
+  },
+  {
+    n: "03",
+    slug: "ezpos",
+    badge: "B2B RETAIL",
+    badgeColor: "bg-[#109C84] text-white",
+    title: "EzPOS",
+    summary:
+      "Mobile POS app for merchants — quick card & QR payments, transaction history, and simplified daily reconciliation.",
+    tags: ["Mobile", "POS", "Payment", "Merchant tools", "Full UX process"],
+  },
+  {
+    n: "04",
+    slug: "integration",
+    badge: "CRM × AUTOMATION",
+    badgeColor: "bg-port-accent text-white",
+    title: "Integration feature",
+    summary:
+      "Guided integration flow letting CRM admins connect FB Messenger, Zalo OA, Instagram, WhatsApp, Shopify, and public APIs — for data sync, auto-messaging, and lead capture.",
+    tags: ["Guided interaction", "Multi-platform", "Automation UX", "CRM"],
+  },
+];
+
+const SKILL_COLS = [
+  {
+    label: "RESEARCH",
+    title: "Discover & frame the problem",
+    items: [
+      "User interviews and usability testing",
+      "Information architecture & workflow analysis",
+      "Synthesizing qualitative & quantitative input",
+      "Translating business and tech constraints into design",
+    ],
+  },
+  {
+    label: "DESIGN",
+    title: "Craft the experience",
+    items: [
+      "Interaction design & user flows",
+      "Wireframing & high-fidelity prototyping",
+      "Responsive web + mobile UI",
+      "Design systems & component libraries",
+    ],
+  },
+  {
+    label: "DELIVERY",
+    title: "Collaborate & ship",
+    items: [
+      "End-to-end ownership (research → handoff)",
+      "Close collaboration with PO and engineering",
+      "Accessibility-aware design",
+      "Exploring AI-assisted UX patterns",
+    ],
+  },
+];
+
+export default function PortfolioOverview() {
+  return (
+    <>
+      <Header />
+
+      {/* HERO */}
+      <section className="bg-port-blue text-[#F5F0E3]">
+        <div className="mx-auto max-w-[1320px] px-6 pt-10 md:px-12 md:pt-12">
+          <Marquee />
+          <div className="mt-2 h-px w-full bg-[#F5F0E3]/15" />
+        </div>
+        <div className="mx-auto max-w-[1320px] px-6 pb-28 pt-20 md:px-12 md:pb-44 md:pt-32">
+          <Reveal direction="up">
+            <Eyebrow color="yellow">01 — Intro</Eyebrow>
+          </Reveal>
+          <Reveal direction="up" delay={0.1}>
+            <h1 className="font-serif mt-8 text-[64px] leading-[0.92] tracking-tight md:text-[160px]">
+              Duong Ngoc<br />Minh Anh<span className="text-port-yellow">.</span>
+            </h1>
+          </Reveal>
+          <Reveal direction="up" delay={0.2}>
+            <p className="mt-10 max-w-3xl text-xl leading-[1.6] text-[#F5F0E3]/85 md:text-2xl">
+              UX Designer — 3+ years building enterprise &amp; B2B workflows for fintech, payment, and CRM products.
+            </p>
+          </Reveal>
+          <Reveal direction="up" delay={0.3}>
+            <div className="mt-14 flex flex-wrap items-center gap-x-8 gap-y-3 text-[15px]">
+              <a className="hover:text-port-yellow transition-colors" href="mailto:minhanhdn9601@gmail.com">
+                minhanhdn9601@gmail.com
+              </a>
+              <span className="text-[#F5F0E3]/40">·</span>
+              <a className="hover:text-port-yellow transition-colors" href="https://www.linkedin.com/in/duongngocminhanh/" target="_blank" rel="noreferrer">
+                linkedin.com/in/duongngocminhanh
+              </a>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section id="about" className="bg-port-cream">
+        <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
+          <Reveal>
+            <Eyebrow>01 — Intro</Eyebrow>
+            <h2 className="font-serif mt-4 text-5xl tracking-tight md:text-7xl">About</h2>
+          </Reveal>
+          <div className="mt-16 grid gap-16 md:grid-cols-[1fr_320px] md:gap-24">
+            <Reveal delay={0.1}>
+              <p className="text-xl leading-[1.65] text-port-body md:text-[22px]">
+                I design end-to-end UX for enterprise products — translating complex business workflows into clear, accessible interfaces. My work spans fintech back-office systems, payment platforms, and CRM automation, where I lead research, interaction design, and design-system contributions in close collaboration with product and engineering.
+              </p>
+              <p className="mt-6 text-lg leading-[1.65] text-port-muted">
+                Currently exploring AI-assisted and guided-interaction patterns to enrich enterprise experiences.
+              </p>
+            </Reveal>
+            <Reveal delay={0.2}>
+              <div className="space-y-10">
+                {[
+                  ["3+", "YEARS EXPERIENCE"],
+                  ["4", "ENTERPRISE PROJECTS"],
+                  ["3", "PLATFORMS / PRODUCT"],
+                ].map(([n, l]) => (
+                  <div key={l}>
+                    <p className="font-bold text-5xl text-port-ink md:text-6xl">{n}</p>
+                    <p className="mt-2 text-xs font-medium tracking-[1.5px] text-port-muted">{l}</p>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* SELECTED WORK */}
+      <section id="work" className="bg-port-cream-light">
+        <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
+          <Reveal>
+            <Eyebrow>02 — Case studies</Eyebrow>
+            <h2 className="font-serif mt-4 text-5xl tracking-tight md:text-7xl">Selected work</h2>
+          </Reveal>
+          <div className="mt-16 grid gap-8 md:grid-cols-2">
+            {PROJECTS.map((p, i) => (
+              <Reveal key={p.slug} delay={i * 0.08}>
+                <Link
+                  href={`/portfolio/${p.slug}`}
+                  className="group block h-full rounded-2xl border border-port-border bg-port-cream p-9 transition-all duration-500 hover:-translate-y-1 hover:border-port-ink hover:shadow-[0_24px_60px_-12px_rgba(21,21,21,0.18)]"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="text-[13px] font-medium tracking-[2px] text-port-muted">{p.n}</span>
+                    <span className={`rounded-full px-3 py-1.5 text-[11px] font-semibold tracking-[1.5px] ${p.badgeColor}`}>{p.badge}</span>
+                  </div>
+                  <h3 className="font-semibold mt-6 text-3xl tracking-tight text-port-ink md:text-4xl">{p.title}</h3>
+                  <p className="mt-4 text-[15px] leading-[1.55] text-port-body">{p.summary}</p>
+                  <div className="mt-7 flex flex-wrap gap-2">
+                    {p.tags.map(t => (
+                      <span key={t} className="rounded-full bg-white/70 px-3 py-1.5 text-xs font-medium text-port-ink">{t}</span>
+                    ))}
+                  </div>
+                  <div className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-port-ink transition-transform group-hover:translate-x-1">
+                    View case study
+                    <span aria-hidden>→</span>
+                  </div>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SKILLS */}
+      <section id="skills" className="bg-port-blue text-[#F5F0E3]">
+        <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
+          <Reveal>
+            <Eyebrow color="yellow">03 — Approach</Eyebrow>
+            <h2 className="font-serif mt-4 text-5xl leading-tight tracking-tight md:text-7xl">Skills &amp; approach</h2>
+          </Reveal>
+          <div className="mt-16 grid gap-6 md:grid-cols-3">
+            {SKILL_COLS.map((col, i) => (
+              <Reveal key={col.label} delay={i * 0.1}>
+                <div className="h-full rounded-2xl bg-port-cream p-9 text-port-ink">
+                  <p className="text-[11px] font-semibold tracking-[2px] text-port-blue">{col.label}</p>
+                  <h3 className="mt-3 text-xl font-semibold leading-tight md:text-2xl">{col.title}</h3>
+                  <ul className="mt-7 space-y-3 text-[15px] leading-[1.55] text-port-body">
+                    {col.items.map(item => (
+                      <li key={item} className="flex gap-3">
+                        <span className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-port-blue" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </>
+  );
+}

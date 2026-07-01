@@ -91,9 +91,9 @@ export default function IntegrationCaseStudy() {
         ]}
         cover={{
           src: "/portfolio/integration/hero.png",
-          width: 1920,
-          height: 762,
-          alt: "Integration — CRM × Automation hero banner",
+          width: 1440,
+          height: 1096,
+          alt: "Integration — browser mockup showing the CRM channel selection drawer",
         }}
       />
 

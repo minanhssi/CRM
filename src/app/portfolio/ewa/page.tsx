@@ -98,7 +98,7 @@ export default function EWACaseStudy() {
           src: "/portfolio/ewa/hero.png",
           width: 2064,
           height: 1440,
-          alt: "Earned Wage Access — 24/7 payroll product hero banner",
+          alt: "Earned Wage Access — mobile app mockup with balance, calendar, and transaction cards",
         }}
       />
 

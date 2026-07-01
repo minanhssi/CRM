@@ -70,9 +70,9 @@ export default function EzPOSCaseStudy() {
         ]}
         cover={{
           src: "/portfolio/ezpos/hero.png",
-          width: 1440,
+          width: 1480,
           height: 1062,
-          alt: "EzPOS — Card & QR-Code payments hero banner",
+          alt: "EzPOS — dual phone mockup with checkout and payment UI",
         }}
       />
 

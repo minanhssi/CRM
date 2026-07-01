@@ -19,7 +19,7 @@ const PROJECTS = [
       "Multi-module back-office for a payment gateway: partner approval, employee management, transaction tracking, and configurable cash-flow workflows.",
     tags: ["Enterprise CMS", "Workflow design", "Design system", "Multi-role", "Banking"],
     thumb: "/portfolio/klbp/hero.png",
-    thumbW: 1440, thumbH: 1096,
+    thumbW: 1902, thumbH: 1121,
   },
   {
     n: "02",
@@ -43,7 +43,7 @@ const PROJECTS = [
       "Mobile POS app for merchants — quick card & QR payments, transaction history, and simplified daily reconciliation.",
     tags: ["Mobile", "POS", "Payment", "Merchant tools", "Full UX process"],
     thumb: "/portfolio/ezpos/hero.png",
-    thumbW: 1440, thumbH: 1062,
+    thumbW: 1480, thumbH: 1062,
   },
   {
     n: "04",

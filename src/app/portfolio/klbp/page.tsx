@@ -75,9 +75,9 @@ export default function KLBPCaseStudy() {
         ]}
         cover={{
           src: "/portfolio/klbp/hero.png",
-          width: 1440,
-          height: 1096,
-          alt: "KienlongBank Pay — payment gateway back-office hero banner",
+          width: 1902,
+          height: 1121,
+          alt: "KienlongBank Pay — dashboard mockup",
         }}
       />
 

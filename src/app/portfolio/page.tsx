@@ -98,7 +98,7 @@ export default function PortfolioOverview() {
       <Header />
 
       {/* HERO */}
-      <section className="relative overflow-hidden bg-port-cream text-port-ink">
+      <section className="relative overflow-hidden bg-gradient-to-br from-white via-white to-port-tint-blue/60 text-port-ink">
         <DecoShapes variant="hero" />
         <div className="relative mx-auto max-w-[1320px] px-6 pb-28 pt-20 md:px-12 md:pb-44 md:pt-32">
           <Reveal direction="up">
@@ -131,7 +131,7 @@ export default function PortfolioOverview() {
       </section>
 
       {/* ABOUT */}
-      <section id="about" className="bg-port-cream">
+      <section id="about" className="border-y border-port-border-soft bg-port-tint-blue">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <Eyebrow>01 — Intro</Eyebrow>
@@ -170,7 +170,7 @@ export default function PortfolioOverview() {
       </section>
 
       {/* SELECTED WORK */}
-      <section id="work" className="bg-port-cream-light">
+      <section id="work" className="bg-white">
         <div className="mx-auto max-w-[1320px] px-6 py-20 md:px-12 md:py-24">
           <Reveal>
             <div className="flex flex-wrap items-end justify-between gap-4">
@@ -188,9 +188,9 @@ export default function PortfolioOverview() {
               <Reveal key={p.slug} delay={i * 0.06}>
                 <Link
                   href={`/portfolio/${p.slug}`}
-                  className="group flex h-full flex-col overflow-hidden rounded-2xl border border-port-border bg-port-cream transition-all duration-500 hover:-translate-y-1 hover:border-port-ink hover:shadow-[0_28px_60px_-16px_rgba(21,21,21,0.22)]"
+                  className="group flex h-full flex-col overflow-hidden rounded-2xl border border-port-border bg-white transition-all duration-500 hover:-translate-y-1 hover:border-port-ink hover:shadow-[0_28px_60px_-16px_rgba(21,21,21,0.18)]"
                 >
-                  <div className="relative aspect-[4/3] overflow-hidden bg-port-cream-light">
+                  <div className="relative aspect-[4/3] overflow-hidden bg-port-tint-gray">
                     <Image
                       src={p.thumb}
                       alt={`${p.title} — hero banner`}
@@ -221,7 +221,7 @@ export default function PortfolioOverview() {
       </section>
 
       {/* SKILLS */}
-      <section id="skills" className="relative overflow-hidden bg-port-cream text-port-ink">
+      <section id="skills" className="relative overflow-hidden border-y border-port-border-soft bg-port-tint-peach text-port-ink">
         <DecoShapes variant="skills" parallax={false} />
         <div className="relative mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
@@ -234,7 +234,7 @@ export default function PortfolioOverview() {
           <div className="mt-16 grid gap-6 md:grid-cols-3">
             {SKILL_COLS.map((col, i) => (
               <Reveal key={col.label} delay={i * 0.1}>
-                <div className="h-full rounded-2xl border border-port-border bg-white/80 p-9 text-port-ink backdrop-blur">
+                <div className="h-full rounded-2xl border border-port-border bg-white p-9 text-port-ink shadow-[0_12px_30px_-16px_rgba(21,21,21,0.12)]">
                   <p className="text-[11px] font-semibold tracking-[2px] text-port-blue">{col.label}</p>
                   <h3 className="mt-3 text-xl font-semibold leading-tight md:text-2xl">{col.title}</h3>
                   <ul className="mt-7 space-y-3 text-[15px] leading-[1.55] text-port-body">

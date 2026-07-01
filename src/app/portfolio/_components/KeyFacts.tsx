@@ -15,17 +15,17 @@ export function KeyFacts({
       initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-      className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-[#F5F0E3]/12 bg-[#F5F0E3]/[0.03] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
+      className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-port-border bg-port-border sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
     >
       {items.map(item => (
-        <div key={item.label} className="flex flex-col gap-2 bg-port-ink px-5 py-4">
+        <div key={item.label} className="flex flex-col gap-2 bg-white px-5 py-4">
           <div className="flex items-center gap-2">
             {item.icon && <span className={accentClass}>{item.icon}</span>}
             <p className={`text-[10px] font-semibold tracking-[1.8px] uppercase ${accentClass}`}>
               {item.label}
             </p>
           </div>
-          <p className="text-[15px] font-semibold leading-[1.25] text-[#F5F0E3]">
+          <p className="text-[15px] font-semibold leading-[1.25] text-port-ink">
             {item.value}
           </p>
         </div>

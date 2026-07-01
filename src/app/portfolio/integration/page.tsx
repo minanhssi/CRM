@@ -80,6 +80,7 @@ export default function IntegrationCaseStudy() {
         }
         subtitle="One guided integration flow for FB Messenger, Zalo OA, Instagram, WhatsApp, Slack, Shopify, Embed, and a Public API — designed for trust, recovery, and zero-IT setup."
         tags={["GUIDED INTERACTION", "MULTI-PLATFORM", "AUTOMATION UX", "TRUST UX"]}
+        heroTint="peach"
         decoVariant="connect"
         decoColor="#F37B23"
         keyFacts={[
@@ -98,7 +99,7 @@ export default function IntegrationCaseStudy() {
       />
 
       {/* ABOUT + META */}
-      <section id="overview" className="bg-port-cream">
+      <section id="overview" className="bg-white">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className="text-port-accent"><SectionDeco variant="dots" /></div>
@@ -145,7 +146,7 @@ export default function IntegrationCaseStudy() {
       </section>
 
       {/* PROBLEM */}
-      <section id="problem" className="bg-port-cream-light">
+      <section id="problem" className="border-y border-port-border-soft bg-port-tint-rose">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className="text-port-accent"><SectionDeco variant="pulse" /></div>
@@ -186,7 +187,7 @@ export default function IntegrationCaseStudy() {
       </section>
 
       {/* APPROACH 3 PILLARS */}
-      <section id="approach" className="bg-port-cream">
+      <section id="approach" className="bg-port-tint-peach">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className="text-port-accent"><SectionDeco variant="layers" /></div>
@@ -239,7 +240,7 @@ export default function IntegrationCaseStudy() {
       </section>
 
       {/* PULL QUOTE — between Approach and Flow */}
-      <section className="bg-port-cream">
+      <section className="bg-white">
         <div className="mx-auto max-w-[1320px] px-6 pb-8 md:px-12 md:pb-16">
           <PullQuote accent="#F37B23" attribution="Design principle behind the feature">
             <span className="text-port-accent">Integration UX</span> is fundamentally about building{" "}
@@ -249,7 +250,7 @@ export default function IntegrationCaseStudy() {
       </section>
 
       {/* KEY FLOW */}
-      <section id="flow" className="bg-port-cream-light">
+      <section id="flow" className="border-y border-port-border-soft bg-port-tint-gray">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className="text-port-accent"><SectionDeco variant="flow" /></div>

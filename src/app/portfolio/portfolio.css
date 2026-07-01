@@ -1,6 +1,6 @@
 /* Portfolio scoped reset — neutralizes globals.css body bg */
 .port-root {
-  background: #f0e8d9;
+  background: #ffffff;
   color: #151515;
   font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;

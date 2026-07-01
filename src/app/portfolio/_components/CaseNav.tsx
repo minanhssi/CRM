@@ -14,7 +14,7 @@ export function CaseNav({ currentSlug }: { currentSlug: string }) {
   const next = idx < ORDER.length - 1 ? ORDER[idx + 1] : ORDER[0];
 
   return (
-    <section className="bg-port-cream border-t border-port-border">
+    <section className="bg-port-tint-gray border-t border-port-border">
       <div className="mx-auto grid max-w-[1320px] gap-6 px-6 py-16 md:grid-cols-2 md:px-12">
         <CaseNavCard direction="prev" item={prev} />
         <CaseNavCard direction="next" item={next} />
@@ -34,9 +34,9 @@ function CaseNavCard({
   return (
     <Link
       href={`/portfolio/${item.slug}`}
-      className={`group relative flex items-center gap-6 rounded-2xl border border-port-border bg-port-cream-light p-5 transition-all duration-500 hover:-translate-y-1 hover:border-port-ink hover:shadow-[0_20px_50px_-14px_rgba(21,21,21,0.2)] ${isNext ? "md:flex-row-reverse md:text-right" : ""}`}
+      className={`group relative flex items-center gap-6 rounded-2xl border border-port-border bg-white p-5 shadow-[0_10px_28px_-18px_rgba(21,21,21,0.12)] transition-all duration-500 hover:-translate-y-1 hover:border-port-ink hover:shadow-[0_20px_50px_-14px_rgba(21,21,21,0.2)] ${isNext ? "md:flex-row-reverse md:text-right" : ""}`}
     >
-      <div className="relative aspect-[4/3] w-28 shrink-0 overflow-hidden rounded-xl bg-port-cream sm:w-36">
+      <div className="relative aspect-[4/3] w-28 shrink-0 overflow-hidden rounded-xl bg-port-tint-gray sm:w-36">
         <Image
           src={item.thumb}
           alt={item.title}

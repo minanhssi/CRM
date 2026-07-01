@@ -59,11 +59,12 @@ export default function KLBPCaseStudy() {
       <CaseHero
         caseNumber="CASE STUDY · 01 / 04"
         eyebrow="Case study 01 — Fintech · Banking back-office"
-        title={<>KienlongBank Pay — <span className="text-[#8CB8FF]">back-office</span> for a payment gateway.</>}
+        title={<>KienlongBank Pay — <span className="text-port-blue">back-office</span> for a payment gateway.</>}
         subtitle="Multi-module enterprise CMS: partner approval, employee management, transaction tracking, and configurable cash-flow workflows for a fintech product at scale."
         tags={["ENTERPRISE CMS", "MULTI-ROLE WORKFLOW", "DESIGN SYSTEM", "BANKING"]}
         eyebrowColor="cream"
-        accentClass="text-[#8CB8FF]"
+        accentClass="text-port-blue"
+        heroTint="blue"
         decoVariant="connect"
         decoColor={BLUE}
         keyFacts={[
@@ -82,7 +83,7 @@ export default function KLBPCaseStudy() {
       />
 
       {/* ABOUT + META */}
-      <section id="overview" className="bg-port-cream">
+      <section id="overview" className="bg-white">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={SOFT_BLUE}><SectionDeco variant="dots" /></div>
@@ -106,7 +107,7 @@ export default function KLBPCaseStudy() {
               </p>
             </Reveal>
             <Reveal delay={0.2}>
-              <div className="rounded-2xl bg-port-cream-light p-8 space-y-6">
+              <div className="rounded-2xl border border-port-border bg-white p-8 space-y-6 shadow-[0_10px_28px_-18px_rgba(21,21,21,0.15)]">
                 {[
                   { icon: <Building2 className="h-4 w-4" />, label: "DOMAIN", value: "Fintech · Banking back-office" },
                   { icon: <LayoutTemplate className="h-4 w-4" />, label: "PRODUCT", value: "Payment gateway CMS — multi-module enterprise" },
@@ -130,7 +131,7 @@ export default function KLBPCaseStudy() {
       </section>
 
       {/* PROBLEM */}
-      <section id="problem" className="bg-port-cream-light">
+      <section id="problem" className="border-y border-port-border-soft bg-port-tint-rose">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={SOFT_BLUE}><SectionDeco variant="pulse" /></div>
@@ -162,7 +163,7 @@ export default function KLBPCaseStudy() {
       </section>
 
       {/* APPROACH */}
-      <section id="approach" className="bg-port-cream">
+      <section id="approach" className="bg-port-tint-blue">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={SOFT_BLUE}><SectionDeco variant="layers" /></div>
@@ -179,7 +180,7 @@ export default function KLBPCaseStudy() {
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             <Reveal delay={0}><PillarCard n="01" label="PILLAR — SHARED RECORD" title="One partner record, six module views"
               icon={<Database className="h-5 w-5" />}
-              accent={SOFT_BLUE} bg="bg-port-cream-light" iconBg="bg-port-blue"
+              accent={SOFT_BLUE} bg="bg-white" iconBg="bg-port-blue"
               bullets={[
                 "Every module reads and writes to the same partner-record schema",
                 "Views are role-scoped: partner-facing staff see intake state, operators see transaction state",
@@ -188,7 +189,7 @@ export default function KLBPCaseStudy() {
               ]} /></Reveal>
             <Reveal delay={0.08}><PillarCard n="02" label="PILLAR — DESIGN SYSTEM" title="One component library, six-module consistency"
               icon={<LayoutTemplate className="h-5 w-5" />}
-              accent={SOFT_BLUE} bg="bg-port-cream-light" iconBg="bg-port-blue"
+              accent={SOFT_BLUE} bg="bg-white" iconBg="bg-port-blue"
               bullets={[
                 "Typography ramp + color tokens applied across every module",
                 "Table, form, drawer, and modal patterns reused unchanged",
@@ -197,7 +198,7 @@ export default function KLBPCaseStudy() {
               ]} /></Reveal>
             <Reveal delay={0.16}><PillarCard n="03" label="PILLAR — RESEARCH-LED" title="Grounded in real operator behavior"
               icon={<Search className="h-5 w-5" />}
-              accent={SOFT_BLUE} bg="bg-port-cream-light" iconBg="bg-port-blue"
+              accent={SOFT_BLUE} bg="bg-white" iconBg="bg-port-blue"
               bullets={[
                 "Competitor teardown of Stripe, Payoo, PayME to benchmark expectations",
                 "Empathy map with two operator personas (Barnett — retail, Amery — travel)",
@@ -209,7 +210,7 @@ export default function KLBPCaseStudy() {
       </section>
 
       {/* PULL QUOTE — anchor thesis */}
-      <section className="bg-port-cream">
+      <section className="bg-white">
         <div className="mx-auto max-w-[1320px] px-6 pb-8 md:px-12 md:pb-16">
           <PullQuote accent="#2D39CF" attribution="Design thesis for six-module coherence">
             One{" "}
@@ -220,7 +221,7 @@ export default function KLBPCaseStudy() {
       </section>
 
       {/* PROCESS + RESEARCH SNAPSHOT */}
-      <section id="process" className="bg-port-cream-light">
+      <section id="process" className="border-y border-port-border-soft bg-port-tint-gray">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={SOFT_BLUE}><SectionDeco variant="arrow" /></div>
@@ -262,7 +263,7 @@ export default function KLBPCaseStudy() {
       </section>
 
       {/* MODULES */}
-      <section id="modules" className="bg-port-cream">
+      <section id="modules" className="bg-white">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={SOFT_BLUE}><SectionDeco variant="flow" /></div>
@@ -282,7 +283,7 @@ export default function KLBPCaseStudy() {
       </section>
 
       {/* DESIGN SYSTEM + MOCKUPS */}
-      <section id="system" className="bg-port-cream-light">
+      <section id="system" className="border-y border-port-border-soft bg-port-tint-blue">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={SOFT_BLUE}><SectionDeco variant="layers" /></div>

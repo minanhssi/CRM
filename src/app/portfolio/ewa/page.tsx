@@ -80,11 +80,12 @@ export default function EWACaseStudy() {
       <CaseHero
         caseNumber="CASE STUDY · 02 / 04"
         eyebrow="Case study 02 — Fintech × HR"
-        title={<><span className="text-[#8CB8FF]">Earned Wage Access</span> — pay workers 24/7, on the wages they already earned.</>}
+        title={<><span className="text-port-blue">Earned Wage Access</span> — pay workers 24/7, on the wages they already earned.</>}
         subtitle="End-to-end design across three connected platforms — worker mobile app, company admin portal, and worker web — letting employees withdraw earned wages anytime without payday loans."
         tags={["3-PLATFORM PRODUCT", "USER TESTING", "PAYROLL WORKFLOW", "B2B2C"]}
         eyebrowColor="cream"
-        accentClass="text-[#8CB8FF]"
+        accentClass="text-port-blue"
+        heroTint="lavender"
         decoVariant="wave"
         decoColor={INDIGO}
         keyFacts={[
@@ -103,7 +104,7 @@ export default function EWACaseStudy() {
       />
 
       {/* ABOUT */}
-      <section id="overview" className="bg-port-cream">
+      <section id="overview" className="bg-white">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={INDIGO_TEXT}><SectionDeco variant="dots" /></div>
@@ -126,7 +127,7 @@ export default function EWACaseStudy() {
               </p>
             </Reveal>
             <Reveal delay={0.2}>
-              <div className="rounded-2xl bg-port-cream-light p-8 space-y-6">
+              <div className="rounded-2xl border border-port-border bg-white p-8 space-y-6 shadow-[0_10px_28px_-18px_rgba(21,21,21,0.15)]">
                 {[
                   { icon: <Briefcase className="h-4 w-4" />, label: "DOMAIN", value: "Fintech · Payroll / HR" },
                   { icon: <Users className="h-4 w-4" />, label: "ROLE", value: "Solo UX Designer — Research, UX, UI, handoff" },
@@ -150,7 +151,7 @@ export default function EWACaseStudy() {
       </section>
 
       {/* PROBLEM */}
-      <section id="problem" className="bg-port-cream-light">
+      <section id="problem" className="border-y border-port-border-soft bg-port-tint-rose">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={INDIGO_TEXT}><SectionDeco variant="pulse" /></div>
@@ -182,7 +183,7 @@ export default function EWACaseStudy() {
       </section>
 
       {/* APPROACH — 3 PLATFORMS */}
-      <section id="approach" className="bg-port-cream">
+      <section id="approach" className="bg-port-tint-lavender">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={INDIGO_TEXT}><SectionDeco variant="layers" /></div>
@@ -199,7 +200,7 @@ export default function EWACaseStudy() {
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             {PLATFORMS.map((p, i) => (
               <Reveal key={p.n} delay={i * 0.08}>
-                <div className="h-full rounded-2xl bg-port-cream-light p-9">
+                <div className="h-full rounded-2xl border border-port-border bg-white p-9 shadow-[0_10px_28px_-18px_rgba(21,21,21,0.15)]">
                   <div className="flex items-center justify-between">
                     <p className={`font-bold text-4xl ${INDIGO_TEXT}`}>{p.n}</p>
                     <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[#4F5BD5] text-white">{p.icon}</div>
@@ -224,7 +225,7 @@ export default function EWACaseStudy() {
       </section>
 
       {/* MOCKUPS */}
-      <section id="mockups" className="bg-port-cream-light">
+      <section id="mockups" className="border-y border-port-border-soft bg-port-tint-gray">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={INDIGO_TEXT}><SectionDeco variant="arrow" /></div>
@@ -248,7 +249,7 @@ export default function EWACaseStudy() {
       </section>
 
       {/* PULL QUOTE */}
-      <section className="bg-port-cream">
+      <section className="bg-white">
         <div className="mx-auto max-w-[1320px] px-6 pb-8 md:px-12 md:pb-16">
           <PullQuote accent="#4F5BD5" attribution="Design principle for B2B2C surfaces">
             Design the{" "}
@@ -259,7 +260,7 @@ export default function EWACaseStudy() {
       </section>
 
       {/* VALIDATION */}
-      <section id="validation" className="bg-port-cream-light">
+      <section id="validation" className="border-y border-port-border-soft bg-port-tint-blue">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={INDIGO_TEXT}><SectionDeco variant="flow" /></div>

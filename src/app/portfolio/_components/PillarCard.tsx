@@ -8,7 +8,7 @@ export function PillarCard({
   icon,
   illustration,
   accent = "text-port-accent",
-  bg = "bg-port-cream-light",
+  bg = "bg-white",
   iconBg = "bg-port-accent",
   iconColor = "text-white",
 }: {
@@ -24,7 +24,7 @@ export function PillarCard({
   iconColor?: string;
 }) {
   return (
-    <div className={`h-full rounded-2xl p-8 ${bg}`}>
+    <div className={`h-full rounded-2xl border border-port-border p-8 shadow-[0_10px_28px_-18px_rgba(21,21,21,0.15)] ${bg}`}>
       <div className="flex items-start justify-between">
         <p className={`font-bold text-5xl ${accent}`}>{n}</p>
         {illustration ? (

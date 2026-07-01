@@ -54,11 +54,12 @@ export default function EzPOSCaseStudy() {
       <CaseHero
         caseNumber="CASE STUDY · 03 / 04"
         eyebrow="Case study 03 — B2B Retail · Mobile POS"
-        title={<>EzPOS — fast card &amp; QR payments, designed for the <span className="text-[#3DC5A6]">merchant in motion</span>.</>}
+        title={<>EzPOS — fast card &amp; QR payments, designed for the <span className="text-[#109C84]">merchant in motion</span>.</>}
         subtitle="Mobile point-of-sale app for retail merchants — quick card & QR payments, transaction history, and a simplified end-of-day reconciliation flow that fits in 3 minutes."
         tags={["MOBILE POS", "PAYMENT", "MERCHANT TOOLS", "FULL UX PROCESS"]}
         eyebrowColor="cream"
-        accentClass="text-[#3DC5A6]"
+        accentClass="text-[#109C84]"
+        heroTint="mint"
         decoVariant="grid"
         decoColor={TEAL}
         keyFacts={[
@@ -77,7 +78,7 @@ export default function EzPOSCaseStudy() {
       />
 
       {/* ABOUT */}
-      <section id="overview" className="bg-port-cream">
+      <section id="overview" className="bg-white">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={TEAL_TEXT}><SectionDeco variant="dots" /></div>
@@ -99,7 +100,7 @@ export default function EzPOSCaseStudy() {
               </p>
             </Reveal>
             <Reveal delay={0.2}>
-              <div className="rounded-2xl bg-port-cream-light p-8 space-y-6">
+              <div className="rounded-2xl border border-port-border bg-white p-8 space-y-6 shadow-[0_10px_28px_-18px_rgba(21,21,21,0.15)]">
                 {[
                   { icon: <Briefcase className="h-4 w-4" />, label: "DOMAIN", value: "Retail · Mobile POS" },
                   { icon: <ShoppingBag className="h-4 w-4" />, label: "PRODUCT", value: "Mobile payment app for merchants" },
@@ -123,7 +124,7 @@ export default function EzPOSCaseStudy() {
       </section>
 
       {/* PROBLEM */}
-      <section id="problem" className="bg-port-cream-light">
+      <section id="problem" className="border-y border-port-border-soft bg-port-tint-rose">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={TEAL_TEXT}><SectionDeco variant="pulse" /></div>
@@ -140,22 +141,22 @@ export default function EzPOSCaseStudy() {
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             <Reveal delay={0}><PainCard who="Merchants" label="FOR THE USER"
               icon={<Hand className="h-5 w-5" />}
-              iconBg="bg-[#109C84]/10" iconColor={TEAL_TEXT} accent={TEAL_TEXT}
+              iconBg="bg-[#109C84]/10" bg="bg-white" iconColor={TEAL_TEXT} accent={TEAL_TEXT}
               body="Split attention between customer, product, and app. Two-handed POS flows dropped transactions when the merchant needed a free hand for the item." /></Reveal>
             <Reveal delay={0.08}><PainCard who="Multi-shop owners" label="FOR THE BUSINESS"
               icon={<Store className="h-5 w-5" />}
-              iconBg="bg-[#109C84]/10" iconColor={TEAL_TEXT} accent={TEAL_TEXT}
+              iconBg="bg-[#109C84]/10" bg="bg-white" iconColor={TEAL_TEXT} accent={TEAL_TEXT}
               body="End-of-day reconciliation across multiple staff and shifts was a 20-minute manual export-and-match. No unified daily summary." /></Reveal>
             <Reveal delay={0.16}><PainCard who="The payment provider" label="FOR THE PLATFORM"
               icon={<MessageSquareWarning className="h-5 w-5" />}
-              iconBg="bg-[#109C84]/10" iconColor={TEAL_TEXT} accent={TEAL_TEXT}
+              iconBg="bg-[#109C84]/10" bg="bg-white" iconColor={TEAL_TEXT} accent={TEAL_TEXT}
               body="No consistent transaction UI across merchant apps meant repeated support burden — every shop asked the same 5 questions." /></Reveal>
           </div>
         </div>
       </section>
 
       {/* PROCESS — 7 STEPS */}
-      <section id="process" className="bg-port-cream">
+      <section id="process" className="bg-port-tint-mint">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={TEAL_TEXT}><SectionDeco variant="flow" /></div>
@@ -184,7 +185,7 @@ export default function EzPOSCaseStudy() {
       </section>
 
       {/* PULL QUOTE */}
-      <section className="bg-port-cream">
+      <section className="bg-white">
         <div className="mx-auto max-w-[1320px] px-6 pb-8 md:px-12 md:pb-16">
           <PullQuote accent="#109C84" attribution="Constraint that shaped every screen">
             Merchants have{" "}
@@ -195,7 +196,7 @@ export default function EzPOSCaseStudy() {
       </section>
 
       {/* UI GALLERY */}
-      <section id="ui" className="bg-port-cream-light">
+      <section id="ui" className="border-y border-port-border-soft bg-port-tint-gray">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={TEAL_TEXT}><SectionDeco variant="layers" /></div>

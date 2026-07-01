@@ -161,7 +161,7 @@ export default function EWACaseStudy() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-10 max-w-4xl text-xl leading-[1.65] text-port-body">
-              Traditional monthly payroll left many workers cash-strapped mid-month. Without a fast, trustworthy way to draw earned wages, they often turned to short-term loans with high interest — creating a financial-stress loop the company wanted to break for its partner employees.
+              Traditional monthly payroll left many workers <Highlight variant="blue">cash-strapped mid-month</Highlight>. Without a fast, trustworthy way to draw earned wages, they often turned to <Highlight variant="strong">short-term loans with high interest</Highlight> — creating a financial-stress loop the company wanted to break for its partner employees.
             </p>
           </Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -193,7 +193,7 @@ export default function EWACaseStudy() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-10 max-w-3xl text-lg leading-[1.65] text-port-body">
-              Each platform serves a different actor, but they share one workflow — a request originated on mobile is reviewed in the admin portal and reflected back to the worker. I designed the data model and information architecture together, so the three platforms stay consistent while each surface stays focused on its primary task.
+              Each platform serves a different actor, but they share <Highlight variant="blue">one workflow</Highlight> — a request originated on mobile is reviewed in the admin portal and reflected back to the worker. I designed the <Highlight variant="strong">data model and information architecture together</Highlight>, so the three platforms stay consistent while each surface stays focused on its primary task.
             </p>
           </Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -271,10 +271,10 @@ export default function EWACaseStudy() {
           <div className="mt-14 grid gap-16 md:grid-cols-[1fr_420px] md:gap-20">
             <Reveal delay={0.1}>
               <p className="text-lg leading-[1.7] text-port-body">
-                Direct access to KienlongBank&apos;s end customers was limited during early design phases. I ran moderated usability tests with internal-company employees — whose monthly-salary pattern closely matches the target audience — across three iterative rounds.
+                Direct access to KienlongBank&apos;s end customers was limited during early design phases. I ran moderated usability tests with <Highlight variant="blue">internal-company employees</Highlight> — whose monthly-salary pattern closely matches the target audience — across <Highlight variant="strong">three iterative rounds</Highlight>.
               </p>
               <p className="mt-5 text-lg leading-[1.7] text-port-body">
-                Each round surfaced specific friction in the request flow, the consent step, and limit visibility. I adjusted wireframes and copy between rounds, reducing perceived steps in the withdrawal flow and clarifying language around &apos;earned&apos; versus &apos;available&apos; balance.
+                Each round surfaced specific friction in the request flow, the consent step, and limit visibility. I <Highlight variant="yellow">reduced perceived steps in the withdrawal flow</Highlight> and clarified language around &apos;earned&apos; versus &apos;available&apos; balance.
               </p>
             </Reveal>
             <Reveal delay={0.2}>

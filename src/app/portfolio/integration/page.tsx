@@ -156,7 +156,7 @@ export default function IntegrationCaseStudy() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-10 max-w-4xl text-xl leading-[1.65] text-port-body">
-              Before this feature, connecting a channel meant pasting raw API tokens into a generic form, with no validation. Tokens silently expired. There was no way to tell if a connection was healthy. And every channel type required a different mental model from the admin.
+              Before this feature, connecting a channel meant pasting <Highlight variant="accent">raw API tokens</Highlight> into a generic form, with no validation. Tokens silently expired. There was <Highlight variant="strong">no way to tell if a connection was healthy</Highlight>. And every channel type required a different mental model from the admin.
             </p>
           </Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -197,7 +197,7 @@ export default function IntegrationCaseStudy() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-10 max-w-3xl text-lg leading-[1.65] text-port-body">
-              I organized the feature around three pillars that each addressed a real problem the admins reported. Every screen in the feature traces back to one of these three intents.
+              I organized the feature around <Highlight variant="accent">three pillars</Highlight> that each addressed a real problem the admins reported. Every screen in the feature <Highlight variant="strong">traces back</Highlight> to one of these three intents.
             </p>
           </Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-3">

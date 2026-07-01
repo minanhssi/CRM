@@ -141,7 +141,7 @@ export default function KLBPCaseStudy() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-10 max-w-4xl text-xl leading-[1.65] text-port-body">
-              Before this rebuild, KienlongBank&apos;s payment operations sat across scattered internal tools and spreadsheets. Partners, employees, and transaction operators each needed different data views but the same underlying record. Approval steps got lost between teams; reconciliation was a monthly fire drill; and every new partner onboarding required manual coordination.
+              Before this rebuild, KienlongBank&apos;s payment operations sat across <Highlight variant="blue">scattered internal tools and spreadsheets</Highlight>. Partners, employees, and transaction operators each needed different data views but the <Highlight variant="strong">same underlying record</Highlight>. Approval steps got lost between teams; reconciliation was a monthly fire drill.
             </p>
           </Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -173,7 +173,7 @@ export default function KLBPCaseStudy() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-10 max-w-3xl text-lg leading-[1.65] text-port-body">
-              I organized the design around three pillars each addressing a real bottleneck. Every screen in the back-office traces back to one of them.
+              I organized the design around <Highlight variant="blue">three pillars</Highlight> each addressing a real bottleneck. <Highlight variant="strong">Every screen in the back-office</Highlight> traces back to one of them.
             </p>
           </Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-3">

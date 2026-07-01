@@ -134,7 +134,7 @@ export default function EzPOSCaseStudy() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-10 max-w-4xl text-xl leading-[1.65] text-port-body">
-              Small retail merchants juggle cash, cards, QR payments, and receipts — all while the next customer is already at the counter. Existing POS apps assumed a stationary setup and a two-handed operator. Neither assumption held for the target user.
+              Small retail merchants juggle cash, cards, QR payments, and receipts — all while the next customer is already at the counter. Existing POS apps assumed a <Highlight variant="green">stationary setup and a two-handed operator</Highlight>. <Highlight variant="strong">Neither assumption held</Highlight> for the target user.
             </p>
           </Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -166,7 +166,7 @@ export default function EzPOSCaseStudy() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-10 max-w-3xl text-lg leading-[1.65] text-port-body">
-              I owned every step from competitor teardown to dev handoff. This is the process I ran — each step feeding into the next, with the earlier steps re-visited when later steps surfaced new assumptions.
+              I owned <Highlight variant="green">every step from competitor teardown to dev handoff</Highlight>. This is the process I ran — each step feeding into the next, with the <Highlight variant="strong">earlier steps re-visited</Highlight> when later steps surfaced new assumptions.
             </p>
           </Reveal>
           <Reveal delay={0.2}>

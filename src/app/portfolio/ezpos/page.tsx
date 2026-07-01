@@ -230,8 +230,8 @@ export default function EzPOSCaseStudy() {
               <ImageBanner
                 src="/portfolio/ezpos/ui.png"
                 alt="EzPOS final UI mockup grid"
-                width={1440}
-                height={2861}
+                width={2880}
+                height={5722}
                 caption="Final UI — mobile POS screens across the checkout, history, and settings flows"
               />
             </div>

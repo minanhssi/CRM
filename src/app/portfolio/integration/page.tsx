@@ -13,6 +13,9 @@ import { PainCard } from "../_components/PainCard";
 import { PillarCard } from "../_components/PillarCard";
 import { OutcomeSection } from "../_components/OutcomeSection";
 import { SectionDeco } from "../_components/SectionDeco";
+import { ScrollProgress } from "../_components/ScrollProgress";
+import { TocSidebar } from "../_components/TocSidebar";
+import { CaseNav } from "../_components/CaseNav";
 
 export const metadata = {
   title: "Integration feature — CRM × Automation | Duong Ngoc Minh Anh",
@@ -51,7 +54,18 @@ const STEPS = [
 export default function IntegrationCaseStudy() {
   return (
     <>
+      <ScrollProgress color="#F37B23" />
       <Header />
+      <TocSidebar
+        accent="#F37B23"
+        sections={[
+          { id: "overview", label: "Overview" },
+          { id: "problem", label: "Problem" },
+          { id: "approach", label: "Approach" },
+          { id: "flow", label: "Key flow" },
+          { id: "reflection", label: "Reflection" },
+        ]}
+      />
 
       <CaseHero
         caseNumber="CASE STUDY · 04 / 04"
@@ -68,7 +82,7 @@ export default function IntegrationCaseStudy() {
       />
 
       {/* ABOUT + META */}
-      <section className="bg-port-cream">
+      <section id="overview" className="bg-port-cream">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className="text-port-accent"><SectionDeco variant="dots" /></div>
@@ -110,7 +124,7 @@ export default function IntegrationCaseStudy() {
       </section>
 
       {/* PROBLEM */}
-      <section className="bg-port-cream-light">
+      <section id="problem" className="bg-port-cream-light">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className="text-port-accent"><SectionDeco variant="pulse" /></div>
@@ -151,7 +165,7 @@ export default function IntegrationCaseStudy() {
       </section>
 
       {/* APPROACH 3 PILLARS */}
-      <section className="bg-port-cream">
+      <section id="approach" className="bg-port-cream">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className="text-port-accent"><SectionDeco variant="layers" /></div>
@@ -207,7 +221,7 @@ export default function IntegrationCaseStudy() {
       </section>
 
       {/* KEY FLOW */}
-      <section className="bg-port-cream-light">
+      <section id="flow" className="bg-port-cream-light">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className="text-port-accent"><SectionDeco variant="flow" /></div>
@@ -238,6 +252,7 @@ export default function IntegrationCaseStudy() {
         </div>
       </section>
 
+      <div id="reflection" />
       <OutcomeSection
         title="What this taught me — and why it transfers to AI-assisted enterprise UX."
         paragraphs={[
@@ -251,6 +266,7 @@ export default function IntegrationCaseStudy() {
         ]}
       />
 
+      <CaseNav currentSlug="integration" />
       <Footer />
     </>
   );

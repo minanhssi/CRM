@@ -13,6 +13,9 @@ import { ModuleCard } from "../_components/ModuleCard";
 import { OutcomeSection } from "../_components/OutcomeSection";
 import { SectionDeco } from "../_components/SectionDeco";
 import { ImageBanner } from "../_components/ImageBanner";
+import { ScrollProgress } from "../_components/ScrollProgress";
+import { TocSidebar } from "../_components/TocSidebar";
+import { CaseNav } from "../_components/CaseNav";
 
 export const metadata = {
   title: "KienlongBank Pay — Payment gateway back-office | Duong Ngoc Minh Anh",
@@ -36,7 +39,20 @@ const MODULES = [
 export default function KLBPCaseStudy() {
   return (
     <>
+      <ScrollProgress color="#2D39CF" />
       <Header />
+      <TocSidebar
+        accent="#2D39CF"
+        sections={[
+          { id: "overview", label: "Overview" },
+          { id: "problem", label: "Problem" },
+          { id: "approach", label: "Approach" },
+          { id: "process", label: "Process" },
+          { id: "modules", label: "Modules" },
+          { id: "system", label: "System" },
+          { id: "reflection", label: "Reflection" },
+        ]}
+      />
 
       <CaseHero
         caseNumber="CASE STUDY · 01 / 04"
@@ -64,7 +80,7 @@ export default function KLBPCaseStudy() {
       </section>
 
       {/* ABOUT + META */}
-      <section className="bg-port-cream">
+      <section id="overview" className="bg-port-cream">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={SOFT_BLUE}><SectionDeco variant="dots" /></div>
@@ -108,7 +124,7 @@ export default function KLBPCaseStudy() {
       </section>
 
       {/* PROBLEM */}
-      <section className="bg-port-cream-light">
+      <section id="problem" className="bg-port-cream-light">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={SOFT_BLUE}><SectionDeco variant="pulse" /></div>
@@ -140,7 +156,7 @@ export default function KLBPCaseStudy() {
       </section>
 
       {/* APPROACH */}
-      <section className="bg-port-cream">
+      <section id="approach" className="bg-port-cream">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={SOFT_BLUE}><SectionDeco variant="layers" /></div>
@@ -187,7 +203,7 @@ export default function KLBPCaseStudy() {
       </section>
 
       {/* PROCESS + RESEARCH SNAPSHOT */}
-      <section className="bg-port-cream-light">
+      <section id="process" className="bg-port-cream-light">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={SOFT_BLUE}><SectionDeco variant="arrow" /></div>
@@ -229,7 +245,7 @@ export default function KLBPCaseStudy() {
       </section>
 
       {/* MODULES */}
-      <section className="bg-port-cream">
+      <section id="modules" className="bg-port-cream">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={SOFT_BLUE}><SectionDeco variant="flow" /></div>
@@ -249,7 +265,7 @@ export default function KLBPCaseStudy() {
       </section>
 
       {/* DESIGN SYSTEM + MOCKUPS */}
-      <section className="bg-port-cream-light">
+      <section id="system" className="bg-port-cream-light">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={SOFT_BLUE}><SectionDeco variant="layers" /></div>
@@ -283,6 +299,7 @@ export default function KLBPCaseStudy() {
         </div>
       </section>
 
+      <div id="reflection" />
       <OutcomeSection
         title="What this taught me about designing at enterprise scale."
         paragraphs={[
@@ -297,6 +314,7 @@ export default function KLBPCaseStudy() {
         accentClass="text-[#8CB8FF]"
       />
 
+      <CaseNav currentSlug="klbp" />
       <Footer />
     </>
   );

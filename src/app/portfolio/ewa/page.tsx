@@ -11,6 +11,9 @@ import { PainCard } from "../_components/PainCard";
 import { OutcomeSection } from "../_components/OutcomeSection";
 import { SectionDeco } from "../_components/SectionDeco";
 import { ImageBanner } from "../_components/ImageBanner";
+import { ScrollProgress } from "../_components/ScrollProgress";
+import { TocSidebar } from "../_components/TocSidebar";
+import { CaseNav } from "../_components/CaseNav";
 
 export const metadata = {
   title: "Earned Wage Access — 3-platform payroll product | Duong Ngoc Minh Anh",
@@ -58,7 +61,19 @@ const PLATFORMS = [
 export default function EWACaseStudy() {
   return (
     <>
+      <ScrollProgress color="#4F5BD5" />
       <Header />
+      <TocSidebar
+        accent="#4F5BD5"
+        sections={[
+          { id: "overview", label: "Overview" },
+          { id: "problem", label: "Problem" },
+          { id: "approach", label: "Platforms" },
+          { id: "mockups", label: "Mockups" },
+          { id: "validation", label: "Validation" },
+          { id: "reflection", label: "Reflection" },
+        ]}
+      />
 
       <CaseHero
         caseNumber="CASE STUDY · 02 / 04"
@@ -86,7 +101,7 @@ export default function EWACaseStudy() {
       </section>
 
       {/* ABOUT */}
-      <section className="bg-port-cream">
+      <section id="overview" className="bg-port-cream">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={INDIGO_TEXT}><SectionDeco variant="dots" /></div>
@@ -130,7 +145,7 @@ export default function EWACaseStudy() {
       </section>
 
       {/* PROBLEM */}
-      <section className="bg-port-cream-light">
+      <section id="problem" className="bg-port-cream-light">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={INDIGO_TEXT}><SectionDeco variant="pulse" /></div>
@@ -162,7 +177,7 @@ export default function EWACaseStudy() {
       </section>
 
       {/* APPROACH — 3 PLATFORMS */}
-      <section className="bg-port-cream">
+      <section id="approach" className="bg-port-cream">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={INDIGO_TEXT}><SectionDeco variant="layers" /></div>
@@ -204,7 +219,7 @@ export default function EWACaseStudy() {
       </section>
 
       {/* MOCKUPS */}
-      <section className="bg-port-cream-light">
+      <section id="mockups" className="bg-port-cream-light">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={INDIGO_TEXT}><SectionDeco variant="arrow" /></div>
@@ -228,7 +243,7 @@ export default function EWACaseStudy() {
       </section>
 
       {/* VALIDATION */}
-      <section className="bg-port-cream-light">
+      <section id="validation" className="bg-port-cream-light">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={INDIGO_TEXT}><SectionDeco variant="flow" /></div>
@@ -267,6 +282,7 @@ export default function EWACaseStudy() {
         </div>
       </section>
 
+      <div id="reflection" />
       <OutcomeSection
         title="What this taught me about designing across connected surfaces."
         paragraphs={[
@@ -281,6 +297,7 @@ export default function EWACaseStudy() {
         accentClass="text-[#8CB8FF]"
       />
 
+      <CaseNav currentSlug="ewa" />
       <Footer />
     </>
   );

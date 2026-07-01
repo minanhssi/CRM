@@ -12,6 +12,9 @@ import { PainCard } from "../_components/PainCard";
 import { OutcomeSection } from "../_components/OutcomeSection";
 import { SectionDeco } from "../_components/SectionDeco";
 import { ImageBanner } from "../_components/ImageBanner";
+import { ScrollProgress } from "../_components/ScrollProgress";
+import { TocSidebar } from "../_components/TocSidebar";
+import { CaseNav } from "../_components/CaseNav";
 
 export const metadata = {
   title: "EzPOS — Mobile POS for merchants | Duong Ngoc Minh Anh",
@@ -33,7 +36,18 @@ const PROCESS_STEPS = [
 export default function EzPOSCaseStudy() {
   return (
     <>
+      <ScrollProgress color="#109C84" />
       <Header />
+      <TocSidebar
+        accent="#109C84"
+        sections={[
+          { id: "overview", label: "Overview" },
+          { id: "problem", label: "Problem" },
+          { id: "process", label: "Process" },
+          { id: "ui", label: "Final UI" },
+          { id: "reflection", label: "Reflection" },
+        ]}
+      />
 
       <CaseHero
         caseNumber="CASE STUDY · 03 / 04"
@@ -61,7 +75,7 @@ export default function EzPOSCaseStudy() {
       </section>
 
       {/* ABOUT */}
-      <section className="bg-port-cream">
+      <section id="overview" className="bg-port-cream">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={TEAL_TEXT}><SectionDeco variant="dots" /></div>
@@ -105,7 +119,7 @@ export default function EzPOSCaseStudy() {
       </section>
 
       {/* PROBLEM */}
-      <section className="bg-port-cream-light">
+      <section id="problem" className="bg-port-cream-light">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={TEAL_TEXT}><SectionDeco variant="pulse" /></div>
@@ -137,7 +151,7 @@ export default function EzPOSCaseStudy() {
       </section>
 
       {/* PROCESS — 7 STEPS */}
-      <section className="bg-port-cream">
+      <section id="process" className="bg-port-cream">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={TEAL_TEXT}><SectionDeco variant="flow" /></div>
@@ -180,7 +194,7 @@ export default function EzPOSCaseStudy() {
       </section>
 
       {/* UI GALLERY */}
-      <section className="bg-port-cream-light">
+      <section id="ui" className="bg-port-cream-light">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={TEAL_TEXT}><SectionDeco variant="layers" /></div>
@@ -203,6 +217,7 @@ export default function EzPOSCaseStudy() {
         </div>
       </section>
 
+      <div id="reflection" />
       <OutcomeSection
         title="What this taught me about designing for high-frequency mobile tools."
         paragraphs={[
@@ -217,6 +232,7 @@ export default function EzPOSCaseStudy() {
         accentClass="text-[#3DC5A6]"
       />
 
+      <CaseNav currentSlug="ezpos" />
       <Footer />
     </>
   );

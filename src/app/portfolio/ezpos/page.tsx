@@ -176,22 +176,8 @@ export default function EzPOSCaseStudy() {
               I owned every step from competitor teardown to dev handoff. This is the process I ran — each step feeding into the next, with the earlier steps re-visited when later steps surfaced new assumptions.
             </p>
           </Reveal>
-          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {PROCESS_STEPS.map((s, i) => (
-              <Reveal key={s.n} delay={i * 0.05}>
-                <div className="h-full rounded-2xl bg-port-cream-light p-8">
-                  <div className="flex items-start justify-between">
-                    <p className={`font-bold text-4xl ${TEAL_TEXT}`}>{s.n}</p>
-                    <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl text-white" style={{ backgroundColor: TEAL }}>{s.icon}</div>
-                  </div>
-                  <h3 className="mt-5 text-xl font-semibold text-port-ink">{s.title}</h3>
-                  <p className="mt-3 text-[15px] leading-[1.55] text-port-body">{s.body}</p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
           <Reveal delay={0.2}>
-            <div className="mt-16">
+            <div className="mt-14">
               <ImageBanner
                 src="/portfolio/ezpos/methods.png"
                 alt="Process methods overview — competitor analysis to UI"

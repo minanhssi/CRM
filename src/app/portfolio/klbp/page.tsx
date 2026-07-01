@@ -64,6 +64,13 @@ export default function KLBPCaseStudy() {
         accentClass="text-[#8CB8FF]"
         decoVariant="connect"
         decoColor={BLUE}
+        keyFacts={[
+          { label: "ROLE", value: "Lead UX designer" },
+          { label: "DOMAIN", value: "Fintech · Back-office" },
+          { label: "MODULES", value: "6 · one shared record" },
+          { label: "METHOD", value: "Research + personas + tests" },
+          { label: "OUTPUT", value: "25+ specs · design system" },
+        ]}
       />
 
       {/* COVER SNAPSHOT */}

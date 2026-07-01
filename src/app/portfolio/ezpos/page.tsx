@@ -59,6 +59,13 @@ export default function EzPOSCaseStudy() {
         accentClass="text-[#3DC5A6]"
         decoVariant="grid"
         decoColor={TEAL}
+        keyFacts={[
+          { label: "ROLE", value: "End-to-end UX / UI" },
+          { label: "DOMAIN", value: "Retail · Mobile POS" },
+          { label: "PLATFORM", value: "iOS · Android" },
+          { label: "PROCESS", value: "7-step full UX cycle" },
+          { label: "OUTPUT", value: "30+ screens · design system" },
+        ]}
       />
 
       {/* COVER SNAPSHOT */}

@@ -16,6 +16,8 @@ import { SectionDeco } from "../_components/SectionDeco";
 import { ScrollProgress } from "../_components/ScrollProgress";
 import { TocSidebar } from "../_components/TocSidebar";
 import { CaseNav } from "../_components/CaseNav";
+import { Highlight } from "../_components/Highlight";
+import { PullQuote } from "../_components/PullQuote";
 
 export const metadata = {
   title: "Integration feature — CRM × Automation | Duong Ngoc Minh Anh",
@@ -79,6 +81,13 @@ export default function IntegrationCaseStudy() {
         tags={["GUIDED INTERACTION", "MULTI-PLATFORM", "AUTOMATION UX", "TRUST UX"]}
         decoVariant="connect"
         decoColor="#F37B23"
+        keyFacts={[
+          { label: "ROLE", value: "Sole UX/UI designer" },
+          { label: "DOMAIN", value: "CRM · Automation" },
+          { label: "CHANNELS", value: "8 · chat, e-com, dev" },
+          { label: "PATTERNS", value: "Guided wizard, trust UX" },
+          { label: "OUTPUT", value: "Flows, UI, design specs" },
+        ]}
       />
 
       {/* ABOUT + META */}
@@ -91,11 +100,16 @@ export default function IntegrationCaseStudy() {
           </Reveal>
           <div className="mt-14 grid gap-16 md:grid-cols-[1fr_400px] md:gap-20">
             <Reveal delay={0.1}>
-              <p className="text-xl leading-[1.65] text-port-body md:text-[22px]">
-                Integration is the feature inside a CRM platform that lets non-technical admins connect their workspace to external messaging, e-commerce, and developer channels — enabling auto-messaging, data sync, and lead capture without involving an engineer.
+              <p className="text-xl leading-[1.75] text-port-body md:text-[22px]">
+                Integration is the feature inside a CRM platform that lets{" "}
+                <Highlight>non-technical admins connect their workspace</Highlight> to external messaging, e-commerce, and developer channels — enabling{" "}
+                <Highlight variant="accent">auto-messaging</Highlight>,{" "}
+                <Highlight variant="accent">data sync</Highlight>, and{" "}
+                <Highlight variant="accent">lead capture</Highlight> without involving an engineer.
               </p>
-              <p className="mt-6 text-lg leading-[1.65] text-port-muted">
-                The feature covers eight channels with very different connection models — OAuth bots (FB Messenger, Zalo OA, Instagram, WhatsApp, Slack), credentialed app keys (Shopify), embed snippets (website widget), and a public API token. Each model needed its own configuration UX, but the entry, recovery, and trust patterns had to feel like one consistent surface.
+              <p className="mt-6 text-lg leading-[1.7] text-port-muted">
+                The feature covers{" "}
+                <Highlight variant="strong">eight channels</Highlight> with very different connection models — OAuth bots (FB Messenger, Zalo OA, Instagram, WhatsApp, Slack), credentialed app keys (Shopify), embed snippets (website widget), and a public API token. Each model needed its own configuration UX, but the entry, recovery, and trust patterns had to feel like <em>one consistent surface</em>.
               </p>
             </Reveal>
             <Reveal delay={0.2}>
@@ -217,6 +231,16 @@ export default function IntegrationCaseStudy() {
               />
             </Reveal>
           </div>
+        </div>
+      </section>
+
+      {/* PULL QUOTE — between Approach and Flow */}
+      <section className="bg-port-cream">
+        <div className="mx-auto max-w-[1320px] px-6 pb-8 md:px-12 md:pb-16">
+          <PullQuote accent="#F37B23" attribution="Design principle behind the feature">
+            <span className="text-port-accent">Integration UX</span> is fundamentally about building{" "}
+            <span className="underline decoration-port-accent decoration-4 underline-offset-8">trust</span> in a system the user can&apos;t see end-to-end.
+          </PullQuote>
         </div>
       </section>
 

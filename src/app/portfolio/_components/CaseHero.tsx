@@ -2,6 +2,8 @@ import { Eyebrow } from "./Eyebrow";
 import { Reveal } from "./Reveal";
 import { BackLink } from "./BackLink";
 import { HeroDeco } from "./HeroDeco";
+import { KeyFacts } from "./KeyFacts";
+import type { ReactNode } from "react";
 
 export function CaseHero({
   caseNumber,
@@ -13,6 +15,7 @@ export function CaseHero({
   accentClass = "text-port-accent",
   decoVariant = "orbit",
   decoColor = "#F37B23",
+  keyFacts,
 }: {
   caseNumber: string;
   eyebrow: string;
@@ -23,6 +26,7 @@ export function CaseHero({
   accentClass?: string;
   decoVariant?: "orbit" | "grid" | "wave" | "connect";
   decoColor?: string;
+  keyFacts?: { label: string; value: string; icon?: ReactNode }[];
 }) {
   return (
     <section className="relative overflow-hidden bg-port-ink text-[#F5F0E3]">
@@ -51,6 +55,9 @@ export function CaseHero({
             ))}
           </div>
         </Reveal>
+        {keyFacts && keyFacts.length > 0 && (
+          <KeyFacts items={keyFacts} accentClass={accentClass} />
+        )}
       </div>
     </section>
   );

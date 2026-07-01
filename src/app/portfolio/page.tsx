@@ -6,6 +6,7 @@ import { Eyebrow } from "./_components/Eyebrow";
 import { Marquee } from "./_components/Marquee";
 import { Reveal } from "./_components/Reveal";
 import { SapCallout } from "./_components/SapCallout";
+import { Highlight } from "./_components/Highlight";
 
 const PROJECTS = [
   {
@@ -139,11 +140,15 @@ export default function PortfolioOverview() {
           </Reveal>
           <div className="mt-16 grid gap-16 md:grid-cols-[1fr_320px] md:gap-24">
             <Reveal delay={0.1}>
-              <p className="text-xl leading-[1.65] text-port-body md:text-[22px]">
-                I design end-to-end UX for enterprise products — translating complex business workflows into clear, accessible interfaces. My work spans fintech back-office systems, payment platforms, and CRM automation, where I lead research, interaction design, and design-system contributions in close collaboration with product and engineering.
+              <p className="text-xl leading-[1.75] text-port-body md:text-[22px]">
+                I design <Highlight variant="blue">end-to-end UX for enterprise products</Highlight> — translating complex business workflows into clear, accessible interfaces. My work spans{" "}
+                <Highlight>fintech back-office systems</Highlight>,{" "}
+                <Highlight>payment platforms</Highlight>, and{" "}
+                <Highlight>CRM automation</Highlight> — where I lead research, interaction design, and design-system contributions in close collaboration with product and engineering.
               </p>
-              <p className="mt-6 text-lg leading-[1.65] text-port-muted">
-                Currently exploring AI-assisted and guided-interaction patterns to enrich enterprise experiences.
+              <p className="mt-6 text-lg leading-[1.7] text-port-muted">
+                Currently exploring{" "}
+                <Highlight variant="yellow">AI-assisted and guided-interaction patterns</Highlight> to enrich enterprise experiences.
               </p>
             </Reveal>
             <Reveal delay={0.2}>

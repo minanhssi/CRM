@@ -85,6 +85,13 @@ export default function EWACaseStudy() {
         accentClass="text-[#8CB8FF]"
         decoVariant="wave"
         decoColor={INDIGO}
+        keyFacts={[
+          { label: "ROLE", value: "Solo UX Designer" },
+          { label: "DOMAIN", value: "Fintech · Payroll / HR" },
+          { label: "PLATFORMS", value: "3 · mobile + 2 web" },
+          { label: "METHOD", value: "3 rounds of usability tests" },
+          { label: "OUTCOME", value: "Flow 6 → 3 perceived steps" },
+        ]}
       />
 
       {/* COVER SNAPSHOT */}

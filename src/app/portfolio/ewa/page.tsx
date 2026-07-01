@@ -1,25 +1,28 @@
+import {
+  Smartphone, Monitor, LayoutDashboard, Wallet, ClipboardList, Building2,
+  Zap, MessageSquareText, Layers, Users, Search, ScrollText, HeartHandshake, Briefcase,
+} from "lucide-react";
 import { Header } from "../_components/Header";
 import { Footer } from "../_components/Footer";
 import { Eyebrow } from "../_components/Eyebrow";
 import { Reveal } from "../_components/Reveal";
 import { CaseHero } from "../_components/CaseHero";
-import { MetaCard } from "../_components/MetaCard";
 import { PainCard } from "../_components/PainCard";
 import { OutcomeSection } from "../_components/OutcomeSection";
+import { SectionDeco } from "../_components/SectionDeco";
 
 export const metadata = {
   title: "Earned Wage Access — 3-platform payroll product | Duong Ngoc Minh Anh",
-  description:
-    "End-to-end design across worker mobile, company admin portal, and worker web — letting employees withdraw earned wages 24/7 without payday loans.",
 };
+
+const INDIGO = "#4F5BD5";
+const INDIGO_TEXT = "text-[#4F5BD5]";
 
 const PLATFORMS = [
   {
-    n: "01",
-    kind: "MOBILE · WORKER",
-    title: "Worker mobile app",
-    body:
-      "The primary surface where employees discover and request earned-wage withdrawals. Designed for one-handed, 3-tap flow.",
+    n: "01", kind: "MOBILE · WORKER", title: "Worker mobile app",
+    body: "The primary surface where employees discover and request earned-wage withdrawals. Designed for one-handed, 3-tap flow.",
+    icon: <Smartphone className="h-5 w-5" />,
     jobs: [
       "View remaining earned balance at a glance",
       "Request withdrawal in 3 taps",
@@ -28,11 +31,9 @@ const PLATFORMS = [
     ],
   },
   {
-    n: "02",
-    kind: "WEB · HR / ADMIN",
-    title: "Company admin portal",
-    body:
-      "Configuration + approval cockpit for HR. Sets up advance rules, monthly limits, and reviews incoming requests.",
+    n: "02", kind: "WEB · HR / ADMIN", title: "Company admin portal",
+    body: "Configuration + approval cockpit for HR. Sets up advance rules, monthly limits, and reviews incoming requests.",
+    icon: <LayoutDashboard className="h-5 w-5" />,
     jobs: [
       "Configure advance rules per employee tier",
       "Review & approve / reject requests",
@@ -41,11 +42,9 @@ const PLATFORMS = [
     ],
   },
   {
-    n: "03",
-    kind: "WEB · WORKER",
-    title: "Worker web view",
-    body:
-      "Lightweight desktop companion to the mobile app — used at-work for detailed history and balance verification.",
+    n: "03", kind: "WEB · WORKER", title: "Worker web view",
+    body: "Lightweight desktop companion to the mobile app — used at-work for detailed history and balance verification.",
+    icon: <Monitor className="h-5 w-5" />,
     jobs: [
       "View detailed transaction history",
       "Check exact earned balance & cap",
@@ -63,21 +62,20 @@ export default function EWACaseStudy() {
       <CaseHero
         caseNumber="CASE STUDY · 02 / 04"
         eyebrow="Case study 02 — Fintech × HR"
-        title={
-          <>
-            <span className="text-[#8CB8FF]">Earned Wage Access</span> — pay workers 24/7, on the wages they already earned.
-          </>
-        }
+        title={<><span className="text-[#8CB8FF]">Earned Wage Access</span> — pay workers 24/7, on the wages they already earned.</>}
         subtitle="End-to-end design across three connected platforms — worker mobile app, company admin portal, and worker web — letting employees withdraw earned wages anytime without payday loans."
         tags={["3-PLATFORM PRODUCT", "USER TESTING", "PAYROLL WORKFLOW", "B2B2C"]}
         eyebrowColor="cream"
         accentClass="text-[#8CB8FF]"
+        decoVariant="wave"
+        decoColor={INDIGO}
       />
 
       {/* ABOUT */}
       <section className="bg-port-cream">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
+            <div className={INDIGO_TEXT}><SectionDeco variant="dots" /></div>
             <Eyebrow>Project overview</Eyebrow>
             <h2 className="font-serif mt-4 text-4xl tracking-tight md:text-6xl">About Earned Wage Access</h2>
           </Reveal>
@@ -90,21 +88,28 @@ export default function EWACaseStudy() {
                 The product spans three connected platforms — a worker mobile app for self-service requests, a company admin portal for HR configuration and approval, and a worker web view to track history and remaining balance. Together they replace ad-hoc payday loans with a controlled, auditable B2B2C workflow.
               </p>
               <p className="mt-4 text-lg leading-[1.65] text-port-muted">
-                I owned UX end-to-end for all three platforms: research, information architecture, user flows, wireframes, prototypes, high-fidelity UI, and dev handoff. The three surfaces share one workflow — a request originated on mobile is reviewed in admin and reflected back to the worker.
+                I owned UX end-to-end for all three platforms: research, information architecture, user flows, wireframes, prototypes, high-fidelity UI, and dev handoff.
               </p>
             </Reveal>
             <Reveal delay={0.2}>
-              <MetaCard
-                items={[
-                  { label: "DOMAIN", value: "Fintech · Payroll / HR" },
-                  { label: "ROLE", value: "Solo UX Designer — Research, UX, UI, handoff" },
-                  { label: "PLATFORMS", value: "3 — worker mobile · admin portal · worker web" },
-                  { label: "TEAM", value: "Product owner + engineering" },
-                  { label: "METHOD", value: "User interviews + in-company usability testing" },
-                  { label: "DELIVERABLES", value: "Flows, wireframes, prototype, design specs" },
-                ]}
-                bg="bg-port-cream-light"
-              />
+              <div className="rounded-2xl bg-port-cream-light p-8 space-y-6">
+                {[
+                  { icon: <Briefcase className="h-4 w-4" />, label: "DOMAIN", value: "Fintech · Payroll / HR" },
+                  { icon: <Users className="h-4 w-4" />, label: "ROLE", value: "Solo UX Designer — Research, UX, UI, handoff" },
+                  { icon: <Layers className="h-4 w-4" />, label: "PLATFORMS", value: "3 — worker mobile · admin portal · worker web" },
+                  { icon: <HeartHandshake className="h-4 w-4" />, label: "TEAM", value: "Product owner + engineering" },
+                  { icon: <Search className="h-4 w-4" />, label: "METHOD", value: "User interviews + in-company usability testing" },
+                  { icon: <ScrollText className="h-4 w-4" />, label: "DELIVERABLES", value: "Flows, wireframes, prototype, design specs" },
+                ].map(m => (
+                  <div key={m.label} className="flex gap-3">
+                    <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-md text-[#4F5BD5]" style={{ backgroundColor: "rgba(79,91,213,0.15)" }}>{m.icon}</div>
+                    <div>
+                      <p className={`text-[11px] font-semibold tracking-[1.8px] ${INDIGO_TEXT}`}>{m.label}</p>
+                      <p className="mt-1 text-[15px] leading-[1.45] font-medium text-port-ink">{m.value}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </Reveal>
           </div>
         </div>
@@ -114,6 +119,7 @@ export default function EWACaseStudy() {
       <section className="bg-port-cream-light">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
+            <div className={INDIGO_TEXT}><SectionDeco variant="pulse" /></div>
             <Eyebrow>The problem</Eyebrow>
             <h2 className="font-serif mt-4 max-w-4xl text-4xl leading-[1.1] tracking-tight md:text-6xl">
               Workers needed faster access to wages they had already earned.
@@ -125,30 +131,18 @@ export default function EWACaseStudy() {
             </p>
           </Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-3">
-            {[
-              {
-                who: "Workers",
-                label: "FOR USERS",
-                body:
-                  "Unpredictable cash needs mid-month. With no structured way to access earned wages early, many fell into payday-loan debt cycles.",
-              },
-              {
-                who: "HR & companies",
-                label: "FOR ADMINS",
-                body:
-                  "Manual advance requests created paperwork burden, inconsistent approval rules, and no clear audit trail of who borrowed how much.",
-              },
-              {
-                who: "The bank",
-                label: "FOR THE BUSINESS",
-                body:
-                  "No standardized B2B2C workflow to deliver earned-wage services at scale across multiple partner companies.",
-              },
-            ].map((p, i) => (
-              <Reveal key={p.who} delay={i * 0.08}>
-                <PainCard who={p.who} label={p.label} body={p.body} accent="text-[#4F5BD5]" />
-              </Reveal>
-            ))}
+            <Reveal delay={0}><PainCard who="Workers" label="FOR USERS"
+              icon={<Wallet className="h-5 w-5" />}
+              iconBg="bg-[#4F5BD5]/10" iconColor={INDIGO_TEXT} accent={INDIGO_TEXT}
+              body="Unpredictable cash needs mid-month. With no structured way to access earned wages early, many fell into payday-loan debt cycles." /></Reveal>
+            <Reveal delay={0.08}><PainCard who="HR & companies" label="FOR ADMINS"
+              icon={<ClipboardList className="h-5 w-5" />}
+              iconBg="bg-[#4F5BD5]/10" iconColor={INDIGO_TEXT} accent={INDIGO_TEXT}
+              body="Manual advance requests created paperwork burden, inconsistent approval rules, and no clear audit trail of who borrowed how much." /></Reveal>
+            <Reveal delay={0.16}><PainCard who="The bank" label="FOR THE BUSINESS"
+              icon={<Building2 className="h-5 w-5" />}
+              iconBg="bg-[#4F5BD5]/10" iconColor={INDIGO_TEXT} accent={INDIGO_TEXT}
+              body="No standardized B2B2C workflow to deliver earned-wage services at scale across multiple partner companies." /></Reveal>
           </div>
         </div>
       </section>
@@ -157,6 +151,7 @@ export default function EWACaseStudy() {
       <section className="bg-port-cream">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
+            <div className={INDIGO_TEXT}><SectionDeco variant="layers" /></div>
             <Eyebrow>Approach</Eyebrow>
             <h2 className="font-serif mt-4 max-w-4xl text-4xl leading-[1.1] tracking-tight md:text-6xl">
               Designing across three connected platforms.
@@ -172,18 +167,17 @@ export default function EWACaseStudy() {
               <Reveal key={p.n} delay={i * 0.08}>
                 <div className="h-full rounded-2xl bg-port-cream-light p-9">
                   <div className="flex items-center justify-between">
-                    <p className="font-bold text-4xl text-[#4F5BD5]">{p.n}</p>
-                    <span className="rounded-full bg-white px-3 py-1.5 text-[11px] font-semibold tracking-[1.5px] text-[#4F5BD5]">
-                      {p.kind}
-                    </span>
+                    <p className={`font-bold text-4xl ${INDIGO_TEXT}`}>{p.n}</p>
+                    <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[#4F5BD5] text-white">{p.icon}</div>
                   </div>
-                  <h3 className="mt-5 text-xl font-semibold text-port-ink">{p.title}</h3>
+                  <span className={`mt-4 inline-block rounded-full bg-white px-3 py-1.5 text-[11px] font-semibold tracking-[1.5px] ${INDIGO_TEXT}`}>{p.kind}</span>
+                  <h3 className="mt-4 text-xl font-semibold text-port-ink">{p.title}</h3>
                   <p className="mt-3 text-[14px] leading-[1.55] text-port-body">{p.body}</p>
                   <p className="mt-5 text-[11px] font-semibold tracking-[1.8px] text-port-muted">KEY JOBS</p>
                   <ul className="mt-3 space-y-2 text-[14px] leading-[1.5] text-port-body">
                     {p.jobs.map(j => (
                       <li key={j} className="flex gap-2">
-                        <span className="text-[#4F5BD5]">→</span>
+                        <span className={INDIGO_TEXT}>→</span>
                         <span>{j}</span>
                       </li>
                     ))}
@@ -195,10 +189,11 @@ export default function EWACaseStudy() {
         </div>
       </section>
 
-      {/* USER TESTING */}
+      {/* VALIDATION */}
       <section className="bg-port-cream-light">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
+            <div className={INDIGO_TEXT}><SectionDeco variant="flow" /></div>
             <Eyebrow>Validation</Eyebrow>
             <h2 className="font-serif mt-4 max-w-4xl text-4xl leading-[1.1] tracking-tight md:text-6xl">
               Tested with internal-company employees as proxy users.
@@ -216,13 +211,16 @@ export default function EWACaseStudy() {
             <Reveal delay={0.2}>
               <div className="space-y-4">
                 {[
-                  { n: "01", text: "Withdrawal flow simplified — from 6 perceived steps to 3." },
-                  { n: "02", text: "Balance copy rewritten — testers no longer confused 'earned' vs 'available'." },
-                  { n: "03", text: "Admin approval queue shipped with bulk actions after HR feedback." },
-                ].map(o => (
-                  <div key={o.n} className="rounded-xl border border-port-border bg-white p-6">
-                    <p className="text-[11px] font-semibold tracking-[1.8px] text-[#4F5BD5]">{`OUTCOME ${o.n}`}</p>
-                    <p className="mt-2 text-[15px] leading-[1.5] font-medium text-port-ink">{o.text}</p>
+                  { icon: <Zap className="h-5 w-5" />, text: "Withdrawal flow simplified — from 6 perceived steps to 3." },
+                  { icon: <MessageSquareText className="h-5 w-5" />, text: "Balance copy rewritten — testers no longer confused 'earned' vs 'available'." },
+                  { icon: <LayoutDashboard className="h-5 w-5" />, text: "Admin approval queue shipped with bulk actions after HR feedback." },
+                ].map((o, i) => (
+                  <div key={i} className="flex gap-4 rounded-xl border border-port-border bg-white p-6">
+                    <div className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#4F5BD5] text-white">{o.icon}</div>
+                    <div>
+                      <p className={`text-[11px] font-semibold tracking-[1.8px] ${INDIGO_TEXT}`}>{`OUTCOME 0${i + 1}`}</p>
+                      <p className="mt-2 text-[15px] leading-[1.5] font-medium text-port-ink">{o.text}</p>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -235,25 +233,14 @@ export default function EWACaseStudy() {
         title="What this taught me about designing across connected surfaces."
         paragraphs={[
           "A B2B2C product only feels seamless when the three actors — the worker, the company admin, and the bank — see the same underlying record from their own vantage point. I designed the data model and IA together before touching any UI, which meant that when I later diverged the surfaces visually, the data trail stayed consistent.",
-          "Running usability tests with proxy users (internal-company employees on monthly salary) turned out to be the most cost-effective research move of the project. It surfaced language issues in the balance copy that would have been invisible in a solo design review — testers repeatedly conflated &apos;earned&apos; and &apos;available.&apos; Rewriting those two words probably prevented weeks of support tickets post-launch.",
+          "Running usability tests with proxy users (internal-company employees on monthly salary) turned out to be the most cost-effective research move of the project. It surfaced language issues in the balance copy that would have been invisible in a solo design review.",
         ]}
         takeaways={[
-          {
-            n: "01",
-            label: "ONE MODEL, THREE SURFACES",
-            text: "Design the schema before the UI. When three roles see the same record from different angles, the schema is the honest broker.",
-          },
-          {
-            n: "02",
-            label: "PROXY USERS ARE STILL USERS",
-            text: "When target users are behind an NDA wall, proxy users with similar context surface 80% of the copy and flow issues.",
-          },
-          {
-            n: "03",
-            label: "COPY IS UX",
-            text: "'Earned' vs. 'available' is a 2-word decision that determines whether every future support ticket exists.",
-          },
+          { n: "01", label: "ONE MODEL, THREE SURFACES", text: "Design the schema before the UI. When three roles see the same record from different angles, the schema is the honest broker." },
+          { n: "02", label: "PROXY USERS ARE STILL USERS", text: "When target users are behind an NDA wall, proxy users with similar context surface 80% of the copy and flow issues." },
+          { n: "03", label: "COPY IS UX", text: "'Earned' vs. 'available' is a 2-word decision that determines whether every future support ticket exists." },
         ]}
+        accentClass="text-[#8CB8FF]"
       />
 
       <Footer />

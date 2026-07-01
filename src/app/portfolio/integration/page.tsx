@@ -18,6 +18,7 @@ import { TocSidebar } from "../_components/TocSidebar";
 import { CaseNav } from "../_components/CaseNav";
 import { Highlight } from "../_components/Highlight";
 import { PullQuote } from "../_components/PullQuote";
+import { Illustration } from "../_components/Illustration";
 
 export const metadata = {
   title: "Integration feature — CRM × Automation | Duong Ngoc Minh Anh",
@@ -156,22 +157,22 @@ export default function IntegrationCaseStudy() {
             <Reveal delay={0}>
               <PainCard
                 who="CRM admin" label="FOR THE USER"
-                icon={<AlertTriangle className="h-5 w-5" />}
-                body="Pasting tokens with no validation. No way to tell if Zalo OA was still connected or if a Shopify key had expired three weeks ago."
+                illustration={<Illustration kind="user" />}
+                body="Pasting tokens with no validation. No way to tell if a channel was still connected."
               />
             </Reveal>
             <Reveal delay={0.08}>
               <PainCard
                 who="Ops & support" label="FOR THE TEAM"
-                icon={<LifeBuoy className="h-5 w-5" />}
-                body="Every 'why isn't my chatbot replying?' ticket required ops to manually inspect tokens. No audit trail of who connected what, or when."
+                illustration={<Illustration kind="ops" />}
+                body="Every 'why isn't my chatbot replying?' ticket needed manual token inspection. No audit trail."
               />
             </Reveal>
             <Reveal delay={0.16}>
               <PainCard
                 who="Engineering" label="FOR DEV"
-                icon={<Code className="h-5 w-5" />}
-                body="Each channel was a different connection model. Bespoke UI per channel meant duplicated code, inconsistent error states, and frequent regressions."
+                illustration={<Illustration kind="dev" />}
+                body="Each channel = a different connection model. Bespoke UI meant duplicated code and inconsistent error states."
               />
             </Reveal>
           </div>
@@ -197,36 +198,33 @@ export default function IntegrationCaseStudy() {
             <Reveal delay={0}>
               <PillarCard
                 n="01" label="PILLAR — DISCOVERY" title="Guided selection over a long flat list"
-                icon={<Compass className="h-5 w-5" />}
+                illustration={<Illustration kind="discover" />}
                 bullets={[
-                  "Group 8 channels by type — Chatbot · Messaging · E-commerce · Developer",
-                  "Show purpose hint under each channel, so admin picks intent first",
-                  "Reuse the same wizard shell for every channel — only step 2 changes",
-                  "Empty state on the integration list nudges admins toward their first connection",
+                  "Group 8 channels by type — Chatbot · Messaging · E-com · Dev",
+                  "Purpose hint under each channel — admin picks intent first",
+                  "One wizard shell for every channel — only step 2 changes",
                 ]}
               />
             </Reveal>
             <Reveal delay={0.08}>
               <PillarCard
-                n="02" label="PILLAR — TRUST" title="Make token health visible at every step"
-                icon={<Eye className="h-5 w-5" />}
+                n="02" label="PILLAR — TRUST" title="Token health visible at every step"
+                illustration={<Illustration kind="trust" />}
                 bullets={[
-                  "Validate token client-side before submission (saves a backend round-trip)",
-                  "Inline error messages reference the platform docs link directly",
-                  "Each integration card surfaces a status indicator: healthy · stale · expired",
-                  "Tooltip on resync explains exactly what happens before the user clicks it",
+                  "Client-side token validation saves a backend round-trip",
+                  "Inline errors link straight to the platform docs",
+                  "Status indicator on every card: healthy · stale · expired",
                 ]}
               />
             </Reveal>
             <Reveal delay={0.16}>
               <PillarCard
-                n="03" label="PILLAR — RECOVERY" title="Treat token expiry as a normal lifecycle event"
-                icon={<RefreshCcw className="h-5 w-5" />}
+                n="03" label="PILLAR — RECOVERY" title="Token expiry as a normal lifecycle event"
+                illustration={<Illustration kind="recovery" />}
                 bullets={[
-                  "Detect drift / expired tokens automatically and badge the affected card",
-                  "One-click resync flow with a confirm modal — never silent re-auth",
-                  "Notification email field is a setting on each integration, not a global default",
-                  "Delete is undoable for 7 days; bulk delete confirms with channel-by-channel checklist",
+                  "Detect drift automatically and badge the affected card",
+                  "One-click resync with a confirm modal — never silent re-auth",
+                  "Delete is undoable for 7 days; bulk delete confirms per channel",
                 ]}
               />
             </Reveal>

@@ -10,6 +10,7 @@ import { CaseHero } from "../_components/CaseHero";
 import { PainCard } from "../_components/PainCard";
 import { OutcomeSection } from "../_components/OutcomeSection";
 import { SectionDeco } from "../_components/SectionDeco";
+import { ImageBanner } from "../_components/ImageBanner";
 
 export const metadata = {
   title: "Earned Wage Access — 3-platform payroll product | Duong Ngoc Minh Anh",
@@ -70,6 +71,19 @@ export default function EWACaseStudy() {
         decoVariant="wave"
         decoColor={INDIGO}
       />
+
+      {/* COVER SNAPSHOT */}
+      <section className="bg-port-cream">
+        <div className="mx-auto max-w-[1320px] px-6 pt-16 md:px-12 md:pt-24">
+          <ImageBanner
+            src="/portfolio/ewa/hero.png"
+            alt="Earned Wage Access — case study cover"
+            width={2064}
+            height={1440}
+            caption="Case study cover — Earned Wage Access"
+          />
+        </div>
+      </section>
 
       {/* ABOUT */}
       <section className="bg-port-cream">
@@ -186,6 +200,30 @@ export default function EWACaseStudy() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* MOCKUPS */}
+      <section className="bg-port-cream-light">
+        <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
+          <Reveal>
+            <div className={INDIGO_TEXT}><SectionDeco variant="arrow" /></div>
+            <Eyebrow>Mockups</Eyebrow>
+            <h2 className="font-serif mt-4 max-w-4xl text-4xl leading-[1.1] tracking-tight md:text-6xl">
+              Three surfaces, one shared workflow.
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <div className="mt-14">
+              <ImageBanner
+                src="/portfolio/ewa/mockups.png"
+                alt="EWA mockups across web and mobile"
+                width={1920}
+                height={2138}
+                caption="Mockups — worker web, company admin portal, and worker mobile app"
+              />
+            </div>
+          </Reveal>
         </div>
       </section>
 

@@ -11,6 +11,7 @@ import { CaseHero } from "../_components/CaseHero";
 import { PainCard } from "../_components/PainCard";
 import { OutcomeSection } from "../_components/OutcomeSection";
 import { SectionDeco } from "../_components/SectionDeco";
+import { ImageBanner } from "../_components/ImageBanner";
 
 export const metadata = {
   title: "EzPOS — Mobile POS for merchants | Duong Ngoc Minh Anh",
@@ -45,6 +46,19 @@ export default function EzPOSCaseStudy() {
         decoVariant="grid"
         decoColor={TEAL}
       />
+
+      {/* COVER SNAPSHOT */}
+      <section className="bg-port-cream">
+        <div className="mx-auto max-w-[1320px] px-6 pt-16 md:px-12 md:pt-24">
+          <ImageBanner
+            src="/portfolio/ezpos/hero.png"
+            alt="EzPOS — case study cover"
+            width={1440}
+            height={1062}
+            caption="Case study cover — EzPOS mobile POS"
+          />
+        </div>
+      </section>
 
       {/* ABOUT */}
       <section className="bg-port-cream">
@@ -151,6 +165,41 @@ export default function EzPOSCaseStudy() {
               </Reveal>
             ))}
           </div>
+          <Reveal delay={0.2}>
+            <div className="mt-16">
+              <ImageBanner
+                src="/portfolio/ezpos/methods.png"
+                alt="Process methods overview — competitor analysis to UI"
+                width={1440}
+                height={2269}
+                caption="Process visual — 7 methods from competitor analysis to UI design"
+              />
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* UI GALLERY */}
+      <section className="bg-port-cream-light">
+        <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
+          <Reveal>
+            <div className={TEAL_TEXT}><SectionDeco variant="layers" /></div>
+            <Eyebrow>Final UI</Eyebrow>
+            <h2 className="font-serif mt-4 max-w-4xl text-4xl leading-[1.1] tracking-tight md:text-6xl">
+              High-fidelity mockups — dark theme, green accent, one-thumb tuned.
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <div className="mt-14">
+              <ImageBanner
+                src="/portfolio/ezpos/ui.png"
+                alt="EzPOS final UI mockup grid"
+                width={1440}
+                height={2861}
+                caption="Final UI — mobile POS screens across the checkout, history, and settings flows"
+              />
+            </div>
+          </Reveal>
         </div>
       </section>
 

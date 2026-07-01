@@ -12,6 +12,7 @@ import { PillarCard } from "../_components/PillarCard";
 import { ModuleCard } from "../_components/ModuleCard";
 import { OutcomeSection } from "../_components/OutcomeSection";
 import { SectionDeco } from "../_components/SectionDeco";
+import { ImageBanner } from "../_components/ImageBanner";
 
 export const metadata = {
   title: "KienlongBank Pay — Payment gateway back-office | Duong Ngoc Minh Anh",
@@ -48,6 +49,19 @@ export default function KLBPCaseStudy() {
         decoVariant="connect"
         decoColor={BLUE}
       />
+
+      {/* COVER SNAPSHOT */}
+      <section className="bg-port-cream">
+        <div className="mx-auto max-w-[1320px] px-6 pt-16 md:px-12 md:pt-24">
+          <ImageBanner
+            src="/portfolio/klbp/hero.png"
+            alt="KienlongBank Pay — case study cover"
+            width={1440}
+            height={1096}
+            caption="Case study cover — KienlongBank Pay back-office"
+          />
+        </div>
+      </section>
 
       {/* ABOUT + META */}
       <section className="bg-port-cream">
@@ -172,8 +186,50 @@ export default function KLBPCaseStudy() {
         </div>
       </section>
 
-      {/* MODULES */}
+      {/* PROCESS + RESEARCH SNAPSHOT */}
       <section className="bg-port-cream-light">
+        <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
+          <Reveal>
+            <div className={SOFT_BLUE}><SectionDeco variant="arrow" /></div>
+            <Eyebrow>Process</Eyebrow>
+            <h2 className="font-serif mt-4 max-w-4xl text-4xl leading-[1.1] tracking-tight md:text-6xl">
+              Five-stage design process from research to test.
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <div className="mt-14">
+              <ImageBanner
+                src="/portfolio/klbp/process.png"
+                alt="Design process overview — Research, Define, Idea, Design, Test"
+                width={1440}
+                height={723}
+                caption="Design process stages — Research · Define · Idea · Design · Test"
+              />
+            </div>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <div className="mt-16 grid gap-8 md:grid-cols-2">
+              <ImageBanner
+                src="/portfolio/klbp/research.png"
+                alt="Competitor analysis and feature prioritization"
+                width={1440}
+                height={2490}
+                caption="Research — competitor teardown &amp; feature prioritization"
+              />
+              <ImageBanner
+                src="/portfolio/klbp/define.png"
+                alt="Empathy map and personas"
+                width={1440}
+                height={2697}
+                caption="Define — empathy map &amp; user personas"
+              />
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* MODULES */}
+      <section className="bg-port-cream">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={SOFT_BLUE}><SectionDeco variant="flow" /></div>
@@ -189,6 +245,41 @@ export default function KLBPCaseStudy() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* DESIGN SYSTEM + MOCKUPS */}
+      <section className="bg-port-cream-light">
+        <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
+          <Reveal>
+            <div className={SOFT_BLUE}><SectionDeco variant="layers" /></div>
+            <Eyebrow>Design system &amp; mockups</Eyebrow>
+            <h2 className="font-serif mt-4 max-w-4xl text-4xl leading-[1.1] tracking-tight md:text-6xl">
+              Shared tokens, one component library, six-module consistency.
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <div className="mt-14">
+              <ImageBanner
+                src="/portfolio/klbp/design-system.png"
+                alt="Design system — typography, colors, and components"
+                width={1440}
+                height={964}
+                caption="Design system — typography ramp, color tokens, component set"
+              />
+            </div>
+          </Reveal>
+          <Reveal delay={0.2}>
+            <div className="mt-16">
+              <ImageBanner
+                src="/portfolio/klbp/mockups.png"
+                alt="High-fidelity mockups across the six modules"
+                width={1408}
+                height={1986}
+                caption="High-fidelity mockups — a slice across the six modules"
+              />
+            </div>
+          </Reveal>
         </div>
       </section>
 

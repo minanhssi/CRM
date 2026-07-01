@@ -19,6 +19,14 @@ export function Highlight({
   variant?: Variant;
 }) {
   return (
-    <span className={`rounded-md px-1.5 py-0.5 ${VARIANTS[variant]}`}>{children}</span>
+    <span
+      className={`rounded px-[3px] py-[1px] ${VARIANTS[variant]}`}
+      style={{
+        boxDecorationBreak: "clone",
+        WebkitBoxDecorationBreak: "clone",
+      }}
+    >
+      {children}
+    </span>
   );
 }

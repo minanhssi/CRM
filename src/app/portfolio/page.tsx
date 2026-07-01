@@ -6,6 +6,7 @@ import { Eyebrow } from "./_components/Eyebrow";
 import { Reveal } from "./_components/Reveal";
 import { SapCallout } from "./_components/SapCallout";
 import { Highlight } from "./_components/Highlight";
+import { DecoShapes } from "./_components/DecoShapes";
 
 const PROJECTS = [
   {
@@ -97,28 +98,31 @@ export default function PortfolioOverview() {
       <Header />
 
       {/* HERO */}
-      <section className="bg-port-blue text-[#F5F0E3]">
-        <div className="mx-auto max-w-[1320px] px-6 pb-28 pt-20 md:px-12 md:pb-44 md:pt-32">
+      <section className="relative overflow-hidden bg-port-cream text-port-ink">
+        <DecoShapes variant="hero" />
+        <div className="relative mx-auto max-w-[1320px] px-6 pb-28 pt-20 md:px-12 md:pb-44 md:pt-32">
           <Reveal direction="up">
-            <Eyebrow color="yellow">01 — Intro</Eyebrow>
+            <Eyebrow>01 — Intro</Eyebrow>
           </Reveal>
           <Reveal direction="up" delay={0.1}>
             <h1 className="font-serif mt-8 text-[64px] leading-[0.92] tracking-tight md:text-[160px]">
-              Duong Ngoc<br />Minh Anh<span className="text-port-yellow">.</span>
+              Duong Ngoc<br />Minh Anh<span className="text-port-blue">.</span>
             </h1>
           </Reveal>
           <Reveal direction="up" delay={0.2}>
-            <p className="mt-10 max-w-3xl text-xl leading-[1.6] text-[#F5F0E3]/85 md:text-2xl">
-              UX Designer — 3+ years building enterprise &amp; B2B workflows for fintech, payment, and CRM products.
+            <p className="mt-10 max-w-3xl text-xl leading-[1.6] text-port-body md:text-2xl">
+              UX Designer — 3+ years building{" "}
+              <span className="bg-port-yellow/50 px-1.5 font-semibold text-port-ink">enterprise &amp; B2B workflows</span>{" "}
+              for fintech, payment, and CRM products.
             </p>
           </Reveal>
           <Reveal direction="up" delay={0.3}>
             <div className="mt-14 flex flex-wrap items-center gap-x-8 gap-y-3 text-[15px]">
-              <a className="hover:text-port-yellow transition-colors" href="mailto:minhanhdn9601@gmail.com">
+              <a className="font-medium text-port-blue underline decoration-port-blue/30 decoration-2 underline-offset-4 transition-colors hover:decoration-port-blue" href="mailto:minhanhdn9601@gmail.com">
                 minhanhdn9601@gmail.com
               </a>
-              <span className="text-[#F5F0E3]/40">·</span>
-              <a className="hover:text-port-yellow transition-colors" href="https://www.linkedin.com/in/duongngocminhanh/" target="_blank" rel="noreferrer">
+              <span className="text-port-muted">·</span>
+              <a className="font-medium text-port-blue underline decoration-port-blue/30 decoration-2 underline-offset-4 transition-colors hover:decoration-port-blue" href="https://www.linkedin.com/in/duongngocminhanh/" target="_blank" rel="noreferrer">
                 linkedin.com/in/duongngocminhanh
               </a>
             </div>
@@ -217,16 +221,20 @@ export default function PortfolioOverview() {
       </section>
 
       {/* SKILLS */}
-      <section id="skills" className="bg-port-blue text-[#F5F0E3]">
-        <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
+      <section id="skills" className="relative overflow-hidden bg-port-cream text-port-ink">
+        <DecoShapes variant="skills" parallax={false} />
+        <div className="relative mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
-            <Eyebrow color="yellow">03 — Approach</Eyebrow>
-            <h2 className="font-serif mt-4 text-5xl leading-tight tracking-tight md:text-7xl">Skills &amp; approach</h2>
+            <Eyebrow>03 — Approach</Eyebrow>
+            <h2 className="font-serif mt-4 text-5xl leading-tight tracking-tight md:text-7xl">
+              Skills &amp; <span className="text-port-blue">approach</span>
+              <span className="text-port-yellow">.</span>
+            </h2>
           </Reveal>
           <div className="mt-16 grid gap-6 md:grid-cols-3">
             {SKILL_COLS.map((col, i) => (
               <Reveal key={col.label} delay={i * 0.1}>
-                <div className="h-full rounded-2xl bg-port-cream p-9 text-port-ink">
+                <div className="h-full rounded-2xl border border-port-border bg-white/80 p-9 text-port-ink backdrop-blur">
                   <p className="text-[11px] font-semibold tracking-[2px] text-port-blue">{col.label}</p>
                   <h3 className="mt-3 text-xl font-semibold leading-tight md:text-2xl">{col.title}</h3>
                   <ul className="mt-7 space-y-3 text-[15px] leading-[1.55] text-port-body">

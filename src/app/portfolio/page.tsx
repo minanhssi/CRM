@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Header } from "./_components/Header";
 import { Footer } from "./_components/Footer";
 import { Eyebrow } from "./_components/Eyebrow";
-import { Marquee } from "./_components/Marquee";
 import { Reveal } from "./_components/Reveal";
 import { SapCallout } from "./_components/SapCallout";
 import { Highlight } from "./_components/Highlight";
@@ -99,10 +98,6 @@ export default function PortfolioOverview() {
 
       {/* HERO */}
       <section className="bg-port-blue text-[#F5F0E3]">
-        <div className="mx-auto max-w-[1320px] px-6 pt-10 md:px-12 md:pt-12">
-          <Marquee />
-          <div className="mt-2 h-px w-full bg-[#F5F0E3]/15" />
-        </div>
         <div className="mx-auto max-w-[1320px] px-6 pb-28 pt-20 md:px-12 md:pb-44 md:pt-32">
           <Reveal direction="up">
             <Eyebrow color="yellow">01 — Intro</Eyebrow>

@@ -13,6 +13,7 @@ export function Footer() {
           </div>
           <div className="rounded-2xl border border-[#F5F0E3]/15 bg-port-blue-dark p-8 md:p-9">
             <Field label="EMAIL" value="minhanhdn9601@gmail.com" href="mailto:minhanhdn9601@gmail.com" />
+            <Field label="PHONE" value="+84 33 276 8796" href="tel:+84332768796" />
             <Field label="LINKEDIN" value="linkedin.com/in/duongngocminhanh" href="https://www.linkedin.com/in/duongngocminhanh/" />
             <Field label="BEHANCE" value="behance.net/minanhssi" href="https://www.behance.net/minanhssi" />
             <Field label="BASED IN" value="Ho Chi Minh City, VN" />

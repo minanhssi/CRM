@@ -89,6 +89,12 @@ export default function IntegrationCaseStudy() {
           { label: "PATTERNS", value: "Guided wizard, trust UX" },
           { label: "OUTPUT", value: "Flows, UI, design specs" },
         ]}
+        cover={{
+          src: "/portfolio/integration/hero.png",
+          width: 1920,
+          height: 762,
+          alt: "Integration — CRM × Automation hero banner",
+        }}
       />
 
       {/* ABOUT + META */}

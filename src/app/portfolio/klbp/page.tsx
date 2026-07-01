@@ -73,20 +73,13 @@ export default function KLBPCaseStudy() {
           { label: "METHOD", value: "Research + personas + tests" },
           { label: "OUTPUT", value: "25+ specs · design system" },
         ]}
+        cover={{
+          src: "/portfolio/klbp/hero.png",
+          width: 1440,
+          height: 1096,
+          alt: "KienlongBank Pay — payment gateway back-office hero banner",
+        }}
       />
-
-      {/* COVER SNAPSHOT */}
-      <section className="bg-port-cream">
-        <div className="mx-auto max-w-[1320px] px-6 pt-16 md:px-12 md:pt-24">
-          <ImageBanner
-            src="/portfolio/klbp/hero.png"
-            alt="KienlongBank Pay — case study cover"
-            width={1440}
-            height={1096}
-            caption="Case study cover — KienlongBank Pay back-office"
-          />
-        </div>
-      </section>
 
       {/* ABOUT + META */}
       <section id="overview" className="bg-port-cream">

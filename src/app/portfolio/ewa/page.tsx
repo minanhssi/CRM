@@ -94,20 +94,13 @@ export default function EWACaseStudy() {
           { label: "METHOD", value: "3 rounds of usability tests" },
           { label: "OUTCOME", value: "Flow 6 → 3 perceived steps" },
         ]}
+        cover={{
+          src: "/portfolio/ewa/hero.png",
+          width: 2064,
+          height: 1440,
+          alt: "Earned Wage Access — 24/7 payroll product hero banner",
+        }}
       />
-
-      {/* COVER SNAPSHOT */}
-      <section className="bg-port-cream">
-        <div className="mx-auto max-w-[1320px] px-6 pt-16 md:px-12 md:pt-24">
-          <ImageBanner
-            src="/portfolio/ewa/hero.png"
-            alt="Earned Wage Access — case study cover"
-            width={2064}
-            height={1440}
-            caption="Case study cover — Earned Wage Access"
-          />
-        </div>
-      </section>
 
       {/* ABOUT */}
       <section id="overview" className="bg-port-cream">

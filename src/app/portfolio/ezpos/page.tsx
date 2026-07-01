@@ -68,20 +68,13 @@ export default function EzPOSCaseStudy() {
           { label: "PROCESS", value: "7-step full UX cycle" },
           { label: "OUTPUT", value: "30+ screens · design system" },
         ]}
+        cover={{
+          src: "/portfolio/ezpos/hero.png",
+          width: 1440,
+          height: 1062,
+          alt: "EzPOS — Card & QR-Code payments hero banner",
+        }}
       />
-
-      {/* COVER SNAPSHOT */}
-      <section className="bg-port-cream">
-        <div className="mx-auto max-w-[1320px] px-6 pt-16 md:px-12 md:pt-24">
-          <ImageBanner
-            src="/portfolio/ezpos/hero.png"
-            alt="EzPOS — case study cover"
-            width={1440}
-            height={1062}
-            caption="Case study cover — EzPOS mobile POS"
-          />
-        </div>
-      </section>
 
       {/* ABOUT */}
       <section id="overview" className="bg-port-cream">

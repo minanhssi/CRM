@@ -165,17 +165,24 @@ export default function PortfolioOverview() {
 
       {/* SELECTED WORK */}
       <section id="work" className="bg-port-cream-light">
-        <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
+        <div className="mx-auto max-w-[1320px] px-6 py-20 md:px-12 md:py-24">
           <Reveal>
-            <Eyebrow>02 — Case studies</Eyebrow>
-            <h2 className="font-serif mt-4 text-5xl tracking-tight md:text-7xl">Selected work</h2>
+            <div className="flex flex-wrap items-end justify-between gap-4">
+              <div>
+                <Eyebrow>02 — Case studies</Eyebrow>
+                <h2 className="font-serif mt-3 text-5xl tracking-tight md:text-6xl">Selected work</h2>
+              </div>
+              <p className="max-w-md text-[15px] leading-[1.55] text-port-muted">
+                Four enterprise / B2B case studies — click any card to open the full write-up.
+              </p>
+            </div>
           </Reveal>
-          <div className="mt-16 grid gap-8 md:grid-cols-2">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
             {PROJECTS.map((p, i) => (
-              <Reveal key={p.slug} delay={i * 0.08}>
+              <Reveal key={p.slug} delay={i * 0.06}>
                 <Link
                   href={`/portfolio/${p.slug}`}
-                  className="group block h-full overflow-hidden rounded-2xl border border-port-border bg-port-cream transition-all duration-500 hover:-translate-y-1 hover:border-port-ink hover:shadow-[0_28px_70px_-12px_rgba(21,21,21,0.22)]"
+                  className="group flex h-full flex-col overflow-hidden rounded-2xl border border-port-border bg-port-cream transition-all duration-500 hover:-translate-y-1 hover:border-port-ink hover:shadow-[0_28px_60px_-16px_rgba(21,21,21,0.22)]"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden bg-port-cream-light">
                     <Image
@@ -183,23 +190,18 @@ export default function PortfolioOverview() {
                       alt={`${p.title} — hero banner`}
                       width={p.thumbW}
                       height={p.thumbH}
-                      sizes="(min-width: 1024px) 640px, 100vw"
-                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]"
+                      sizes="(min-width: 1280px) 300px, (min-width: 640px) 45vw, 90vw"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.05]"
                     />
-                    <div className="absolute right-4 top-4">
-                      <span className={`rounded-full px-3 py-1.5 text-[10px] font-semibold tracking-[1.5px] shadow-sm ${p.badgeColor}`}>{p.badge}</span>
+                    <div className="absolute right-3 top-3">
+                      <span className={`rounded-full px-2.5 py-1 text-[9px] font-semibold tracking-[1.4px] shadow-sm ${p.badgeColor}`}>{p.badge}</span>
                     </div>
                   </div>
-                  <div className="p-9">
-                    <p className="text-[13px] font-medium tracking-[2px] text-port-muted">{p.n}</p>
-                    <h3 className="font-semibold mt-3 text-3xl tracking-tight text-port-ink md:text-4xl">{p.title}</h3>
-                    <p className="mt-4 text-[15px] leading-[1.55] text-port-body">{p.summary}</p>
-                    <div className="mt-7 flex flex-wrap gap-2">
-                      {p.tags.map(t => (
-                        <span key={t} className="rounded-full bg-white/70 px-3 py-1.5 text-xs font-medium text-port-ink">{t}</span>
-                      ))}
-                    </div>
-                    <div className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-port-ink transition-transform group-hover:translate-x-1">
+                  <div className="flex flex-1 flex-col p-5">
+                    <p className="text-[11px] font-medium tracking-[1.8px] text-port-muted">{p.n}</p>
+                    <h3 className="font-semibold mt-1.5 text-xl leading-tight tracking-tight text-port-ink">{p.title}</h3>
+                    <p className="mt-2.5 line-clamp-2 text-[13px] leading-[1.5] text-port-body">{p.summary}</p>
+                    <div className="mt-auto pt-4 inline-flex items-center gap-1.5 text-[12px] font-semibold tracking-[0.5px] text-port-ink transition-transform group-hover:translate-x-1">
                       View case study
                       <span aria-hidden>→</span>
                     </div>

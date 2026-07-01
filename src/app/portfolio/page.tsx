@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Header } from "./_components/Header";
 import { Footer } from "./_components/Footer";
 import { Eyebrow } from "./_components/Eyebrow";
@@ -15,6 +16,8 @@ const PROJECTS = [
     summary:
       "Multi-module back-office for a payment gateway: partner approval, employee management, transaction tracking, and configurable cash-flow workflows.",
     tags: ["Enterprise CMS", "Workflow design", "Design system", "Multi-role", "Banking"],
+    thumb: "/portfolio/klbp/hero.png",
+    thumbW: 1440, thumbH: 1096,
   },
   {
     n: "02",
@@ -25,6 +28,8 @@ const PROJECTS = [
     summary:
       "End-to-end design across 3 platforms — worker web, company admin portal, and worker mobile app — letting employees draw earned wages 24/7.",
     tags: ["Admin portal", "Mobile app", "Responsive", "User testing", "Payroll"],
+    thumb: "/portfolio/ewa/hero.png",
+    thumbW: 2064, thumbH: 1440,
   },
   {
     n: "03",
@@ -35,6 +40,8 @@ const PROJECTS = [
     summary:
       "Mobile POS app for merchants — quick card & QR payments, transaction history, and simplified daily reconciliation.",
     tags: ["Mobile", "POS", "Payment", "Merchant tools", "Full UX process"],
+    thumb: "/portfolio/ezpos/hero.png",
+    thumbW: 1440, thumbH: 1062,
   },
   {
     n: "04",
@@ -45,6 +52,8 @@ const PROJECTS = [
     summary:
       "Guided integration flow letting CRM admins connect FB Messenger, Zalo OA, Instagram, WhatsApp, Shopify, and public APIs — for data sync, auto-messaging, and lead capture.",
     tags: ["Guided interaction", "Multi-platform", "Automation UX", "CRM"],
+    thumb: "/portfolio/integration/hero.png",
+    thumbW: 1920, thumbH: 762,
   },
 ];
 
@@ -166,22 +175,34 @@ export default function PortfolioOverview() {
               <Reveal key={p.slug} delay={i * 0.08}>
                 <Link
                   href={`/portfolio/${p.slug}`}
-                  className="group block h-full rounded-2xl border border-port-border bg-port-cream p-9 transition-all duration-500 hover:-translate-y-1 hover:border-port-ink hover:shadow-[0_24px_60px_-12px_rgba(21,21,21,0.18)]"
+                  className="group block h-full overflow-hidden rounded-2xl border border-port-border bg-port-cream transition-all duration-500 hover:-translate-y-1 hover:border-port-ink hover:shadow-[0_28px_70px_-12px_rgba(21,21,21,0.22)]"
                 >
-                  <div className="flex items-center justify-between">
-                    <span className="text-[13px] font-medium tracking-[2px] text-port-muted">{p.n}</span>
-                    <span className={`rounded-full px-3 py-1.5 text-[11px] font-semibold tracking-[1.5px] ${p.badgeColor}`}>{p.badge}</span>
+                  <div className="relative aspect-[4/3] overflow-hidden bg-port-cream-light">
+                    <Image
+                      src={p.thumb}
+                      alt={`${p.title} — hero banner`}
+                      width={p.thumbW}
+                      height={p.thumbH}
+                      sizes="(min-width: 1024px) 640px, 100vw"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]"
+                    />
+                    <div className="absolute right-4 top-4">
+                      <span className={`rounded-full px-3 py-1.5 text-[10px] font-semibold tracking-[1.5px] shadow-sm ${p.badgeColor}`}>{p.badge}</span>
+                    </div>
                   </div>
-                  <h3 className="font-semibold mt-6 text-3xl tracking-tight text-port-ink md:text-4xl">{p.title}</h3>
-                  <p className="mt-4 text-[15px] leading-[1.55] text-port-body">{p.summary}</p>
-                  <div className="mt-7 flex flex-wrap gap-2">
-                    {p.tags.map(t => (
-                      <span key={t} className="rounded-full bg-white/70 px-3 py-1.5 text-xs font-medium text-port-ink">{t}</span>
-                    ))}
-                  </div>
-                  <div className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-port-ink transition-transform group-hover:translate-x-1">
-                    View case study
-                    <span aria-hidden>→</span>
+                  <div className="p-9">
+                    <p className="text-[13px] font-medium tracking-[2px] text-port-muted">{p.n}</p>
+                    <h3 className="font-semibold mt-3 text-3xl tracking-tight text-port-ink md:text-4xl">{p.title}</h3>
+                    <p className="mt-4 text-[15px] leading-[1.55] text-port-body">{p.summary}</p>
+                    <div className="mt-7 flex flex-wrap gap-2">
+                      {p.tags.map(t => (
+                        <span key={t} className="rounded-full bg-white/70 px-3 py-1.5 text-xs font-medium text-port-ink">{t}</span>
+                      ))}
+                    </div>
+                    <div className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-port-ink transition-transform group-hover:translate-x-1">
+                      View case study
+                      <span aria-hidden>→</span>
+                    </div>
                   </div>
                 </Link>
               </Reveal>

@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Mail, ArrowUpRight } from "lucide-react";
 
 const NAV_ITEMS = [
   { href: "/portfolio#work", label: "Work" },
@@ -12,18 +13,22 @@ const NAV_ITEMS = [
 
 export function Header() {
   const { scrollY } = useScroll();
-  const bg = useTransform(scrollY, [0, 80], ["rgba(45,57,207,0)", "rgba(45,57,207,0.92)"]);
-  const blur = useTransform(scrollY, [0, 80], [0, 12]);
+  // Always visible solid background so header text stays readable on any section
+  const bg = useTransform(scrollY, [0, 80], ["rgba(24, 31, 138, 0.96)", "rgba(45, 57, 207, 0.98)"]);
+  const blur = useTransform(scrollY, [0, 80], [8, 14]);
   const backdropFilter = useTransform(blur, (v) => `blur(${v}px)`);
 
   return (
     <motion.header
       style={{ backgroundColor: bg, backdropFilter, WebkitBackdropFilter: backdropFilter as never }}
-      className="sticky top-0 z-50 transition-colors"
+      className="sticky top-0 z-50 border-b border-white/10 shadow-[0_2px_12px_-6px_rgba(0,0,0,0.35)]"
     >
-      <div className="mx-auto flex max-w-[1320px] items-center justify-between px-6 py-4 text-[13px] font-medium tracking-[2px] text-[#F5F0E3] md:px-12">
-        <Link href="/portfolio" className="font-serif text-xl transition-colors hover:text-port-yellow">
+      <div className="mx-auto flex max-w-[1320px] items-center justify-between px-6 py-3.5 text-[13px] font-medium tracking-[2px] text-white md:px-12">
+        <Link href="/portfolio" className="group flex items-center gap-2 font-serif text-xl transition-colors hover:text-port-yellow">
           DNM<span className="text-port-yellow">.</span>
+          <span className="hidden text-[10px] font-medium tracking-[1.6px] text-white/50 group-hover:text-white/80 md:inline">
+            UX DESIGNER · B2B / ENTERPRISE
+          </span>
         </Link>
         <nav className="hidden gap-8 md:flex">
           {NAV_ITEMS.map(item => (
@@ -38,10 +43,13 @@ export function Header() {
           ))}
         </nav>
         <a
-          href="mailto:minhanhdn9601@gmail.com"
-          className="group relative overflow-hidden rounded-full border border-[#F5F0E3]/40 px-4 py-2 text-[12px] transition-colors hover:bg-port-yellow hover:text-port-blue hover:border-port-yellow"
+          href="mailto:minhanhdn9601@gmail.com?subject=SAP%20UX%20Design%20Specialist%20role"
+          className="group inline-flex items-center gap-2 rounded-full bg-port-yellow px-4 py-2.5 text-[12px] font-semibold tracking-[1px] text-port-blue-dark transition-all duration-300 hover:gap-3 hover:bg-white"
+          aria-label="Email Duong Ngoc Minh Anh"
         >
-          <span className="relative">Get in touch</span>
+          <Mail className="h-3.5 w-3.5" />
+          <span>Email me</span>
+          <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
         </a>
       </div>
     </motion.header>

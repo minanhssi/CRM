@@ -28,6 +28,8 @@ export function MockFrame({
         alt={alt}
         width={width}
         height={height}
+        quality={92}
+        sizes="(min-width: 1200px) 800px, 100vw"
         className="block w-full h-auto"
         priority={false}
       />

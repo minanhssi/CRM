@@ -14,6 +14,8 @@ import { ImageBanner } from "../_components/ImageBanner";
 import { ScrollProgress } from "../_components/ScrollProgress";
 import { TocSidebar } from "../_components/TocSidebar";
 import { CaseNav } from "../_components/CaseNav";
+import { Highlight } from "../_components/Highlight";
+import { PullQuote } from "../_components/PullQuote";
 
 export const metadata = {
   title: "Earned Wage Access — 3-platform payroll product | Duong Ngoc Minh Anh",
@@ -117,13 +119,16 @@ export default function EWACaseStudy() {
           </Reveal>
           <div className="mt-14 grid gap-16 md:grid-cols-[1fr_400px] md:gap-20">
             <Reveal delay={0.1}>
-              <p className="text-xl leading-[1.65] text-port-body md:text-[22px]">
-                An on-demand pay solution by KienlongBank — letting workers withdraw a portion of their already-earned wages anytime, 24/7, without waiting for the regular payday.
+              <p className="text-xl leading-[1.75] text-port-body md:text-[22px]">
+                An <Highlight variant="blue">on-demand pay solution</Highlight> by KienlongBank — letting workers withdraw a portion of their already-earned wages{" "}
+                <Highlight variant="strong">anytime, 24/7</Highlight>, without waiting for the regular payday.
               </p>
-              <p className="mt-6 text-lg leading-[1.65] text-port-muted">
-                The product spans three connected platforms — a worker mobile app for self-service requests, a company admin portal for HR configuration and approval, and a worker web view to track history and remaining balance. Together they replace ad-hoc payday loans with a controlled, auditable B2B2C workflow.
+              <p className="mt-6 text-lg leading-[1.7] text-port-muted">
+                The product spans{" "}
+                <Highlight variant="blue">three connected platforms</Highlight> — a worker mobile app for self-service requests, a company admin portal for HR configuration and approval, and a worker web view to track history and remaining balance. Together they replace ad-hoc payday loans with a{" "}
+                <Highlight>controlled, auditable B2B2C workflow</Highlight>.
               </p>
-              <p className="mt-4 text-lg leading-[1.65] text-port-muted">
+              <p className="mt-4 text-lg leading-[1.7] text-port-muted">
                 I owned UX end-to-end for all three platforms: research, information architecture, user flows, wireframes, prototypes, high-fidelity UI, and dev handoff.
               </p>
             </Reveal>
@@ -246,6 +251,17 @@ export default function EWACaseStudy() {
               />
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* PULL QUOTE */}
+      <section className="bg-port-cream">
+        <div className="mx-auto max-w-[1320px] px-6 pb-8 md:px-12 md:pb-16">
+          <PullQuote accent="#4F5BD5" attribution="Design principle for B2B2C surfaces">
+            Design the{" "}
+            <span className="text-[#4F5BD5]">data model</span> before the UI — three roles seeing one shared record is the{" "}
+            <span className="underline decoration-[#4F5BD5] decoration-4 underline-offset-8">honest broker</span>.
+          </PullQuote>
         </div>
       </section>
 

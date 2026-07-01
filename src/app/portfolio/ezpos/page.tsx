@@ -15,6 +15,8 @@ import { ImageBanner } from "../_components/ImageBanner";
 import { ScrollProgress } from "../_components/ScrollProgress";
 import { TocSidebar } from "../_components/TocSidebar";
 import { CaseNav } from "../_components/CaseNav";
+import { Highlight } from "../_components/Highlight";
+import { PullQuote } from "../_components/PullQuote";
 
 export const metadata = {
   title: "EzPOS — Mobile POS for merchants | Duong Ngoc Minh Anh",
@@ -91,13 +93,15 @@ export default function EzPOSCaseStudy() {
           </Reveal>
           <div className="mt-14 grid gap-16 md:grid-cols-[1fr_400px] md:gap-20">
             <Reveal delay={0.1}>
-              <p className="text-xl leading-[1.65] text-port-body md:text-[22px]">
-                EzPOS is a B2B mobile payment app for retail merchants. The job is small but high-frequency: take a payment, see today&apos;s transactions, close the day. The challenge was building a clean checkout flow that works one-handed at the counter, plus reconciliation tools that respect a busy merchant&apos;s time.
+              <p className="text-xl leading-[1.75] text-port-body md:text-[22px]">
+                EzPOS is a <Highlight variant="green">B2B mobile payment app</Highlight> for retail merchants. The job is small but high-frequency: take a payment, see today&apos;s transactions, close the day. The challenge was building a{" "}
+                <Highlight variant="strong">one-handed checkout flow</Highlight> that works at the counter, plus reconciliation tools that respect a busy merchant&apos;s time.
               </p>
-              <p className="mt-6 text-lg leading-[1.65] text-port-muted">
-                I led the full UX process — competitor analysis (Square, Stripe Terminal, SumUp), moodboard, user flow, wireframing, prototyping, design system, and high-fidelity UI. Output was a 30+ screen mobile app with a tight, on-brand visual language.
+              <p className="mt-6 text-lg leading-[1.7] text-port-muted">
+                I led the <Highlight variant="green">full UX process</Highlight> — competitor analysis (Square, Stripe Terminal, SumUp), moodboard, user flow, wireframing, prototyping, design system, and high-fidelity UI. Output was a{" "}
+                <Highlight>30+ screen mobile app</Highlight> with a tight, on-brand visual language.
               </p>
-              <p className="mt-4 text-lg leading-[1.65] text-port-muted">
+              <p className="mt-4 text-lg leading-[1.7] text-port-muted">
                 The visual identity leans dark with green accent — chosen after moodboarding for legibility outdoors at market stalls and small-shop storefronts.
               </p>
             </Reveal>
@@ -197,6 +201,17 @@ export default function EzPOSCaseStudy() {
               />
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* PULL QUOTE */}
+      <section className="bg-port-cream">
+        <div className="mx-auto max-w-[1320px] px-6 pb-8 md:px-12 md:pb-16">
+          <PullQuote accent="#109C84" attribution="Constraint that shaped every screen">
+            Merchants have{" "}
+            <span className="text-[#109C84]">one hand for the phone</span> and one for the product. Primary actions belong in the{" "}
+            <span className="underline decoration-[#109C84] decoration-4 underline-offset-8">bottom third</span> of every screen.
+          </PullQuote>
         </div>
       </section>
 

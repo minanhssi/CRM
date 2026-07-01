@@ -31,6 +31,7 @@ export function ImageBanner({
           alt={alt}
           width={width}
           height={height}
+          quality={92}
           className="block w-full h-auto"
           sizes="(min-width: 1200px) 1200px, 100vw"
         />

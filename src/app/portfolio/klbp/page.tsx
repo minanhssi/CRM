@@ -16,6 +16,8 @@ import { ImageBanner } from "../_components/ImageBanner";
 import { ScrollProgress } from "../_components/ScrollProgress";
 import { TocSidebar } from "../_components/TocSidebar";
 import { CaseNav } from "../_components/CaseNav";
+import { Highlight } from "../_components/Highlight";
+import { PullQuote } from "../_components/PullQuote";
 
 export const metadata = {
   title: "KienlongBank Pay — Payment gateway back-office | Duong Ngoc Minh Anh",
@@ -96,14 +98,18 @@ export default function KLBPCaseStudy() {
           </Reveal>
           <div className="mt-14 grid gap-16 md:grid-cols-[1fr_400px] md:gap-20">
             <Reveal delay={0.1}>
-              <p className="text-xl leading-[1.65] text-port-body md:text-[22px]">
-                KienlongBank Pay is an integrated payment-gateway product. The back-office side is where the bank&apos;s partner businesses, employees, and transaction operators do their work — approving merchants, configuring fee tiers, tracking transactions, and reconciling cash flow across multiple parties.
+              <p className="text-xl leading-[1.75] text-port-body md:text-[22px]">
+                KienlongBank Pay is an{" "}
+                <Highlight variant="blue">integrated payment-gateway product</Highlight>. The back-office side is where the bank&apos;s partner businesses, employees, and transaction operators do their work — approving merchants, configuring fee tiers, tracking transactions, and reconciling cash flow across multiple parties.
               </p>
-              <p className="mt-6 text-lg leading-[1.65] text-port-muted">
-                I led the UX for the entire back-office system across six core modules — partner management, employee management, fee configuration, transaction operations, cash-flow oversight, and PayPOS integration. Each module ships to a different internal role, but they share one workflow engine.
+              <p className="mt-6 text-lg leading-[1.7] text-port-muted">
+                I led the UX for the entire back-office system across{" "}
+                <Highlight variant="strong">six core modules</Highlight> — partner management, employee management, fee configuration, transaction operations, cash-flow oversight, and PayPOS integration. Each module ships to a{" "}
+                <Highlight variant="blue">different internal role</Highlight>, but they share <em>one workflow engine</em>.
               </p>
-              <p className="mt-4 text-lg leading-[1.65] text-port-muted">
-                The flagship challenge was making a multi-role, multi-step approval workflow feel coherent rather than bureaucratic — with an audit trail thorough enough for banking compliance, but a UX simple enough that non-technical partner-facing staff don&apos;t need training to use it.
+              <p className="mt-4 text-lg leading-[1.7] text-port-muted">
+                The flagship challenge was making a{" "}
+                <Highlight>multi-role, multi-step approval workflow</Highlight> feel coherent rather than bureaucratic — with an audit trail thorough enough for banking compliance, but a UX simple enough that non-technical partner-facing staff don&apos;t need training to use it.
               </p>
             </Reveal>
             <Reveal delay={0.2}>
@@ -206,6 +212,17 @@ export default function KLBPCaseStudy() {
                 "Usability testing with internal partners refining approval flow copy",
               ]} /></Reveal>
           </div>
+        </div>
+      </section>
+
+      {/* PULL QUOTE — anchor thesis */}
+      <section className="bg-port-cream">
+        <div className="mx-auto max-w-[1320px] px-6 pb-8 md:px-12 md:pb-16">
+          <PullQuote accent="#2D39CF" attribution="Design thesis for six-module coherence">
+            One{" "}
+            <span className="text-port-blue">shared record</span>, six module views —{" "}
+            <span className="underline decoration-port-blue decoration-4 underline-offset-8">operators trust the system</span> because they can trace every action back to its origin.
+          </PullQuote>
         </div>
       </section>
 

@@ -197,7 +197,8 @@ export default function PortfolioOverview() {
                       alt={`${p.title} — hero banner`}
                       width={p.thumbW}
                       height={p.thumbH}
-                      sizes="(min-width: 1280px) 300px, (min-width: 640px) 45vw, 90vw"
+                      quality={92}
+                      sizes="(min-width: 1280px) 320px, (min-width: 640px) 45vw, 90vw"
                       className="absolute inset-0 h-full w-full object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.05]"
                     />
                     <div className="absolute right-3 top-3">

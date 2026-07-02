@@ -31,7 +31,8 @@ const PROJECTS = [
       "End-to-end design across 3 platforms — worker web, company admin portal, and worker mobile app — letting employees draw earned wages 24/7.",
     tags: ["Admin portal", "Mobile app", "Responsive", "User testing", "Payroll"],
     thumb: "/portfolio/Thumbnail-EWA.svg",
-    thumbW: 981, thumbH: 669,
+    thumbW: 1584, thumbH: 954,
+    thumbFit: "contain" as const,
   },
   {
     n: "03",
@@ -232,7 +233,7 @@ export default function PortfolioOverview() {
                         height={p.thumbH}
                         quality={92}
                         sizes="(min-width: 1280px) 320px, (min-width: 640px) 45vw, 90vw"
-                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.05]"
+                        className={`absolute inset-0 h-full w-full ${p.thumbFit === "contain" ? "object-contain" : "object-cover"} transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.05]`}
                       />
                     </div>
                     <div className="absolute right-3 top-3">

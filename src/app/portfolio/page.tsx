@@ -144,11 +144,11 @@ export default function PortfolioOverview() {
 
             {/* RIGHT — avatar illustration (full composition) */}
             <Reveal direction="up" delay={0.15}>
-              <div className="relative mx-auto w-full max-w-[560px]">
+              <div className="relative w-full">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="/portfolio/hero-avatar.svg"
-                  alt="Duong Ngoc Minh Anh — avatar illustration"
+                  alt="Duong Ngoc Minh Anh — avatar with product mockups"
                   className="block h-auto w-full"
                 />
               </div>

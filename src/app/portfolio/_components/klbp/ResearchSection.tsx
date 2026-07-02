@@ -58,7 +58,7 @@ export function ResearchSection() {
               <img
                 src={c.logo}
                 alt={`${c.name} logo`}
-                className="max-h-12 max-w-[110px] object-contain"
+                className="max-h-12 max-w-[110px] object-contain mix-blend-multiply"
               />
             </div>
             <div>

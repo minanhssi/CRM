@@ -24,48 +24,60 @@ export function DecoShapes({
   if (variant === "hero") {
     return (
       <div ref={ref} className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
-        {/* Large blue blob top-right */}
-        <motion.svg
-          style={{ y: yA, rotate }}
-          viewBox="0 0 600 600"
-          className="absolute -right-40 -top-40 h-[720px] w-[720px] text-port-blue"
-        >
-          <path
-            fill="currentColor"
-            fillOpacity="0.9"
-            d="M300 60c65 0 130 20 175 68s70 116 60 180-60 118-115 160-118 62-180 46-118-70-152-125-52-118-40-180 60-118 120-140 88-9 132-9z"
-          />
-        </motion.svg>
-
-        {/* Yellow blob bottom-left */}
-        <motion.svg
-          style={{ y: yB }}
-          viewBox="0 0 400 400"
-          className="absolute -bottom-20 -left-20 h-[380px] w-[380px] text-port-yellow"
-        >
-          <path
-            fill="currentColor"
-            d="M200 40c50 0 96 20 130 55s50 84 40 130-50 86-90 108-90 26-130 6-70-70-84-120-6-104 30-140 60-39 104-39z"
-          />
-        </motion.svg>
-
-        {/* Yellow dots pattern top-left */}
-        <svg className="absolute left-12 top-24 h-32 w-32 text-port-blue/25" viewBox="0 0 120 120">
-          {Array.from({ length: 7 }).map((_, r) =>
-            Array.from({ length: 7 }).map((_, c) => (
-              <circle key={`${r}-${c}`} cx={10 + c * 16} cy={10 + r * 16} r="2" fill="currentColor" />
-            ))
-          )}
-        </svg>
-
-        {/* Blue thin arc middle-right */}
+        {/* Concentric outline rings — far right, subtle */}
         <svg
-          className="absolute right-10 top-1/2 h-64 w-64 -translate-y-1/2 text-port-blue/40"
-          viewBox="0 0 200 200"
+          className="absolute -right-[520px] top-1/2 h-[1400px] w-[1400px] -translate-y-1/2 text-port-blue/25"
+          viewBox="0 0 800 800"
           fill="none"
         >
-          <circle cx="100" cy="100" r="95" stroke="currentColor" strokeWidth="0.6" />
-          <circle cx="100" cy="100" r="70" stroke="currentColor" strokeWidth="0.6" strokeDasharray="2 4" />
+          <circle cx="400" cy="400" r="380" stroke="currentColor" strokeWidth="1" />
+          <circle cx="400" cy="400" r="330" stroke="currentColor" strokeWidth="1" strokeDasharray="3 6" />
+          <circle cx="400" cy="400" r="270" stroke="currentColor" strokeWidth="1" />
+          <circle cx="400" cy="400" r="210" stroke="currentColor" strokeWidth="1" strokeDasharray="2 5" />
+        </svg>
+
+        {/* LARGE solid blue circle — dominant right side */}
+        <motion.svg
+          style={{ y: yA }}
+          viewBox="0 0 800 800"
+          className="absolute -right-[280px] top-[40px] h-[820px] w-[820px] text-port-blue"
+        >
+          <circle cx="400" cy="400" r="380" fill="currentColor" />
+        </motion.svg>
+
+        {/* Small blue accent circle floating top-right of the big one */}
+        <motion.svg
+          style={{ y: yB }}
+          viewBox="0 0 100 100"
+          className="absolute right-[38%] top-[18%] h-8 w-8 text-port-blue"
+        >
+          <circle cx="50" cy="50" r="48" fill="currentColor" />
+        </motion.svg>
+
+        {/* Yellow accent dot mid-right */}
+        <motion.svg
+          style={{ y: yB, rotate }}
+          viewBox="0 0 100 100"
+          className="absolute right-[24%] top-[62%] h-6 w-6 text-port-yellow"
+        >
+          <circle cx="50" cy="50" r="48" fill="currentColor" />
+        </motion.svg>
+
+        {/* Yellow quarter circle bottom-left */}
+        <svg
+          className="absolute -bottom-[80px] -left-[80px] h-[260px] w-[260px] text-port-yellow"
+          viewBox="0 0 200 200"
+        >
+          <circle cx="0" cy="200" r="200" fill="currentColor" />
+        </svg>
+
+        {/* Blue dot grid top-left */}
+        <svg className="absolute left-8 top-24 h-24 w-24 text-port-blue/25" viewBox="0 0 120 120">
+          {Array.from({ length: 6 }).map((_, r) =>
+            Array.from({ length: 6 }).map((_, c) => (
+              <circle key={`${r}-${c}`} cx={10 + c * 18} cy={10 + r * 18} r="2" fill="currentColor" />
+            ))
+          )}
         </svg>
       </div>
     );

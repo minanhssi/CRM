@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const QUADRANTS: { label: string; bg: string; border: string; items: string[] }[] = [
   {
     label: "Say",
@@ -41,19 +43,20 @@ const PERSONAS: {
   name: string;
   role: string;
   context: string;
+  avatar: string;
   quote: string;
   insight: string;
   insightDetail: string;
   designResponse: string;
   designDetail: string;
   impact: string;
-  avatarColor: string;
   avatarBg: string;
 }[] = [
   {
     name: "Barnett",
     role: "Independent retail merchant",
     context: "29 · Runs a mini supermarket · Excel-based bookkeeping",
+    avatar: "/portfolio/klbp/personas/barnett.png",
     quote: "I lose sales when a customer wants to pay by e-wallet and I only have cash.",
     insight: "Missing a payment method isn't friction — it's a lost order.",
     insightDetail:
@@ -62,13 +65,13 @@ const PERSONAS: {
     designDetail:
       "Onboarding flow surfaces e-wallet / card / QR toggles as the first screen — projected uplift shown before commit so the merchant sees the value, not the config.",
     impact: "Setup time 30 min → 5 min in usability test",
-    avatarColor: "#B87333",
     avatarBg: "#F0E6D8",
   },
   {
     name: "Amery",
     role: "Multi-channel service operator",
     context: "36 · Runs a travel-services company · Bookings across web + Facebook + Zalo",
+    avatar: "/portfolio/klbp/personas/amery.png",
     quote: "My staff send bank details over Zalo. I never know if the transfer actually landed.",
     insight: "Multi-channel bookings break the audit loop before payment even settles.",
     insightDetail:
@@ -77,7 +80,6 @@ const PERSONAS: {
     designDetail:
       "One inbox aggregates chat / web / API bookings into a single settlement view; each booking auto-matches to its bank transfer with a visible trace so no reconciliation happens off-platform.",
     impact: "Manual daily reconciliation → real-time settlement view",
-    avatarColor: "#F0C808",
     avatarBg: "#FFF8DC",
   },
 ];
@@ -124,20 +126,28 @@ export function DefineSection() {
         <strong className="font-semibold text-port-ink">the specific UI decision</strong> it drove.
       </p>
 
-      <div className="mt-6 grid gap-4 md:grid-cols-2">
+      <div
+        className="mt-6 grid gap-4 md:grid-cols-2"
+        style={{ gridTemplateRows: "auto auto auto auto auto" }}
+      >
         {PERSONAS.map(p => (
           <div
             key={p.name}
-            className="flex flex-col overflow-hidden rounded-xl border border-port-border bg-white"
+            className="grid overflow-hidden rounded-xl border border-port-border bg-white md:row-span-5 md:grid-rows-subgrid"
           >
-            {/* Header — avatar + name + role */}
+            {/* Header — avatar image + name + role */}
             <div className="flex items-center gap-4 border-b border-port-border/70 bg-port-tint-blue/40 px-5 py-4">
               <div
-                className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full text-2xl font-bold shadow-[0_6px_16px_-8px_rgba(21,21,21,0.2)]"
-                style={{ backgroundColor: p.avatarBg, color: p.avatarColor }}
-                aria-hidden
+                className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full ring-2 ring-white shadow-[0_6px_16px_-8px_rgba(21,21,21,0.25)]"
+                style={{ backgroundColor: p.avatarBg }}
               >
-                {p.name.charAt(0)}
+                <Image
+                  src={p.avatar}
+                  alt={`${p.name} — persona avatar`}
+                  width={128}
+                  height={128}
+                  className="h-full w-full object-cover"
+                />
               </div>
               <div>
                 <p className="text-[15px] font-semibold text-port-ink">{p.name}</p>
@@ -179,7 +189,7 @@ export function DefineSection() {
             </div>
 
             {/* Impact chip */}
-            <div className="mt-auto flex items-center gap-2 bg-[#FEEFEB] px-5 py-3">
+            <div className="flex items-center gap-2 bg-[#FEEFEB] px-5 py-3">
               <span className="text-[10px] font-semibold tracking-[1.8px] text-port-accent">
                 IMPACT
               </span>

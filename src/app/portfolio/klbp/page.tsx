@@ -104,9 +104,9 @@ export default function KLBPCaseStudy() {
                 <Highlight variant="blue">integrated payment-gateway product</Highlight>. The back-office side is where the bank&apos;s partner businesses, employees, and transaction operators do their work — approving merchants, configuring fee tiers, tracking transactions, and reconciling cash flow across multiple parties.
               </p>
               <p className="mt-6 text-lg leading-[1.7] text-port-muted">
-                I led the UX for the entire back-office system across{" "}
-                <Highlight variant="strong">six core modules</Highlight> — partner management, employee management, fee configuration, transaction operations, cash-flow oversight, and PayPOS integration. Each module ships to a{" "}
-                <Highlight variant="blue">different internal role</Highlight>, but they share <em>one workflow engine</em>.
+                I led the UX for the entire back-office system —{" "}
+                <Highlight variant="strong">six core modules</Highlight>, each shipping to a{" "}
+                <Highlight variant="blue">different internal role</Highlight>, all sharing <em>one workflow engine</em>. Module-by-module breakdown lives further down the page.
               </p>
               <p className="mt-4 text-lg leading-[1.7] text-port-muted">
                 The flagship challenge was making a{" "}
@@ -207,10 +207,9 @@ export default function KLBPCaseStudy() {
               icon={<Search className="h-5 w-5" />}
               accent={SOFT_BLUE} bg="bg-white" iconBg="bg-port-blue"
               bullets={[
-                "Competitor teardown of Stripe, Payoo, PayME to benchmark expectations",
-                "Empathy map with two operator personas (Barnett — retail, Amery — travel)",
                 "IA driven by task flow, not org chart — modules organized around jobs",
                 "Usability testing with internal partners refining approval flow copy",
+                "Every state change carries a reason string so ops never asks 'why?'",
               ]} /></Reveal>
           </div>
         </div>

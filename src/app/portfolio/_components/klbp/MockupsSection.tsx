@@ -12,10 +12,10 @@ const MOCKUPS: { label: string; title: string; description: string; src: string;
   {
     label: "STATISTIC",
     title: "Statistic",
-    description: "Real-time revenue, transaction volume, and comparative views.",
+    description: "Filterable KPI dashboard — value, success, fail, cancel — with drillable transactions list.",
     src: "/portfolio/klbp/mockups/statistic.png",
-    w: 1508,
-    h: 1244,
+    w: 1404,
+    h: 980,
   },
   {
     label: "PAY PAGE",

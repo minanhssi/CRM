@@ -18,8 +18,8 @@ const PROJECTS = [
     summary:
       "Multi-module back-office for a payment gateway: partner approval, employee management, transaction tracking, and configurable cash-flow workflows.",
     tags: ["Enterprise CMS", "Workflow design", "Design system", "Multi-role", "Banking"],
-    thumb: "/portfolio/klbp/hero.png",
-    thumbW: 1902, thumbH: 1121,
+    thumb: "/portfolio/Thumbnail-KLBP.svg",
+    thumbW: 1440, thumbH: 810,
   },
   {
     n: "02",

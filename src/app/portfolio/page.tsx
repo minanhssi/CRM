@@ -32,6 +32,7 @@ const PROJECTS = [
     tags: ["Admin portal", "Mobile app", "Responsive", "User testing", "Payroll"],
     thumb: "/portfolio/Thumbnail-EWA.svg",
     thumbW: 1584, thumbH: 954,
+    thumbZoom: 1.08,
   },
   {
     n: "03",
@@ -221,15 +222,20 @@ export default function PortfolioOverview() {
                   className="group flex h-full flex-col overflow-hidden rounded-2xl border border-port-border bg-white transition-all duration-500 hover:-translate-y-1 hover:border-port-ink hover:shadow-[0_28px_60px_-16px_rgba(21,21,21,0.18)]"
                 >
                   <div className="relative aspect-[16/9] overflow-hidden bg-port-tint-gray">
-                    <Image
-                      src={p.thumb}
-                      alt={`${p.title} — hero banner`}
-                      width={p.thumbW}
-                      height={p.thumbH}
-                      quality={92}
-                      sizes="(min-width: 1280px) 320px, (min-width: 640px) 45vw, 90vw"
-                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.05]"
-                    />
+                    <div
+                      className="absolute inset-0"
+                      style={p.thumbZoom ? { transform: `scale(${p.thumbZoom})` } : undefined}
+                    >
+                      <Image
+                        src={p.thumb}
+                        alt={`${p.title} — hero banner`}
+                        width={p.thumbW}
+                        height={p.thumbH}
+                        quality={92}
+                        sizes="(min-width: 1280px) 320px, (min-width: 640px) 45vw, 90vw"
+                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.05]"
+                      />
+                    </div>
                     <div className="absolute right-3 top-3">
                       <span className={`rounded-full px-2.5 py-1 text-[9px] font-semibold tracking-[1.4px] shadow-sm ${p.badgeColor}`}>{p.badge}</span>
                     </div>

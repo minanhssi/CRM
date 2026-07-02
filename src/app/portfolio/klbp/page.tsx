@@ -10,6 +10,8 @@ import { CaseHero } from "../_components/CaseHero";
 import { ProcessSection } from "../_components/klbp/ProcessSection";
 import { ResearchSection } from "../_components/klbp/ResearchSection";
 import { DefineSection } from "../_components/klbp/DefineSection";
+import { DesignSystemSection } from "../_components/klbp/DesignSystemSection";
+import { PatternsSection } from "../_components/klbp/PatternsSection";
 import { PainCard } from "../_components/PainCard";
 import { PillarCard } from "../_components/PillarCard";
 import { ModuleCard } from "../_components/ModuleCard";
@@ -279,24 +281,12 @@ export default function KLBPCaseStudy() {
           </Reveal>
           <Reveal delay={0.1}>
             <div className="mt-14">
-              <ImageBanner
-                src="/portfolio/klbp/design-system.png"
-                alt="Design system — typography, colors, and components"
-                width={1440}
-                height={964}
-                caption="Design system — typography ramp, color tokens, component set"
-              />
+              <DesignSystemSection />
             </div>
           </Reveal>
           <Reveal delay={0.2}>
-            <div className="mt-16">
-              <ImageBanner
-                src="/portfolio/klbp/mockups.png"
-                alt="High-fidelity mockups across the six modules"
-                width={1408}
-                height={1986}
-                caption="High-fidelity mockups — a slice across the six modules"
-              />
+            <div className="mt-10">
+              <PatternsSection />
             </div>
           </Reveal>
         </div>

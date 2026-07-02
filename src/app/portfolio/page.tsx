@@ -220,7 +220,7 @@ export default function PortfolioOverview() {
                   href={`/portfolio/${p.slug}`}
                   className="group flex h-full flex-col overflow-hidden rounded-2xl border border-port-border bg-white transition-all duration-500 hover:-translate-y-1 hover:border-port-ink hover:shadow-[0_28px_60px_-16px_rgba(21,21,21,0.18)]"
                 >
-                  <div className="relative aspect-[4/3] overflow-hidden bg-port-tint-gray">
+                  <div className="relative aspect-[16/9] overflow-hidden bg-port-tint-gray">
                     <Image
                       src={p.thumb}
                       alt={`${p.title} — hero banner`}

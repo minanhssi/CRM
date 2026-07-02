@@ -242,7 +242,7 @@ export default function KLBPCaseStudy() {
             </div>
           </Reveal>
           <Reveal delay={0.2}>
-            <div className="mt-10 grid gap-8 xl:grid-cols-2">
+            <div className="mt-10 space-y-8">
               <ResearchSection />
               <DefineSection />
             </div>

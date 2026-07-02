@@ -43,8 +43,8 @@ const PROJECTS = [
     summary:
       "Mobile POS app for merchants — quick card & QR payments, transaction history, and simplified daily reconciliation.",
     tags: ["Mobile", "POS", "Payment", "Merchant tools", "Full UX process"],
-    thumb: "/portfolio/ezpos/hero.png",
-    thumbW: 1480, thumbH: 1062,
+    thumb: "/portfolio/Thumbnail-EzPOS.png",
+    thumbW: 1440, thumbH: 810,
   },
   {
     n: "04",

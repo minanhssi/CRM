@@ -32,6 +32,7 @@ const PROJECTS = [
     tags: ["Admin portal", "Mobile app", "Responsive", "User testing", "Payroll"],
     thumb: "/portfolio/Thumbnail-EWA-PNG.png",
     thumbW: 1584, thumbH: 954,
+    thumbZoom: 1.35,
   },
   {
     n: "03",

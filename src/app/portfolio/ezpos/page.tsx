@@ -141,15 +141,15 @@ export default function EzPOSCaseStudy() {
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             <Reveal delay={0}><PainCard who="Merchants" label="FOR THE USER"
               icon={<Hand className="h-5 w-5" />}
-              iconBg="bg-[#109C84]/10" bg="bg-white" iconColor={TEAL_TEXT} accent={TEAL_TEXT}
+              iconBg="bg-[#109C84]/10" iconColor={TEAL_TEXT} accent={TEAL_TEXT}
               body="Split attention between customer, product, and app. Two-handed POS flows dropped transactions when the merchant needed a free hand for the item." /></Reveal>
             <Reveal delay={0.08}><PainCard who="Multi-shop owners" label="FOR THE BUSINESS"
               icon={<Store className="h-5 w-5" />}
-              iconBg="bg-[#109C84]/10" bg="bg-white" iconColor={TEAL_TEXT} accent={TEAL_TEXT}
+              iconBg="bg-[#109C84]/10" iconColor={TEAL_TEXT} accent={TEAL_TEXT}
               body="End-of-day reconciliation across multiple staff and shifts was a 20-minute manual export-and-match. No unified daily summary." /></Reveal>
             <Reveal delay={0.16}><PainCard who="The payment provider" label="FOR THE PLATFORM"
               icon={<MessageSquareWarning className="h-5 w-5" />}
-              iconBg="bg-[#109C84]/10" bg="bg-white" iconColor={TEAL_TEXT} accent={TEAL_TEXT}
+              iconBg="bg-[#109C84]/10" iconColor={TEAL_TEXT} accent={TEAL_TEXT}
               body="No consistent transaction UI across merchant apps meant repeated support burden — every shop asked the same 5 questions." /></Reveal>
           </div>
         </div>

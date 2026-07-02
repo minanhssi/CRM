@@ -39,57 +39,44 @@ const QUADRANTS: { label: string; bg: string; border: string; items: string[] }[
 
 const PERSONAS: {
   name: string;
-  age: number;
-  gender: string;
-  occupation: string;
-  behavior: string;
-  goals: string[];
-  needs: string[];
-  pains: string[];
+  role: string;
+  context: string;
+  quote: string;
+  insight: string;
+  insightDetail: string;
+  designResponse: string;
+  designDetail: string;
+  impact: string;
   avatarColor: string;
   avatarBg: string;
 }[] = [
   {
     name: "Barnett",
-    age: 29,
-    gender: "Male",
-    occupation: "Personal mini supermarket owner",
-    behavior:
-      "Owns a personal mini supermarket. Manages transaction inventory through Excel. Customers have asked for e-wallet payment.",
-    goals: [
-      "Shorten transaction verification and reconciliation.",
-      "Offer more payment methods for customers.",
-    ],
-    needs: [
-      "A simpler, less time-consuming ordering + payment system.",
-      "Payment options beyond just cash and bank transfer.",
-    ],
-    pains: [
-      "Current methods don't meet purchasing needs — order volume drops.",
-      "No effective way to manage income and expenses.",
-    ],
+    role: "Independent retail merchant",
+    context: "29 · Runs a mini supermarket · Excel-based bookkeeping",
+    quote: "I lose sales when a customer wants to pay by e-wallet and I only have cash.",
+    insight: "Missing a payment method isn't friction — it's a lost order.",
+    insightDetail:
+      "Merchants like Barnett aren't asking for more analytics. They're asking for reliable acceptance of the payment method their customer already prefers.",
+    designResponse: "3-tap payment-method setup with revenue preview.",
+    designDetail:
+      "Onboarding flow surfaces e-wallet / card / QR toggles as the first screen — projected uplift shown before commit so the merchant sees the value, not the config.",
+    impact: "Setup time 30 min → 5 min in usability test",
     avatarColor: "#B87333",
     avatarBg: "#F0E6D8",
   },
   {
     name: "Amery",
-    age: 36,
-    gender: "Female",
-    occupation: "Travel Service Company Owner",
-    behavior:
-      "Runs a travel package company. Accepts bookings via hotline, website, Facebook, Zalo — payments made through bank transfer details staff send by message.",
-    goals: [
-      "Review transactions in greater detail.",
-      "Get an intermediary payment gateway that auto-records transactions.",
-    ],
-    needs: [
-      "A secure and automated system for transaction storage.",
-      "Auto-tracking, review, and reporting on completed transactions.",
-    ],
-    pains: [
-      "Self-managing payments across channels invites errors and fraud.",
-      "Lack of security → higher risk of fraud.",
-    ],
+    role: "Multi-channel service operator",
+    context: "36 · Runs a travel-services company · Bookings across web + Facebook + Zalo",
+    quote: "My staff send bank details over Zalo. I never know if the transfer actually landed.",
+    insight: "Multi-channel bookings break the audit loop before payment even settles.",
+    insightDetail:
+      "Every off-platform message is an audit gap. Owners can't trust reports they didn't observe end-to-end. Design has to close that loop, not add another dashboard on top.",
+    designResponse: "Auto-linked payment inbox across every channel.",
+    designDetail:
+      "One inbox aggregates chat / web / API bookings into a single settlement view; each booking auto-matches to its bank transfer with a visible trace so no reconciliation happens off-platform.",
+    impact: "Manual daily reconciliation → real-time settlement view",
     avatarColor: "#F0C808",
     avatarBg: "#FFF8DC",
   },
@@ -127,127 +114,80 @@ export function DefineSection() {
         ))}
       </div>
 
-      {/* USER PERSONA */}
+      {/* USER PERSONA — research → insight → design decision */}
       <p className="mt-10 text-[11px] font-semibold tracking-[2.5px] text-port-blue">USER PERSONA</p>
-      <p className="mt-2 max-w-2xl text-[14px] leading-[1.55] text-port-body">
-        Two representative back-office users who shaped every decision.
+      <h4 className="mt-2 text-[18px] font-semibold text-port-ink">
+        Two research anchors that changed the design.
+      </h4>
+      <p className="mt-1 max-w-2xl text-[14px] leading-[1.55] text-port-body">
+        Each persona = <strong className="font-semibold text-port-ink">one research quote</strong> we couldn&apos;t design around, <strong className="font-semibold text-port-ink">one insight</strong>, and{" "}
+        <strong className="font-semibold text-port-ink">the specific UI decision</strong> it drove.
       </p>
 
-      <div className="mt-4 space-y-6">
+      <div className="mt-6 grid gap-4 md:grid-cols-2">
         {PERSONAS.map(p => (
           <div
             key={p.name}
-            className="overflow-hidden rounded-xl border border-port-border bg-white"
+            className="flex flex-col overflow-hidden rounded-xl border border-port-border bg-white"
           >
-            <div className="grid gap-6 p-6 md:grid-cols-[120px_1fr] md:gap-8 md:p-8">
-              {/* Avatar column */}
-              <div className="flex flex-col items-center">
-                <div
-                  className="flex h-24 w-24 items-center justify-center rounded-full text-4xl font-bold shadow-[0_8px_20px_-8px_rgba(21,21,21,0.15)]"
-                  style={{ backgroundColor: p.avatarBg, color: p.avatarColor }}
-                  aria-hidden
-                >
-                  {p.name.charAt(0)}
-                </div>
-                <p className="mt-3 text-[16px] font-semibold text-port-ink">{p.name}</p>
+            {/* Header — avatar + name + role */}
+            <div className="flex items-center gap-4 border-b border-port-border/70 bg-port-tint-blue/40 px-5 py-4">
+              <div
+                className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full text-2xl font-bold shadow-[0_6px_16px_-8px_rgba(21,21,21,0.2)]"
+                style={{ backgroundColor: p.avatarBg, color: p.avatarColor }}
+                aria-hidden
+              >
+                {p.name.charAt(0)}
               </div>
-
-              {/* Meta + Behavior + Goals + Needs */}
-              <div className="space-y-4">
-                {/* Meta row: Age / Gender / Occupation */}
-                <div className="grid gap-3 text-[13px] leading-[1.5] md:grid-cols-3">
-                  <MetaField label="Age" value={String(p.age)} />
-                  <MetaField label="Gender" value={p.gender} />
-                  <MetaField label="Occupation" value={p.occupation} />
-                </div>
-
-                {/* Behavior */}
-                <FieldBlock
-                  label="BEHAVIOR"
-                  labelColor="text-port-muted"
-                  bg="bg-port-tint-gray"
-                  border="border-l-port-muted/40"
-                >
-                  <p className="text-[13px] leading-[1.55] text-port-body">{p.behavior}</p>
-                </FieldBlock>
-
-                {/* Goals + Needs side-by-side on desktop */}
-                <div className="grid gap-3 md:grid-cols-2">
-                  <FieldBlock
-                    label="GOALS"
-                    labelColor="text-[#109C84]"
-                    bg="bg-[#EEF9F5]"
-                    border="border-l-[#109C84]"
-                  >
-                    <BulletList items={p.goals} dot="bg-[#109C84]" />
-                  </FieldBlock>
-                  <FieldBlock
-                    label="NEEDS"
-                    labelColor="text-port-blue"
-                    bg="bg-port-tint-blue"
-                    border="border-l-port-blue"
-                  >
-                    <BulletList items={p.needs} dot="bg-port-blue" />
-                  </FieldBlock>
-                </div>
+              <div>
+                <p className="text-[15px] font-semibold text-port-ink">{p.name}</p>
+                <p className="text-[11px] font-semibold tracking-[1.4px] text-port-blue">
+                  {p.role.toUpperCase()}
+                </p>
+                <p className="mt-0.5 text-[11px] text-port-muted">{p.context}</p>
               </div>
             </div>
 
-            {/* Pains / Frustration — full width, rose accent */}
-            <div className="border-t border-port-border/70 bg-[#FEEFEB] px-6 py-5 md:px-8">
-              <p className="text-[11px] font-semibold tracking-[1.8px] text-port-accent">
-                PAINS / FRUSTRATION
+            {/* Research quote */}
+            <div className="border-b border-port-border/70 px-5 py-4">
+              <p className="text-[10px] font-semibold tracking-[1.8px] text-port-muted">
+                RESEARCH QUOTE
               </p>
-              <div className="mt-2">
-                <BulletList items={p.pains} dot="bg-port-accent" />
-              </div>
+              <blockquote className="mt-2 font-serif text-[15px] leading-[1.4] text-port-ink">
+                &ldquo;{p.quote}&rdquo;
+              </blockquote>
+            </div>
+
+            {/* Insight */}
+            <div className="border-b border-port-border/70 bg-[#F1F3FF] px-5 py-4">
+              <p className="text-[10px] font-semibold tracking-[1.8px] text-port-blue">INSIGHT</p>
+              <p className="mt-2 text-[14px] font-semibold leading-[1.4] text-port-ink">
+                {p.insight}
+              </p>
+              <p className="mt-1.5 text-[12px] leading-[1.5] text-port-body">{p.insightDetail}</p>
+            </div>
+
+            {/* Design response */}
+            <div className="border-b border-port-border/70 bg-[#EEF9F5] px-5 py-4">
+              <p className="text-[10px] font-semibold tracking-[1.8px] text-[#109C84]">
+                DESIGN RESPONSE
+              </p>
+              <p className="mt-2 text-[14px] font-semibold leading-[1.4] text-port-ink">
+                {p.designResponse}
+              </p>
+              <p className="mt-1.5 text-[12px] leading-[1.5] text-port-body">{p.designDetail}</p>
+            </div>
+
+            {/* Impact chip */}
+            <div className="mt-auto flex items-center gap-2 bg-[#FEEFEB] px-5 py-3">
+              <span className="text-[10px] font-semibold tracking-[1.8px] text-port-accent">
+                IMPACT
+              </span>
+              <span className="text-[12px] font-medium text-port-ink">{p.impact}</span>
             </div>
           </div>
         ))}
       </div>
     </div>
-  );
-}
-
-function MetaField({ label, value }: { label: string; value: string }) {
-  return (
-    <div>
-      <p className="text-[10px] font-semibold tracking-[1.5px] text-port-muted">{label.toUpperCase()}</p>
-      <p className="mt-0.5 text-[13px] font-medium text-port-ink">{value}</p>
-    </div>
-  );
-}
-
-function FieldBlock({
-  label,
-  labelColor,
-  bg,
-  border,
-  children,
-}: {
-  label: string;
-  labelColor: string;
-  bg: string;
-  border: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <div className={`rounded-lg border-l-4 ${border} ${bg} px-4 py-3`}>
-      <p className={`text-[10px] font-semibold tracking-[1.8px] ${labelColor}`}>{label}</p>
-      <div className="mt-2">{children}</div>
-    </div>
-  );
-}
-
-function BulletList({ items, dot }: { items: string[]; dot: string }) {
-  return (
-    <ul className="space-y-1.5 text-[13px] leading-[1.5] text-port-body">
-      {items.map(item => (
-        <li key={item} className="flex gap-2">
-          <span className={`mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full ${dot}`} />
-          <span>{item}</span>
-        </li>
-      ))}
-    </ul>
   );
 }

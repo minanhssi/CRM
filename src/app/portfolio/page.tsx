@@ -117,7 +117,7 @@ export default function PortfolioOverview() {
               <Reveal direction="up" delay={0.2}>
                 <p className="mt-8 max-w-xl text-lg leading-[1.55] text-port-ink md:text-xl">
                   UX Designer — 3+ years building{" "}
-                  <strong className="font-semibold text-port-ink">enterprise &amp; B2B workflows</strong>{" "}
+                  <strong className="whitespace-nowrap font-semibold text-port-ink">enterprise &amp; B2B workflows</strong>{" "}
                   for fintech, payment, and CRM products.
                 </p>
               </Reveal>

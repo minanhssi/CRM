@@ -24,60 +24,38 @@ export function DecoShapes({
   if (variant === "hero") {
     return (
       <div ref={ref} className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
-        {/* Concentric outline rings — far right, subtle */}
+        {/* Orange gradient half-circle bottom-left */}
         <svg
-          className="absolute -right-[520px] top-1/2 h-[1400px] w-[1400px] -translate-y-1/2 text-port-blue/25"
-          viewBox="0 0 800 800"
-          fill="none"
-        >
-          <circle cx="400" cy="400" r="380" stroke="currentColor" strokeWidth="1" />
-          <circle cx="400" cy="400" r="330" stroke="currentColor" strokeWidth="1" strokeDasharray="3 6" />
-          <circle cx="400" cy="400" r="270" stroke="currentColor" strokeWidth="1" />
-          <circle cx="400" cy="400" r="210" stroke="currentColor" strokeWidth="1" strokeDasharray="2 5" />
-        </svg>
-
-        {/* LARGE solid blue circle — dominant right side */}
-        <motion.svg
-          style={{ y: yA }}
-          viewBox="0 0 800 800"
-          className="absolute -right-[280px] top-[40px] h-[820px] w-[820px] text-port-blue"
-        >
-          <circle cx="400" cy="400" r="380" fill="currentColor" />
-        </motion.svg>
-
-        {/* Small blue accent circle floating top-right of the big one */}
-        <motion.svg
-          style={{ y: yB }}
-          viewBox="0 0 100 100"
-          className="absolute right-[38%] top-[18%] h-8 w-8 text-port-blue"
-        >
-          <circle cx="50" cy="50" r="48" fill="currentColor" />
-        </motion.svg>
-
-        {/* Yellow accent dot mid-right */}
-        <motion.svg
-          style={{ y: yB, rotate }}
-          viewBox="0 0 100 100"
-          className="absolute right-[24%] top-[62%] h-6 w-6 text-port-yellow"
-        >
-          <circle cx="50" cy="50" r="48" fill="currentColor" />
-        </motion.svg>
-
-        {/* Yellow quarter circle bottom-left */}
-        <svg
-          className="absolute -bottom-[80px] -left-[80px] h-[260px] w-[260px] text-port-yellow"
+          className="absolute -bottom-[160px] -left-[120px] h-[420px] w-[420px]"
           viewBox="0 0 200 200"
         >
-          <circle cx="0" cy="200" r="200" fill="currentColor" />
+          <defs>
+            <radialGradient id="heroOrange" cx="30%" cy="30%" r="80%">
+              <stop offset="0%" stopColor="#FFB84D" />
+              <stop offset="100%" stopColor="#F37B23" />
+            </radialGradient>
+          </defs>
+          <circle cx="60" cy="140" r="120" fill="url(#heroOrange)" />
         </svg>
 
-        {/* Blue dot grid top-left */}
-        <svg className="absolute left-8 top-24 h-24 w-24 text-port-blue/25" viewBox="0 0 120 120">
+        {/* Blue dot grid top-left (subtle purple-blue) */}
+        <svg className="absolute left-8 top-20 h-24 w-24 text-port-blue/30" viewBox="0 0 120 120">
           {Array.from({ length: 6 }).map((_, r) =>
             Array.from({ length: 6 }).map((_, c) => (
               <circle key={`${r}-${c}`} cx={10 + c * 18} cy={10 + r * 18} r="2" fill="currentColor" />
             ))
           )}
+        </svg>
+
+        {/* Scattered lavender dots bottom-left area */}
+        <svg className="absolute bottom-24 left-40 h-16 w-24 text-port-blue/35" viewBox="0 0 120 80">
+          <circle cx="10" cy="20" r="2" fill="currentColor" />
+          <circle cx="30" cy="10" r="2" fill="currentColor" />
+          <circle cx="50" cy="30" r="2" fill="currentColor" />
+          <circle cx="70" cy="15" r="2" fill="currentColor" />
+          <circle cx="90" cy="35" r="2" fill="currentColor" />
+          <circle cx="20" cy="50" r="2" fill="currentColor" />
+          <circle cx="60" cy="60" r="2" fill="currentColor" />
         </svg>
       </div>
     );

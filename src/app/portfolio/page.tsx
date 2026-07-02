@@ -1,14 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail } from "lucide-react";
-
-function LinkedinIcon({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden>
-      <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.44a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z" />
-    </svg>
-  );
-}
 import { Header } from "./_components/Header";
 import { Footer } from "./_components/Footer";
 import { Eyebrow } from "./_components/Eyebrow";
@@ -107,73 +98,62 @@ export default function PortfolioOverview() {
       <Header />
 
       {/* HERO */}
-      <section className="relative overflow-hidden bg-white text-port-ink">
+      <section className="relative overflow-hidden bg-gradient-to-br from-white via-white to-port-tint-blue/50 text-port-ink">
         <DecoShapes variant="hero" />
-        <div className="relative mx-auto max-w-[1320px] px-6 pb-28 pt-16 md:px-12 md:pb-40 md:pt-24">
-          <Reveal direction="up">
-            <p className="text-[13px] font-semibold tracking-[2.5px] uppercase text-port-accent">
-              01. — Intro
-            </p>
-          </Reveal>
-          <Reveal direction="up" delay={0.05}>
-            <p className="mt-3 text-[15px] font-semibold tracking-[3px] uppercase text-port-blue">
-              UX Designer Portfolio
-            </p>
-          </Reveal>
-          <Reveal direction="up" delay={0.1}>
-            <h1 className="font-serif mt-8 text-[64px] leading-[0.92] tracking-tight md:text-[140px] lg:text-[160px]">
-              Duong Ngoc<br />Minh Anh<span className="text-port-blue">.</span>
-            </h1>
-          </Reveal>
-          <Reveal direction="up" delay={0.18}>
-            <div className="mt-8 flex items-center gap-3">
-              <span className="h-px w-10 bg-port-blue" aria-hidden />
-              <p className="text-[15px] font-medium text-port-blue underline decoration-port-blue/40 decoration-1 underline-offset-4">
-                Portfolio of Duong Ngoc Minh Anh
-              </p>
+        <div className="relative mx-auto max-w-[1320px] px-6 pb-28 pt-16 md:px-12 md:pb-32 md:pt-20">
+          <div className="grid items-center gap-10 md:grid-cols-[1.15fr_1fr] md:gap-12 lg:gap-16">
+            {/* LEFT — text content */}
+            <div>
+              <Reveal direction="up">
+                <p className="text-[15px] font-semibold tracking-[3px] uppercase text-port-blue">
+                  UX Designer Portfolio
+                </p>
+              </Reveal>
+              <Reveal direction="up" delay={0.1}>
+                <h1 className="font-serif mt-6 text-[56px] leading-[0.95] tracking-tight md:text-[104px] lg:text-[120px]">
+                  Duong Ngoc<br />Minh Anh<span className="text-port-blue">.</span>
+                </h1>
+              </Reveal>
+              <Reveal direction="up" delay={0.2}>
+                <p className="mt-8 max-w-xl text-lg leading-[1.55] text-port-ink md:text-xl">
+                  UX Designer — 3+ years building{" "}
+                  <strong className="font-semibold text-port-ink">enterprise &amp; B2B workflows</strong>{" "}
+                  for fintech, payment, and CRM products.
+                </p>
+              </Reveal>
+              <Reveal direction="up" delay={0.3}>
+                <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-[14px]">
+                  <a
+                    href="mailto:minhanhdn9601@gmail.com"
+                    className="font-medium text-port-ink underline decoration-port-ink/20 decoration-1 underline-offset-4 transition-colors hover:text-port-blue hover:decoration-port-blue"
+                  >
+                    minhanhdn9601@gmail.com
+                  </a>
+                  <span className="text-port-muted">·</span>
+                  <a
+                    href="https://www.linkedin.com/in/duongngocminhanh/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="font-medium text-port-ink underline decoration-port-ink/20 decoration-1 underline-offset-4 transition-colors hover:text-port-blue hover:decoration-port-blue"
+                  >
+                    linkedin.com/in/duongngocminhanh
+                  </a>
+                </div>
+              </Reveal>
             </div>
-          </Reveal>
-          <Reveal direction="up" delay={0.24}>
-            <p className="mt-8 max-w-3xl text-xl leading-[1.55] text-port-ink md:text-2xl">
-              UX Designer — 3+ years building{" "}
-              <span
-                className="bg-port-yellow/60 px-1.5 font-semibold text-port-ink"
-                style={{ boxDecorationBreak: "clone", WebkitBoxDecorationBreak: "clone" }}
-              >
-                enterprise &amp; B2B workflows
-              </span>{" "}
-              for fintech, payment, and CRM products.
-            </p>
-          </Reveal>
-          <Reveal direction="up" delay={0.32}>
-            <div className="mt-14 flex flex-wrap items-center gap-x-8 gap-y-4 text-[15px]">
-              <a
-                href="mailto:minhanhdn9601@gmail.com"
-                className="group inline-flex items-center gap-3 font-medium text-port-ink transition-colors hover:text-port-blue"
-              >
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-port-blue text-white shadow-[0_6px_16px_-6px_rgba(45,57,207,0.5)] transition-transform group-hover:scale-105">
-                  <Mail className="h-4 w-4" />
-                </span>
-                <span className="underline decoration-port-blue/30 decoration-2 underline-offset-4 transition-colors group-hover:decoration-port-blue">
-                  minhanhdn9601@gmail.com
-                </span>
-              </a>
-              <span className="text-port-muted">·</span>
-              <a
-                href="https://www.linkedin.com/in/duongngocminhanh/"
-                target="_blank"
-                rel="noreferrer"
-                className="group inline-flex items-center gap-3 font-medium text-port-ink transition-colors hover:text-port-blue"
-              >
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-port-blue text-white shadow-[0_6px_16px_-6px_rgba(45,57,207,0.5)] transition-transform group-hover:scale-105">
-                  <LinkedinIcon className="h-4 w-4" />
-                </span>
-                <span className="underline decoration-port-blue/30 decoration-2 underline-offset-4 transition-colors group-hover:decoration-port-blue">
-                  linkedin.com/in/duongngocminhanh
-                </span>
-              </a>
-            </div>
-          </Reveal>
+
+            {/* RIGHT — avatar illustration (full composition) */}
+            <Reveal direction="up" delay={0.15}>
+              <div className="relative mx-auto w-full max-w-[560px]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/portfolio/hero-avatar.svg"
+                  alt="Duong Ngoc Minh Anh — avatar illustration"
+                  className="block h-auto w-full"
+                />
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 

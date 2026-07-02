@@ -25,7 +25,7 @@ export function Header() {
     >
       <div className="mx-auto flex max-w-[1320px] items-center justify-between px-6 py-3.5 text-[13px] font-medium tracking-[2px] text-white md:px-12">
         <Link href="/portfolio" className="group flex items-center gap-2 font-serif text-xl transition-colors hover:text-port-yellow">
-          DNM<span className="text-port-yellow">.</span>
+          DNMA<span className="text-port-yellow">.</span>
           <span className="hidden text-[10px] font-medium tracking-[1.6px] text-white/50 group-hover:text-white/80 md:inline">
             UX DESIGNER · B2B / ENTERPRISE
           </span>

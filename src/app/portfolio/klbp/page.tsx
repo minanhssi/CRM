@@ -81,11 +81,12 @@ export default function KLBPCaseStudy() {
           { label: "OUTPUT", value: "25+ specs · design system" },
         ]}
         cover={{
-          src: "/portfolio/klbp/hero.png",
-          width: 1902,
-          height: 1121,
-          alt: "KienlongBank Pay — dashboard mockup",
+          src: "/portfolio/mockup-klbp.svg",
+          width: 1507,
+          height: 893,
+          alt: "KienlongBank Pay — dashboard + QR modal mockup",
         }}
+        coverBg="dark"
       />
 
       {/* ABOUT + META */}

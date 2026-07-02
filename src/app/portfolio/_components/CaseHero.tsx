@@ -29,6 +29,7 @@ export function CaseHero({
   heroTint = "peach",
   keyFacts,
   cover,
+  coverBg,
 }: {
   caseNumber: string;
   eyebrow: string;
@@ -42,6 +43,7 @@ export function CaseHero({
   heroTint?: "peach" | "blue" | "mint" | "lavender";
   keyFacts?: { label: string; value: string; icon?: ReactNode }[];
   cover?: CoverImage;
+  coverBg?: "light" | "dark";
 }) {
   const tintClass = {
     peach: "from-white via-white to-port-tint-peach",
@@ -100,7 +102,11 @@ export function CaseHero({
               className="relative"
             >
               <div
-                className="relative overflow-hidden rounded-2xl border border-port-border bg-white shadow-[0_32px_70px_-24px_rgba(21,21,21,0.22),0_12px_32px_-10px_rgba(21,21,21,0.10)]"
+                className={
+                  coverBg === "dark"
+                    ? "relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-[#0A1030] via-[#0F1846] to-[#0A0D2E] shadow-[0_36px_80px_-20px_rgba(10,16,48,0.55),0_16px_40px_-8px_rgba(10,16,48,0.25)]"
+                    : "relative overflow-hidden rounded-2xl border border-port-border bg-white shadow-[0_32px_70px_-24px_rgba(21,21,21,0.22),0_12px_32px_-10px_rgba(21,21,21,0.10)]"
+                }
               >
                 <Image
                   src={cover.src}

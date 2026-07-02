@@ -3,22 +3,22 @@ import {
 } from "lucide-react";
 import type { ReactNode } from "react";
 
-const COMPETITORS: { name: string; brandColor: string; takeaway: string; feature: string }[] = [
+const COMPETITORS: { name: string; logo: string; takeaway: string; feature: string }[] = [
   {
-    name: "stripe",
-    brandColor: "#635BFF",
+    name: "Stripe",
+    logo: "/portfolio/klbp/logos/stripe.png",
     takeaway: "Global standard for developer flexibility",
     feature: "Reference for API-first architecture and clean transaction flows.",
   },
   {
     name: "9Pay",
-    brandColor: "#2FAADE",
+    logo: "/portfolio/klbp/logos/9pay.png",
     takeaway: "Vietnam-first, business-friendly",
     feature: "Reference for local integrations and real-time analytics UI.",
   },
   {
     name: "PayME",
-    brandColor: "#26A65B",
+    logo: "/portfolio/klbp/logos/payme.png",
     takeaway: "No-code embedded payments",
     feature: "Reference for zero-setup Pay Link, POS, and Pay Button surfaces.",
   },
@@ -51,11 +51,16 @@ export function ResearchSection() {
         {COMPETITORS.map(c => (
           <div
             key={c.name}
-            className="grid grid-cols-[110px_1fr] items-center gap-4 rounded-xl border border-port-border bg-white px-5 py-4"
+            className="grid grid-cols-[120px_1fr] items-center gap-4 rounded-xl border border-port-border bg-white px-5 py-4"
           >
-            <span className="font-serif text-2xl font-bold" style={{ color: c.brandColor }}>
-              {c.name}
-            </span>
+            <div className="relative flex h-12 items-center justify-center">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={c.logo}
+                alt={`${c.name} logo`}
+                className="max-h-12 max-w-[110px] object-contain"
+              />
+            </div>
             <div>
               <p className="text-[14px] font-semibold text-port-ink">{c.takeaway}</p>
               <p className="mt-1 text-[12px] leading-[1.45] text-port-muted">{c.feature}</p>

@@ -12,6 +12,7 @@ import { ResearchSection } from "../_components/klbp/ResearchSection";
 import { DefineSection } from "../_components/klbp/DefineSection";
 import { DesignSystemSection } from "../_components/klbp/DesignSystemSection";
 import { PatternsSection } from "../_components/klbp/PatternsSection";
+import { MockupsSection } from "../_components/klbp/MockupsSection";
 import { PainCard } from "../_components/PainCard";
 import { PillarCard } from "../_components/PillarCard";
 import { ModuleCard } from "../_components/ModuleCard";
@@ -286,7 +287,7 @@ export default function KLBPCaseStudy() {
           </Reveal>
           <Reveal delay={0.2}>
             <div className="mt-10">
-              <PatternsSection />
+              <MockupsSection />
             </div>
           </Reveal>
         </div>

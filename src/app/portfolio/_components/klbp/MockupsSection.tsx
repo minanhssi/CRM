@@ -57,7 +57,7 @@ export function MockupsSection() {
                 <p className="mt-1.5 text-[15px] font-semibold text-port-ink">{m.title}</p>
               </div>
             </div>
-            <div className="mt-4 overflow-hidden rounded-lg border border-port-border bg-white shadow-[0_12px_30px_-16px_rgba(21,21,21,0.15)]">
+            <div className="mt-4 overflow-hidden rounded-lg">
               <Image
                 src={m.src}
                 alt={`${m.title} — KLBP back-office screen`}

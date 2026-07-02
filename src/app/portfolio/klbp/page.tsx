@@ -7,6 +7,9 @@ import { Footer } from "../_components/Footer";
 import { Eyebrow } from "../_components/Eyebrow";
 import { Reveal } from "../_components/Reveal";
 import { CaseHero } from "../_components/CaseHero";
+import { ProcessSection } from "../_components/klbp/ProcessSection";
+import { ResearchSection } from "../_components/klbp/ResearchSection";
+import { DefineSection } from "../_components/klbp/DefineSection";
 import { PainCard } from "../_components/PainCard";
 import { PillarCard } from "../_components/PillarCard";
 import { ModuleCard } from "../_components/ModuleCard";
@@ -232,31 +235,13 @@ export default function KLBPCaseStudy() {
           </Reveal>
           <Reveal delay={0.1}>
             <div className="mt-14">
-              <ImageBanner
-                src="/portfolio/klbp/process.png"
-                alt="Design process overview — Research, Define, Idea, Design, Test"
-                width={1440}
-                height={723}
-                caption="Design process stages — Research · Define · Idea · Design · Test"
-              />
+              <ProcessSection />
             </div>
           </Reveal>
           <Reveal delay={0.2}>
-            <div className="mt-16 grid gap-8 md:grid-cols-2">
-              <ImageBanner
-                src="/portfolio/klbp/research.png"
-                alt="Competitor analysis and feature prioritization"
-                width={1440}
-                height={2490}
-                caption="Research — competitor teardown &amp; feature prioritization"
-              />
-              <ImageBanner
-                src="/portfolio/klbp/define.png"
-                alt="Empathy map and personas"
-                width={1440}
-                height={2697}
-                caption="Define — empathy map &amp; user personas"
-              />
+            <div className="mt-10 grid gap-8 xl:grid-cols-2">
+              <ResearchSection />
+              <DefineSection />
             </div>
           </Reveal>
         </div>

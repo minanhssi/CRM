@@ -30,8 +30,8 @@ const PROJECTS = [
     summary:
       "End-to-end design across 3 platforms — worker web, company admin portal, and worker mobile app — letting employees draw earned wages 24/7.",
     tags: ["Admin portal", "Mobile app", "Responsive", "User testing", "Payroll"],
-    thumb: "/portfolio/ewa/hero.png",
-    thumbW: 2064, thumbH: 1440,
+    thumb: "/portfolio/Thumbnail-EWA.svg",
+    thumbW: 1584, thumbH: 954,
   },
   {
     n: "03",

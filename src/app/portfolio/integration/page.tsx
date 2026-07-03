@@ -29,17 +29,17 @@ const STEPS = [
   {
     n: "01", label: "SELECT CHANNEL", title: "Choose one of 18 supported platforms",
     body: "Platforms are grouped into four categories — Social Platform, Communication, Website, and External System — so administrators can locate the right integration by business context instead of scanning a long flat list.",
-    img: "/portfolio/integration/step1-list.png",
+    img: "/portfolio/integration/step1-live.png",
   },
   {
     n: "02", label: "OAUTH AUTHORIZATION", title: "Authorize the CRM through the platform's OAuth flow",
     body: "The administrator signs into the target platform and grants the CRM the specific permissions it needs — no copy-pasting of raw tokens. When a platform uses a different authentication model, the same shell adapts to show only the fields required for that model.",
-    img: "/portfolio/integration/step2-auth.png",
+    img: "/portfolio/integration/step2-live.png",
   },
   {
     n: "03", label: "GENERATE CONNECTION INFO", title: "CRM auto-generates the Webhook URL & Secret Key",
     body: "After authorization, the CRM produces the connection information the third-party platform needs — a Webhook URL to receive real-time events (new messages, orders, business events) and a Secret Key to verify request authenticity. Both values are copy-ready for use inside the external platform.",
-    img: "/portfolio/integration/step3-validate.png",
+    img: "/portfolio/integration/step3-live.png",
   },
   {
     n: "04", label: "INTEGRATION LIVE", title: "Managed from the integration list",
@@ -258,7 +258,7 @@ export default function IntegrationCaseStudy() {
             {STEPS.map((s, i) => (
               <div key={s.n} className="grid items-center gap-10 md:grid-cols-[1.4fr_1fr] md:gap-20">
                 <div className={i % 2 === 1 ? "md:order-2" : ""}>
-                  <MockFrame src={s.img} alt={s.title} width={1366} height={768} />
+                  <MockFrame src={s.img} alt={s.title} width={1792} height={1092} />
                 </div>
                 <Reveal direction={i % 2 === 0 ? "left" : "right"}>
                   <Eyebrow>{`${s.n}. ${s.label}`}</Eyebrow>

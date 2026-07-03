@@ -1,5 +1,5 @@
 import {
-  Smartphone, Monitor, LayoutDashboard, Wallet, ClipboardList, Building2,
+  Smartphone, LayoutDashboard, Wallet, ClipboardList, Building2,
   Zap, MessageSquareText, Layers, Users, Search, ScrollText, HeartHandshake, Briefcase,
 } from "lucide-react";
 import { Header } from "../_components/Header";
@@ -18,7 +18,7 @@ import { Highlight } from "../_components/Highlight";
 import { PullQuote } from "../_components/PullQuote";
 
 export const metadata = {
-  title: "Earned Wage Access — 3-platform payroll product | Duong Ngoc Minh Anh",
+  title: "Earned Wage Access — mobile + admin portal payroll product | Duong Ngoc Minh Anh",
 };
 
 const INDIGO = "#4F5BD5";
@@ -27,35 +27,24 @@ const INDIGO_TEXT = "text-[#4F5BD5]";
 const PLATFORMS = [
   {
     n: "01", kind: "MOBILE · WORKER", title: "Worker mobile app",
-    body: "The primary surface where employees discover and request earned-wage withdrawals. Designed for one-handed, 3-tap flow.",
+    body: "The primary experience where employees can view their earned wages and request withdrawals anytime. The flow was optimized to minimize friction, letting users complete a withdrawal request in just a few steps.",
     icon: <Smartphone className="h-5 w-5" />,
     jobs: [
-      "View remaining earned balance at a glance",
-      "Request withdrawal in 3 taps",
-      "Track request status & history",
-      "Receive push notifications for approval",
+      "View available earned wage balance",
+      "Request a withdrawal in 3 taps",
+      "Track request status and history",
+      "Receive notifications after approval",
     ],
   },
   {
     n: "02", kind: "WEB · HR / ADMIN", title: "Company admin portal",
-    body: "Configuration + approval cockpit for HR. Sets up advance rules, monthly limits, and reviews incoming requests.",
+    body: "A management portal that enables HR teams to configure earned-wage policies and process employee withdrawal requests efficiently.",
     icon: <LayoutDashboard className="h-5 w-5" />,
     jobs: [
-      "Configure advance rules per employee tier",
-      "Review & approve / reject requests",
-      "Manage employee list & their limits",
-      "Export reports for payroll reconciliation",
-    ],
-  },
-  {
-    n: "03", kind: "WEB · WORKER", title: "Worker web view",
-    body: "Lightweight desktop companion to the mobile app — used at-work for detailed history and balance verification.",
-    icon: <Monitor className="h-5 w-5" />,
-    jobs: [
-      "View detailed transaction history",
-      "Check exact earned balance & cap",
-      "Manage account & connected info",
-      "View remaining advance allowance",
+      "Configure withdrawal rules and limits",
+      "Review, approve or reject requests",
+      "Manage employees and withdrawal limits",
+      "Export payroll reconciliation reports",
     ],
   },
 ];
@@ -81,8 +70,8 @@ export default function EWACaseStudy() {
         caseNumber="CASE STUDY · 02 / 04"
         eyebrow="Case study 02 — Fintech × HR"
         title={<><span className="text-port-blue">Earned Wage Access</span> — pay workers 24/7, on the wages they already earned.</>}
-        subtitle="End-to-end design across three connected platforms — worker mobile app, company admin portal, and worker web — letting employees withdraw earned wages anytime without payday loans."
-        tags={["3-PLATFORM PRODUCT", "USER TESTING", "PAYROLL WORKFLOW", "B2B2C"]}
+        subtitle="Designed the two touchpoints I owned in this B2B2C payroll workflow — the worker mobile app and the HR admin portal — letting employees withdraw earned wages anytime without payday loans."
+        tags={["MOBILE + ADMIN PORTAL", "USER TESTING", "PAYROLL WORKFLOW", "B2B2C"]}
         eyebrowColor="cream"
         accentClass="text-port-blue"
         heroTint="lavender"
@@ -91,7 +80,7 @@ export default function EWACaseStudy() {
         keyFacts={[
           { label: "ROLE", value: "Solo UX Designer" },
           { label: "DOMAIN", value: "Fintech · Payroll / HR" },
-          { label: "PLATFORMS", value: "3 · mobile + 2 web" },
+          { label: "PLATFORMS", value: "2 · mobile + web admin" },
           { label: "METHOD", value: "3 rounds of usability tests" },
           { label: "OUTCOME", value: "Flow 6 → 3 perceived steps" },
         ]}
@@ -118,12 +107,12 @@ export default function EWACaseStudy() {
                 <Highlight variant="strong">anytime, 24/7</Highlight>, without waiting for the regular payday.
               </p>
               <p className="mt-6 text-lg leading-[1.7] text-port-muted">
-                The product spans{" "}
-                <Highlight variant="blue">three connected platforms</Highlight> — a worker mobile app for self-service requests, a company admin portal for HR configuration and approval, and a worker web view to track history and remaining balance. Together they replace ad-hoc payday loans with a{" "}
-                <Highlight>controlled, auditable B2B2C workflow</Highlight>.
+                The wider ecosystem is B2B2C, but my design scope focused on the{" "}
+                <Highlight variant="blue">two touchpoints that own the withdrawal workflow</Highlight> — the worker mobile app and the HR admin portal. Together they replace ad-hoc payday loans with a{" "}
+                <Highlight>controlled, auditable</Highlight> request-and-approval loop.
               </p>
               <p className="mt-4 text-lg leading-[1.7] text-port-muted">
-                I owned UX end-to-end for all three platforms: research, information architecture, user flows, wireframes, prototypes, high-fidelity UI, and dev handoff.
+                On these two products I owned UX end-to-end: research, information architecture, user flows, wireframes, prototypes, high-fidelity UI, and dev handoff.
               </p>
             </Reveal>
             <Reveal delay={0.2}>
@@ -131,7 +120,7 @@ export default function EWACaseStudy() {
                 {[
                   { icon: <Briefcase className="h-4 w-4" />, label: "DOMAIN", value: "Fintech · Payroll / HR" },
                   { icon: <Users className="h-4 w-4" />, label: "ROLE", value: "Solo UX Designer — Research, UX, UI, handoff" },
-                  { icon: <Layers className="h-4 w-4" />, label: "PLATFORMS", value: "3 — worker mobile · admin portal · worker web" },
+                  { icon: <Layers className="h-4 w-4" />, label: "PLATFORMS", value: "2 — worker mobile app · HR admin portal" },
                   { icon: <HeartHandshake className="h-4 w-4" />, label: "TEAM", value: "Product owner + engineering" },
                   { icon: <Search className="h-4 w-4" />, label: "METHOD", value: "User interviews + in-company usability testing" },
                   { icon: <ScrollText className="h-4 w-4" />, label: "DELIVERABLES", value: "Flows, wireframes, prototype, design specs" },
@@ -189,15 +178,15 @@ export default function EWACaseStudy() {
             <div className={INDIGO_TEXT}><SectionDeco variant="layers" /></div>
             <Eyebrow>Approach</Eyebrow>
             <h2 className="font-serif mt-4 max-w-4xl text-4xl leading-[1.1] tracking-tight md:text-6xl">
-              Designing across three connected platforms.
+              Designing two key touchpoints in a connected payroll workflow.
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-10 max-w-3xl text-lg leading-[1.65] text-port-body">
-              Each platform serves a different actor, but they share <Highlight variant="blue">one workflow</Highlight> — a request originated on mobile is reviewed in the admin portal and reflected back to the worker. I designed the <Highlight variant="strong">data model and information architecture together</Highlight>, so the three platforms stay consistent while each surface stays focused on its primary task.
+              Although the Earned Wage Access ecosystem includes multiple touchpoints, my design scope focused on the <Highlight variant="blue">worker mobile app</Highlight> and the <Highlight variant="blue">company admin portal</Highlight>. The worker initiates a withdrawal through the app, while HR reviews and manages requests in the portal. I designed both around the <Highlight variant="strong">same information architecture and business rules</Highlight> to keep the workflow consistent between employees and administrators.
             </p>
           </Reveal>
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
+          <div className="mt-14 grid gap-6 md:grid-cols-2 md:max-w-5xl md:mx-auto">
             {PLATFORMS.map((p, i) => (
               <Reveal key={p.n} delay={i * 0.08}>
                 <div className="h-full rounded-2xl border border-port-border bg-white p-9 shadow-[0_10px_28px_-18px_rgba(21,21,21,0.15)]">
@@ -231,17 +220,17 @@ export default function EWACaseStudy() {
             <div className={INDIGO_TEXT}><SectionDeco variant="arrow" /></div>
             <Eyebrow>Mockups</Eyebrow>
             <h2 className="font-serif mt-4 max-w-4xl text-4xl leading-[1.1] tracking-tight md:text-6xl">
-              Three surfaces, one shared workflow.
+              Two surfaces, one shared workflow.
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <div className="mt-14">
               <ImageBanner
                 src="/portfolio/ewa/mockups.png"
-                alt="EWA mockups across web and mobile"
+                alt="EWA mockups across mobile app and admin portal"
                 width={1920}
                 height={2138}
-                caption="Mockups — worker web, company admin portal, and worker mobile app"
+                caption="Mockups — worker mobile app and HR admin portal"
               />
             </div>
           </Reveal>
@@ -251,9 +240,9 @@ export default function EWACaseStudy() {
       {/* PULL QUOTE */}
       <section className="bg-white">
         <div className="mx-auto max-w-[1320px] px-6 pb-8 md:px-12 md:pb-16">
-          <PullQuote accent="#4F5BD5" attribution="Design principle for B2B2C surfaces">
+          <PullQuote accent="#4F5BD5" attribution="Design principle for connected surfaces">
             Design the{" "}
-            <span className="text-[#4F5BD5]">data model</span> before the UI — three roles seeing one shared record is the{" "}
+            <span className="text-[#4F5BD5]">data model</span> before the UI — two roles seeing one shared record is the{" "}
             <span className="underline decoration-[#4F5BD5] decoration-4 underline-offset-8">honest broker</span>.
           </PullQuote>
         </div>
@@ -266,16 +255,16 @@ export default function EWACaseStudy() {
             <div className={INDIGO_TEXT}><SectionDeco variant="flow" /></div>
             <Eyebrow>Validation</Eyebrow>
             <h2 className="font-serif mt-4 max-w-4xl text-4xl leading-[1.1] tracking-tight md:text-6xl">
-              Tested with internal-company employees as proxy users.
+              Tested the worker app and admin portal with proxy users.
             </h2>
           </Reveal>
           <div className="mt-14 grid gap-16 md:grid-cols-[1fr_420px] md:gap-20">
             <Reveal delay={0.1}>
               <p className="text-lg leading-[1.7] text-port-body">
-                Direct access to KienlongBank&apos;s end customers was limited during early design phases. I ran moderated usability tests with <Highlight variant="blue">internal-company employees</Highlight> — whose monthly-salary pattern closely matches the target audience — across <Highlight variant="strong">three iterative rounds</Highlight>.
+                Direct access to KienlongBank&apos;s end customers was limited during the early design phase. I ran moderated usability tests with <Highlight variant="blue">internal-company employees</Highlight> — whose monthly-salary pattern closely matches the target audience — across <Highlight variant="strong">three iterative rounds</Highlight>.
               </p>
               <p className="mt-5 text-lg leading-[1.7] text-port-body">
-                Each round surfaced specific friction in the request flow, the consent step, and limit visibility. I <Highlight variant="yellow">reduced perceived steps in the withdrawal flow</Highlight> and clarified language around &apos;earned&apos; versus &apos;available&apos; balance.
+                We evaluated the <Highlight variant="blue">worker mobile app</Highlight> and the <Highlight variant="blue">HR admin portal</Highlight> side by side, surfacing friction in the withdrawal flow, the consent step, balance terminology, and the approval workflow. I <Highlight variant="yellow">reduced perceived steps in the withdrawal flow</Highlight> and clarified language around &apos;earned&apos; versus &apos;available&apos; balance.
               </p>
             </Reveal>
             <Reveal delay={0.2}>
@@ -303,11 +292,11 @@ export default function EWACaseStudy() {
       <OutcomeSection
         title="What this taught me about designing across connected surfaces."
         paragraphs={[
-          "A B2B2C product only feels seamless when the three actors — the worker, the company admin, and the bank — see the same underlying record from their own vantage point. I designed the data model and IA together before touching any UI, which meant that when I later diverged the surfaces visually, the data trail stayed consistent.",
+          "Designing an Earned Wage Access product required thinking beyond individual screens. Even though my scope covered the worker mobile app and the HR admin portal, both products shared the same business rules and data model. Establishing the information architecture before designing the UI ensured a consistent experience between employees and HR throughout the withdrawal process.",
           "Running usability tests with proxy users (internal-company employees on monthly salary) turned out to be the most cost-effective research move of the project. It surfaced language issues in the balance copy that would have been invisible in a solo design review.",
         ]}
         takeaways={[
-          { n: "01", label: "ONE MODEL, THREE SURFACES", text: "Design the schema before the UI. When three roles see the same record from different angles, the schema is the honest broker." },
+          { n: "01", label: "ONE DATA MODEL, TWO EXPERIENCES", text: "Design the data model before the UI. When employees and HR interact with the same request from different perspectives, a shared structure keeps the experience consistent across products." },
           { n: "02", label: "PROXY USERS ARE STILL USERS", text: "When target users are behind an NDA wall, proxy users with similar context surface 80% of the copy and flow issues." },
           { n: "03", label: "COPY IS UX", text: "'Earned' vs. 'available' is a 2-word decision that determines whether every future support ticket exists." },
         ]}

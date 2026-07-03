@@ -1,6 +1,6 @@
 import Link from "next/link";
 import {
-  Download, Mail, MapPin, Globe, ArrowUpRight, GraduationCap, Award, Languages,
+  Download, Mail, MapPin, Globe, ArrowUpRight, GraduationCap, Award, Languages, Clock, FileText,
 } from "lucide-react";
 
 function LinkedinIcon({ className }: { className?: string }) {
@@ -150,6 +150,22 @@ export default function ResumePage() {
             <p className="mt-4 text-[15px] text-port-muted">
               Enterprise SaaS · B2B · Fintech · Banking · Workflow Systems
             </p>
+
+            {/* Meta strip — last updated + reading time */}
+            <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-[12px] text-port-muted">
+              <span className="inline-flex items-center gap-1.5">
+                <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#31C48D]" />
+                <span className="font-medium">Last updated · July 2026</span>
+              </span>
+              <span className="inline-flex items-center gap-1.5">
+                <Clock className="h-3.5 w-3.5" />
+                <span className="font-medium">Estimated reading time · 2 min</span>
+              </span>
+              <span className="inline-flex items-center gap-1.5">
+                <FileText className="h-3.5 w-3.5" />
+                <span className="font-medium">PDF · 2 pages</span>
+              </span>
+            </div>
           </Reveal>
 
           <Reveal delay={0.1}>

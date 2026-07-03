@@ -2,13 +2,12 @@
 
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Download } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 const NAV_ITEMS = [
   { href: "/portfolio#work", label: "Work" },
   { href: "/portfolio#skills", label: "Skills" },
   { href: "/portfolio#about", label: "About" },
-  { href: "/portfolio/resume", label: "Resume" },
   { href: "/portfolio#contact", label: "Contact" },
 ];
 
@@ -43,15 +42,24 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <a
-          href="/resume.pdf"
-          download="Duong-Ngoc-Minh-Anh-CV.pdf"
-          className="group inline-flex items-center gap-2 rounded-full bg-port-yellow px-4 py-2.5 text-[12px] font-semibold tracking-[1px] text-port-blue-dark transition-all duration-300 hover:gap-3 hover:bg-white"
-          aria-label="Download CV as PDF"
-        >
-          <Download className="h-3.5 w-3.5" />
-          <span>Download CV</span>
-        </a>
+        <div className="flex items-center gap-2 md:gap-3">
+          <a
+            href="/resume.pdf"
+            download="Duong-Ngoc-Minh-Anh-CV.pdf"
+            className="hidden text-[12px] font-medium tracking-[1.5px] text-white/70 underline decoration-white/25 decoration-1 underline-offset-4 transition-colors hover:text-port-yellow hover:decoration-port-yellow md:inline"
+            aria-label="Download résumé as PDF"
+          >
+            PDF ↓
+          </a>
+          <Link
+            href="/portfolio/resume"
+            className="group inline-flex items-center gap-2 rounded-full bg-port-yellow px-4 py-2.5 text-[12px] font-semibold tracking-[1px] text-port-blue-dark transition-all duration-300 hover:gap-3 hover:bg-white"
+            aria-label="View résumé"
+          >
+            <span>View résumé</span>
+            <ArrowUpRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </Link>
+        </div>
       </div>
     </motion.header>
   );

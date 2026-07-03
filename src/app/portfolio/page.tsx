@@ -122,7 +122,7 @@ export default function PortfolioOverview() {
                 </p>
               </Reveal>
               <Reveal direction="up" delay={0.28}>
-                <div className="mt-8 flex flex-wrap gap-3">
+                <div className="mt-8 flex flex-wrap items-center gap-3">
                   <Link
                     href="#work"
                     className="group inline-flex items-center gap-2 rounded-full bg-port-blue px-5 py-3 text-[13px] font-semibold text-white transition-all hover:gap-3 hover:bg-port-blue-dark"
@@ -130,13 +130,20 @@ export default function PortfolioOverview() {
                     View projects
                     <span aria-hidden className="transition-transform group-hover:translate-x-0.5">→</span>
                   </Link>
+                  <Link
+                    href="/portfolio/resume"
+                    className="group inline-flex items-center gap-2 rounded-full border border-port-blue bg-white px-5 py-3 text-[13px] font-semibold text-port-blue transition-colors hover:bg-port-tint-blue"
+                  >
+                    View résumé
+                    <span aria-hidden className="transition-transform group-hover:translate-x-0.5">→</span>
+                  </Link>
                   <a
                     href="/resume.pdf"
                     download="Duong-Ngoc-Minh-Anh-CV.pdf"
-                    className="group inline-flex items-center gap-2 rounded-full border border-port-ink/20 bg-white px-5 py-3 text-[13px] font-semibold text-port-ink transition-colors hover:border-port-ink"
+                    className="group inline-flex items-center gap-1.5 py-3 text-[13px] font-semibold text-port-muted underline decoration-port-muted/30 decoration-1 underline-offset-4 transition-colors hover:text-port-blue hover:decoration-port-blue"
                   >
                     <span aria-hidden>↓</span>
-                    Download CV
+                    Download PDF
                   </a>
                 </div>
               </Reveal>

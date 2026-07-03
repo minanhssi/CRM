@@ -97,8 +97,8 @@ export default function EWACaseStudy() {
         ]}
         cover={{
           src: "/portfolio/Thumbnail-EWA-PNG.png",
-          width: 1584,
-          height: 954,
+          width: 1294,
+          height: 728,
           alt: "Earned Wage Access — mobile app mockup with balance, calendar, and transaction cards",
         }}
       />

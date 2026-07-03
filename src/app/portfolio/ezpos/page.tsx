@@ -26,7 +26,7 @@ const TEAL = "#109C84";
 const TEAL_TEXT = "text-[#109C84]";
 
 const PROCESS_STEPS = [
-  { n: "01", title: "Competitor analysis", body: "Teardown of Square, Stripe Terminal, and SumUp to benchmark the smallest viable checkout flow. Identified 3 patterns worth adopting and 2 to explicitly avoid.", icon: <SearchCode className="h-5 w-5" /> },
+  { n: "01", title: "Competitor analysis", body: "Teardown of mPOS.vn, Payoo, and Square — each chosen for a specific lens: mPOS.vn for local payment device connectivity, Payoo for QR checkout and merchant transaction history, Square for one-handed checkout and design-system rigor. Extracted the patterns worth adopting and the ones to explicitly avoid.", icon: <SearchCode className="h-5 w-5" /> },
   { n: "02", title: "User flow", body: "Mapped the merchant's day-in-life: open shift → take payment → check history → close shift. Every screen serves one of these four states.", icon: <GitBranch className="h-5 w-5" /> },
   { n: "03", title: "Moodboard", body: "Assembled visual references for one-thumb interfaces and merchant tools. Landed on a green-accented dark theme that reads well outdoors at market stalls.", icon: <Palette className="h-5 w-5" /> },
   { n: "04", title: "Wireframing", body: "Low-fi wireframes for the 30+ screens covering all 4 states, prioritizing thumb-reachable primary actions on every screen.", icon: <PenLine className="h-5 w-5" /> },
@@ -92,8 +92,8 @@ export default function EzPOSCaseStudy() {
                 <Highlight variant="strong">one-handed checkout flow</Highlight> that works at the counter, plus reconciliation tools that respect a busy merchant&apos;s time.
               </p>
               <p className="mt-6 text-lg leading-[1.7] text-port-muted">
-                I led the <Highlight variant="green">full UX process</Highlight> — competitor analysis (Square, Stripe Terminal, SumUp), moodboard, user flow, wireframing, prototyping, design system, and high-fidelity UI. Output was a{" "}
-                <Highlight>30+ screen mobile app</Highlight> with a tight, on-brand visual language.
+                I led the end-to-end UX process — including <Highlight variant="green">competitive analysis of mPOS.vn, Payoo, and Square</Highlight>, moodboarding, user flows, wireframing, prototyping, design system creation, high-fidelity UI design, and developer handoff. The outcome was a{" "}
+                <Highlight>30+ screen mobile app</Highlight> with a consistent visual language optimized for retail merchants.
               </p>
               <p className="mt-4 text-lg leading-[1.7] text-port-muted">
                 The visual identity leans dark with green accent — chosen after moodboarding for legibility outdoors at market stalls and small-shop storefronts.
@@ -162,13 +162,46 @@ export default function EzPOSCaseStudy() {
             <div className={TEAL_TEXT}><SectionDeco variant="flow" /></div>
             <Eyebrow>Process</Eyebrow>
             <h2 className="font-serif mt-4 max-w-4xl text-4xl leading-[1.1] tracking-tight md:text-6xl">
-              Seven steps, end-to-end ownership.
+              Seven-step design process — from competitor research to developer handoff.
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-10 max-w-3xl text-lg leading-[1.65] text-port-body">
-              I owned <Highlight variant="green">every step from competitor teardown to dev handoff</Highlight>. This is the process I ran — each step feeding into the next, with the <Highlight variant="strong">earlier steps re-visited</Highlight> when later steps surfaced new assumptions.
+              My process began with analyzing <Highlight variant="green">mPOS.vn, Payoo, and Square</Highlight> to understand common payment flows, merchant workflows, and UI patterns before defining opportunities for EzPOS. Each step fed into the next, with the <Highlight variant="strong">earlier steps re-visited</Highlight> when later steps surfaced new assumptions.
             </p>
+          </Reveal>
+
+          {/* Competitor breakdown — why these 3 and what each contributed */}
+          <Reveal delay={0.15}>
+            <div className="mt-12 grid gap-4 md:grid-cols-3">
+              {[
+                {
+                  name: "mPOS.vn",
+                  region: "VN · Domestic reference",
+                  focus: "Payment flow, POS device connectivity, transaction management",
+                },
+                {
+                  name: "Payoo",
+                  region: "VN · Merchant leader",
+                  focus: "QR payments, transaction history, merchant-facing experience",
+                },
+                {
+                  name: "Square",
+                  region: "US · Global benchmark",
+                  focus: "One-handed checkout, design system rigor, modern POS flow",
+                },
+              ].map((c, i) => (
+                <div key={c.name} className="rounded-2xl border border-port-border bg-white p-6 shadow-[0_10px_28px_-18px_rgba(21,21,21,0.15)]">
+                  <div className="flex items-baseline justify-between gap-3">
+                    <p className={`font-bold text-2xl ${TEAL_TEXT}`}>{`0${i + 1}`}</p>
+                    <span className={`text-[10px] font-semibold tracking-[1.6px] uppercase ${TEAL_TEXT}`}>{c.region}</span>
+                  </div>
+                  <h3 className="mt-3 text-xl font-semibold text-port-ink">{c.name}</h3>
+                  <p className="mt-2 text-[11px] font-semibold tracking-[1.6px] uppercase text-port-muted">Studied for</p>
+                  <p className="mt-1 text-[14px] leading-[1.55] text-port-body">{c.focus}</p>
+                </div>
+              ))}
+            </div>
           </Reveal>
           <Reveal delay={0.2}>
             <div className="mt-14">

@@ -230,15 +230,15 @@ export default function ResumePage() {
                   aria-hidden
                   className="absolute -right-2 -top-2 h-4 w-4 rounded-full bg-port-yellow shadow-[0_4px_10px_-2px_rgba(0,0,0,0.15)]"
                 />
-                <div className="relative aspect-square overflow-hidden rounded-full">
+                <div className="relative aspect-square overflow-hidden rounded-full shadow-[0_18px_44px_-18px_rgba(15,20,60,0.35)]">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src="/portfolio/hero-avatar.svg"
+                    src="/portfolio/portrait.jpg"
                     alt="Duong Ngoc Minh Anh portrait"
-                    width={669}
-                    height={503}
-                    className="absolute left-1/2 top-1/2 h-auto w-[145%] max-w-none -translate-x-[52%] -translate-y-[46%]"
-                    style={{ imageRendering: "-webkit-optimize-contrast" }}
+                    width={400}
+                    height={534}
+                    className="h-full w-full object-cover"
+                    style={{ objectPosition: "50% 22%" }}
                   />
                 </div>
               </div>

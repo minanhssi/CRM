@@ -27,29 +27,24 @@ export const metadata = {
 
 const STEPS = [
   {
-    n: "01", label: "SELECT PLATFORM", title: "Choose one of 18 supported platforms",
+    n: "01", label: "SELECT CHANNEL", title: "Choose one of 18 supported platforms",
     body: "Platforms are grouped into four categories — Social Platform, Communication, Website, and External System — so administrators can locate the right integration by business context instead of scanning a long flat list.",
     img: "/portfolio/integration/step1-list.png",
   },
   {
-    n: "02", label: "CONFIGURE INTEGRATION", title: "Only the fields this platform actually needs",
-    body: "The form adapts to the selected platform — some require OAuth authorization, others API credentials, account information, or platform-specific configuration. Nothing irrelevant is shown, and every field is labeled by purpose rather than technical name.",
+    n: "02", label: "OAUTH AUTHORIZATION", title: "Authorize the CRM through the platform's OAuth flow",
+    body: "The administrator signs into the target platform and grants the CRM the specific permissions it needs — no copy-pasting of raw tokens. When a platform uses a different authentication model, the same shell adapts to show only the fields required for that model.",
     img: "/portfolio/integration/step2-auth.png",
   },
   {
     n: "03", label: "GENERATE CONNECTION INFO", title: "CRM auto-generates the Webhook URL & Secret Key",
-    body: "After configuration, the CRM produces the connection information the third-party platform needs — a Webhook URL to receive real-time events (new messages, orders, business events) and a Secret Key to verify request authenticity. Both values are copy-ready for use inside the external platform.",
+    body: "After authorization, the CRM produces the connection information the third-party platform needs — a Webhook URL to receive real-time events (new messages, orders, business events) and a Secret Key to verify request authenticity. Both values are copy-ready for use inside the external platform.",
     img: "/portfolio/integration/step3-validate.png",
   },
   {
-    n: "04", label: "REVIEW & ACTIVATE", title: "Confirm before switching the integration on",
-    body: "Administrators review the platform, its configuration, the generated Webhook URL, and the Secret Key together in one place before activation — so nothing goes live until the admin has explicitly acknowledged what will start flowing.",
-    img: "/portfolio/integration/step4-confirm.png",
-  },
-  {
-    n: "05", label: "INTEGRATION LIVE", title: "Managed from the integration list",
-    body: "Once live, the integration appears in the management list with a connection-status badge. From there administrators can view status, edit configuration, reconnect, disable, or delete the integration at any time.",
-    img: "/portfolio/integration/step5-success.png",
+    n: "04", label: "INTEGRATION LIVE", title: "Managed from the integration list",
+    body: "Once activated, the integration appears in the management list with a connection-status badge. From there administrators can view status, edit configuration, reconnect, disable, or delete the integration at any time.",
+    img: "/portfolio/integration/step4-live.png",
   },
 ];
 
@@ -251,12 +246,12 @@ export default function IntegrationCaseStudy() {
             <div className="text-port-accent"><SectionDeco variant="flow" /></div>
             <Eyebrow>Key flow</Eyebrow>
             <h2 className="font-serif mt-4 max-w-4xl text-4xl leading-[1.1] tracking-tight md:text-6xl">
-              Adding a new integration — five steps, one consistent flow.
+              Adding a new integration — four steps, one consistent flow.
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-10 max-w-4xl text-lg leading-[1.65] text-port-body">
-              Whether the administrator is connecting Zalo OA, Shopify, or a Website Widget, the sequence stays the same: <Highlight variant="accent">select the platform → configure it → generate connection info → review → go live</Highlight>. Only the second step&apos;s form adapts to the platform&apos;s specific requirements — everything around it is shared, so learning one integration teaches all 18.
+              Whether the administrator is connecting Zalo OA, Shopify, or a Website Widget, the sequence stays the same: <Highlight variant="accent">select the channel → authorize via OAuth → generate the Webhook URL & Secret Key → go live</Highlight>. Only the authorization step adapts to the platform&apos;s specific requirements — everything around it is shared, so learning one integration teaches all 18.
             </p>
           </Reveal>
           <div className="mt-20 space-y-24 md:space-y-32">

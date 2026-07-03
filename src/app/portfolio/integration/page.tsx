@@ -1,6 +1,5 @@
 import {
-  Wallet, ShoppingBag, Smartphone, Sparkles, ShieldCheck, RefreshCcw,
-  AlertTriangle, LifeBuoy, Code, Compass, Eye, TimerReset,
+  ShoppingBag, Sparkles, ShieldCheck, Compass, Layers,
 } from "lucide-react";
 import { Header } from "../_components/Header";
 import { Footer } from "../_components/Footer";
@@ -21,35 +20,35 @@ import { PullQuote } from "../_components/PullQuote";
 import { Illustration } from "../_components/Illustration";
 
 export const metadata = {
-  title: "Integration feature — CRM × Automation | Duong Ngoc Minh Anh",
+  title: "Integration module — AI CRM × 18 platforms | Duong Ngoc Minh Anh",
   description:
-    "Guided integration flow letting CRM admins connect 8+ channels — Zalo OA, FB Messenger, Shopify, public APIs — for data sync, auto-messaging, and lead capture.",
+    "Guided integration experience letting CRM administrators connect an AI chatbot to 18 external platforms across four categories — social, communication, website, and external systems.",
 };
 
 const STEPS = [
   {
-    n: "01", label: "SELECT TYPE", title: "Pick a channel",
-    body: "Categorized grid of 8 channels with one-line purpose hints. Empty state nudges first-time admins toward their first connection.",
+    n: "01", label: "SELECT PLATFORM", title: "Choose one of 18 supported platforms",
+    body: "Platforms are grouped into four categories — Social Platform, Communication, Website, and External System — so administrators can locate the right integration by business context instead of scanning a long flat list.",
     img: "/portfolio/integration/step1-list.png",
   },
   {
-    n: "02", label: "CONFIGURE", title: "Auth in the right model",
-    body: "Step 2 swaps based on channel — OAuth redirect for FB/Zalo, token field for Slack/WhatsApp, embed snippet for website, key for Shopify.",
+    n: "02", label: "CONFIGURE INTEGRATION", title: "Only the fields this platform actually needs",
+    body: "The form adapts to the selected platform — some require OAuth authorization, others API credentials, account information, or platform-specific configuration. Nothing irrelevant is shown, and every field is labeled by purpose rather than technical name.",
     img: "/portfolio/integration/step2-auth.png",
   },
   {
-    n: "03", label: "VALIDATE", title: "Token health check",
-    body: "Client-side validation first, then a background ping to the provider — inline error with docs link on failure, never silent acceptance.",
+    n: "03", label: "GENERATE CONNECTION INFO", title: "CRM auto-generates the Webhook URL & Secret Key",
+    body: "After configuration, the CRM produces the connection information the third-party platform needs — a Webhook URL to receive real-time events (new messages, orders, business events) and a Secret Key to verify request authenticity. Both values are copy-ready for use inside the external platform.",
     img: "/portfolio/integration/step3-validate.png",
   },
   {
-    n: "04", label: "CONFIRM", title: "Review before going live",
-    body: "Confirm screen names exactly what will sync, who gets notified on token expiry, and what permissions the CRM is requesting.",
+    n: "04", label: "REVIEW & ACTIVATE", title: "Confirm before switching the integration on",
+    body: "Administrators review the platform, its configuration, the generated Webhook URL, and the Secret Key together in one place before activation — so nothing goes live until the admin has explicitly acknowledged what will start flowing.",
     img: "/portfolio/integration/step4-confirm.png",
   },
   {
-    n: "05", label: "SUCCESS + LIVE", title: "Healthy state + next steps",
-    body: "Success modal links to the integration detail page, with notification settings already filled in and a live status badge visible.",
+    n: "05", label: "INTEGRATION LIVE", title: "Managed from the integration list",
+    body: "Once live, the integration appears in the management list with a connection-status badge. From there administrators can view status, edit configuration, reconnect, disable, or delete the integration at any time.",
     img: "/portfolio/integration/step5-success.png",
   },
 ];
@@ -75,26 +74,26 @@ export default function IntegrationCaseStudy() {
         eyebrow="Case study 04 — CRM × Automation"
         title={
           <>
-            Connect a CRM to <span className="text-port-accent">8+ channels</span> — in minutes, with no broken tokens.
+            Connect an AI CRM to <span className="text-port-accent">18 platforms</span> through one guided integration experience.
           </>
         }
-        subtitle="One guided integration flow for FB Messenger, Zalo OA, Instagram, WhatsApp, Slack, Shopify, Embed, and a Public API — designed for trust, recovery, and zero-IT setup."
-        tags={["GUIDED INTERACTION", "MULTI-PLATFORM", "AUTOMATION UX", "TRUST UX"]}
+        subtitle="Integration module inside an AI CRM — letting administrators connect an AI chatbot with 18 external platforms across four categories: Social Platform, Communication, Website, and External System."
+        tags={["GUIDED SETUP", "18 PLATFORMS · 4 CATEGORIES", "ENTERPRISE UX", "AI CRM"]}
         heroTint="peach"
         decoVariant="connect"
         decoColor="#F37B23"
         keyFacts={[
           { label: "ROLE", value: "Sole UX/UI designer" },
-          { label: "DOMAIN", value: "CRM · Automation" },
-          { label: "CHANNELS", value: "8 · chat, e-com, dev" },
-          { label: "PATTERNS", value: "Guided wizard, trust UX" },
+          { label: "DOMAIN", value: "AI CRM · Enterprise" },
+          { label: "PLATFORMS", value: "18 · 4 categories" },
+          { label: "PATTERNS", value: "Guided setup · Consistent flow" },
           { label: "OUTPUT", value: "Flows, UI, design specs" },
         ]}
         cover={{
           src: "/portfolio/Thumbnail-Integration.png",
           width: 1440,
           height: 810,
-          alt: "Integration — CRM connecting to 8+ social + commerce channels",
+          alt: "Integration — AI CRM connecting to 18 platforms across four categories",
         }}
       />
 
@@ -109,25 +108,20 @@ export default function IntegrationCaseStudy() {
           <div className="mt-14 grid gap-16 md:grid-cols-[1fr_400px] md:gap-20">
             <Reveal delay={0.1}>
               <p className="text-xl leading-[1.75] text-port-body md:text-[22px]">
-                Integration is the feature inside a CRM platform that lets{" "}
-                <Highlight>non-technical admins connect their workspace</Highlight> to external messaging, e-commerce, and developer channels — enabling{" "}
-                <Highlight variant="accent">auto-messaging</Highlight>,{" "}
-                <Highlight variant="accent">data sync</Highlight>, and{" "}
-                <Highlight variant="accent">lead capture</Highlight> without involving an engineer.
+                The Integration module lets CRM administrators <Highlight>connect their AI chatbot to 18 external platforms</Highlight> — from social messaging to communication tools, websites, and other business systems — through one <Highlight variant="accent">consistent setup experience</Highlight>.
               </p>
               <p className="mt-6 text-lg leading-[1.7] text-port-muted">
-                The feature covers{" "}
-                <Highlight variant="strong">eight channels</Highlight> with very different connection models — OAuth bots (FB Messenger, Zalo OA, Instagram, WhatsApp, Slack), credentialed app keys (Shopify), embed snippets (website widget), and a public API token. Each model needed its own configuration UX, but the entry, recovery, and trust patterns had to feel like <em>one consistent surface</em>.
+                The 18 platforms span four categories — <Highlight variant="strong">Social Platform</Highlight> (Facebook Messenger, Instagram, TikTok…), <Highlight variant="strong">Communication</Highlight> (WhatsApp, Zalo OA, Telegram, Slack, Viber…), <Highlight variant="strong">Website</Highlight> (Shopify, Magento, WordPress, Framer, Website Widget…), and <Highlight variant="strong">External System</Highlight> (Shopee, Lazada, and other systems). Every platform has different authentication and configuration requirements, but the UX presents one guided setup flow so administrators don&apos;t have to learn each platform&apos;s technical model.
               </p>
             </Reveal>
             <Reveal delay={0.2}>
               <div className="rounded-2xl bg-port-accent-soft p-8 space-y-6">
                 {[
-                  { icon: <ShoppingBag className="h-4 w-4" />, label: "PRODUCT", value: "CRM platform — internal feature module" },
-                  { icon: <Sparkles className="h-4 w-4" />, label: "ROLE", value: "Sole UX/UI designer for the Integration feature" },
+                  { icon: <ShoppingBag className="h-4 w-4" />, label: "PRODUCT", value: "AI CRM platform — Integration module" },
+                  { icon: <Sparkles className="h-4 w-4" />, label: "ROLE", value: "Sole UX/UI designer for the Integration module" },
                   { icon: <Compass className="h-4 w-4" />, label: "SCOPE", value: "End-to-end — flow, wireframes, UI, design system, handoff" },
-                  { icon: <Wallet className="h-4 w-4" />, label: "CHANNELS", value: "8 — chatbot (5), e-commerce (1), web embed (1), public API (1)" },
-                  { icon: <ShieldCheck className="h-4 w-4" />, label: "KEY PATTERNS", value: "Guided wizard · Token validation · Recovery / re-sync" },
+                  { icon: <Layers className="h-4 w-4" />, label: "PLATFORMS", value: "18 platforms — Social · Communication · Website · External System" },
+                  { icon: <ShieldCheck className="h-4 w-4" />, label: "KEY PATTERNS", value: "Guided setup · Platform categorization · Consistent flow" },
                 ].map(m => (
                   <div key={m.label} className="flex gap-3">
                     <div className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-port-accent/15 text-port-accent">
@@ -152,34 +146,34 @@ export default function IntegrationCaseStudy() {
             <div className="text-port-accent"><SectionDeco variant="pulse" /></div>
             <Eyebrow>The problem</Eyebrow>
             <h2 className="font-serif mt-4 max-w-4xl text-4xl leading-[1.1] tracking-tight md:text-6xl">
-              Admins were copy-pasting tokens across 8+ channels — with no audit trail and no recovery.
+              Non-technical administrators needed a simple way to connect many different business platforms.
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-10 max-w-4xl text-xl leading-[1.65] text-port-body">
-              Before this feature, connecting a channel meant pasting <Highlight variant="accent">raw API tokens</Highlight> into a generic form, with no validation. Tokens silently expired. There was <Highlight variant="strong">no way to tell if a connection was healthy</Highlight>. And every channel type required a different mental model from the admin.
+              Each of the 18 platforms had its own <Highlight variant="accent">setup process</Highlight>. Technical concepts like API credentials, webhook configuration, and authentication created friction for administrators without engineering backgrounds. Without guidance, integrations were <Highlight variant="strong">difficult to configure, troubleshoot, and maintain</Highlight>.
             </p>
           </Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             <Reveal delay={0}>
               <PainCard
-                who="CRM admin" label="FOR THE USER"
+                who="CRM administrators" label="FOR THE USER"
                 illustration={<Illustration kind="user" />}
-                body="Pasting tokens with no validation. No way to tell if a channel was still connected."
+                body="A different setup process for every platform. Unfamiliar technical terminology. No easy way to know whether an integration is working correctly."
               />
             </Reveal>
             <Reveal delay={0.08}>
               <PainCard
-                who="Ops & support" label="FOR THE TEAM"
+                who="Support team" label="FOR SUPPORT"
                 illustration={<Illustration kind="ops" />}
-                body="Every 'why isn't my chatbot replying?' ticket needed manual token inspection. No audit trail."
+                body="Frequent tickets caused by incorrect configuration. Difficult to identify configuration mistakes remotely. Manual troubleshooting eating into support capacity."
               />
             </Reveal>
             <Reveal delay={0.16}>
               <PainCard
                 who="Engineering" label="FOR DEV"
                 illustration={<Illustration kind="dev" />}
-                body="Each channel = a different connection model. Bespoke UI meant duplicated code and inconsistent error states."
+                body="Every platform uses different APIs and authentication models. Needed a scalable integration experience that could grow with new platforms without re-designing each one."
               />
             </Reveal>
           </div>
@@ -193,45 +187,45 @@ export default function IntegrationCaseStudy() {
             <div className="text-port-accent"><SectionDeco variant="layers" /></div>
             <Eyebrow>Approach</Eyebrow>
             <h2 className="font-serif mt-4 max-w-4xl text-4xl leading-[1.1] tracking-tight md:text-6xl">
-              Three design pillars to make integrations feel like one feature, not eight.
+              Three design pillars to make 18 platforms feel like one experience.
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-10 max-w-3xl text-lg leading-[1.65] text-port-body">
-              I organized the feature around <Highlight variant="accent">three pillars</Highlight> that each addressed a real problem the admins reported. Every screen in the feature <Highlight variant="strong">traces back</Highlight> to one of these three intents.
+              I organized the module around <Highlight variant="accent">three pillars</Highlight> that address the friction non-technical administrators face when connecting external platforms. Every screen in the module <Highlight variant="strong">traces back</Highlight> to one of these three intents.
             </p>
           </Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-3">
             <Reveal delay={0}>
               <PillarCard
-                n="01" label="PILLAR — DISCOVERY" title="Guided selection over a long flat list"
+                n="01" label="PILLAR — PLATFORM ORGANIZATION" title="Group 18 platforms into four business-facing categories"
                 illustration={<Illustration kind="discover" />}
                 bullets={[
-                  "Group 8 channels by type — Chatbot · Messaging · E-com · Dev",
-                  "Purpose hint under each channel — admin picks intent first",
-                  "One wizard shell for every channel — only step 2 changes",
+                  "Four categories — Social Platform, Communication, Website, External System",
+                  "Recognizable platform logos so admins locate by brand, not by internal name",
+                  "One guided setup flow reused across every platform",
                 ]}
               />
             </Reveal>
             <Reveal delay={0.08}>
               <PillarCard
-                n="02" label="PILLAR — TRUST" title="Token health visible at every step"
+                n="02" label="PILLAR — CLEAR SETUP GUIDANCE" title="Administrators always know where they are in the flow"
                 illustration={<Illustration kind="trust" />}
                 bullets={[
-                  "Client-side token validation saves a backend round-trip",
-                  "Inline errors link straight to the platform docs",
-                  "Status indicator on every card: healthy · stale · expired",
+                  "Only the fields required for the selected platform are shown",
+                  "Configuration progress and current step are visible at every stage",
+                  "Validation before activation — the integration goes live only when the admin confirms",
                 ]}
               />
             </Reveal>
             <Reveal delay={0.16}>
               <PillarCard
-                n="03" label="PILLAR — RECOVERY" title="Token expiry as a normal lifecycle event"
+                n="03" label="PILLAR — RELIABLE CONNECTION" title="Auto-generated Webhook URL & Secret Key, explained in plain language"
                 illustration={<Illustration kind="recovery" />}
                 bullets={[
-                  "Detect drift automatically and badge the affected card",
-                  "One-click resync with a confirm modal — never silent re-auth",
-                  "Delete is undoable for 7 days; bulk delete confirms per channel",
+                  "Webhook URL — receives real-time events (messages, orders, business events) from the connected platform",
+                  "Secret Key — verifies request authenticity, preventing unauthorized calls to the CRM",
+                  "Copy-ready values, visible connection status, and edit / reconnect available after setup",
                 ]}
               />
             </Reveal>
@@ -242,9 +236,10 @@ export default function IntegrationCaseStudy() {
       {/* PULL QUOTE — between Approach and Flow */}
       <section className="bg-white">
         <div className="mx-auto max-w-[1320px] px-6 pb-8 md:px-12 md:pb-16">
-          <PullQuote accent="#F37B23" attribution="Design principle behind the feature">
-            <span className="text-port-accent">Integration UX</span> is fundamentally about building{" "}
-            <span className="underline decoration-port-accent decoration-4 underline-offset-8">trust</span> in a system the user can&apos;t see end-to-end.
+          <PullQuote accent="#F37B23" attribution="Design principle behind the module">
+            Good{" "}
+            <span className="text-port-accent">integration UX</span> isn&apos;t about APIs — it&apos;s about helping{" "}
+            <span className="underline decoration-port-accent decoration-4 underline-offset-8">non-technical users</span> confidently connect complex systems.
           </PullQuote>
         </div>
       </section>
@@ -256,12 +251,12 @@ export default function IntegrationCaseStudy() {
             <div className="text-port-accent"><SectionDeco variant="flow" /></div>
             <Eyebrow>Key flow</Eyebrow>
             <h2 className="font-serif mt-4 max-w-4xl text-4xl leading-[1.1] tracking-tight md:text-6xl">
-              Adding a new integration — five steps, one mental model.
+              Adding a new integration — five steps, one consistent flow.
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-10 max-w-4xl text-lg leading-[1.65] text-port-body">
-              Whether the admin is connecting Zalo OA or a public API, the flow is the same: pick what to connect → tell us how to authenticate → we validate → confirm → live. The only thing that changes between channels is the middle step.
+              Whether the administrator is connecting Zalo OA, Shopify, or a Website Widget, the sequence stays the same: <Highlight variant="accent">select the platform → configure it → generate connection info → review → go live</Highlight>. Only the second step&apos;s form adapts to the platform&apos;s specific requirements — everything around it is shared, so learning one integration teaches all 18.
             </p>
           </Reveal>
           <div className="mt-20 space-y-24 md:space-y-32">
@@ -283,15 +278,15 @@ export default function IntegrationCaseStudy() {
 
       <div id="reflection" />
       <OutcomeSection
-        title="What this taught me — and why it transfers to AI-assisted enterprise UX."
+        title="What this taught me about designing integrations for enterprise software."
         paragraphs={[
-          "Integration UX is fundamentally about building trust in a system the user can't see end-to-end. The same pattern shows up in AI-assisted enterprise design: the user grants the system permission to act on their behalf, and the design has to make outcomes visible, recoverable, and explainable at every step.",
-          "The three patterns I leaned on — guided selection, visible status, named consequence — apply directly to AI experiences like conversational flows, agentic actions, and recommendation surfaces. I'm carrying these principles into my exploration of AI-assisted UX patterns next.",
+          "Designing integrations taught me that users don't think in APIs — they think in business outcomes. The role of the UX is to hide technical complexity while still making configuration transparent and trustworthy. When an administrator connects Shopify or Zalo OA, they don't want to reason about OAuth flows, webhooks, or secret keys — they want to know their AI chatbot is talking to that platform, and that they can see when it stops.",
+          "Good integration design isn't about reducing functionality. It's about making technical workflows understandable for administrators without engineering backgrounds — grouping platforms by business context, showing only the fields that matter for the current platform, and explaining Webhook URL and Secret Key by what they do rather than what they are. Consistency does the rest: 18 platforms feel like one product when the shell around them stays the same.",
         ]}
         takeaways={[
-          { n: "01", label: "GUIDED OVER FLAT", text: "When you have 5+ options of different kinds, group by intent — the picker becomes a question, not a list." },
-          { n: "02", label: "STATUS BEATS DOCS", text: "A visible badge replaces a help article. Make the system's current state legible before you write words about it." },
-          { n: "03", label: "NAMED CONSEQUENCE", text: "Replace 'Are you sure?' with the exact thing that will happen — it gives the user a real choice, not a yes/no reflex." },
+          { n: "01", label: "ORGANIZE BEFORE CONFIGURE", text: "Grouping integrations by business context makes large ecosystems easier to navigate. Four categories are more legible than 18 tiles." },
+          { n: "02", label: "EXPLAIN TECHNICAL CONCEPTS", text: "Webhook URLs and Secret Keys should be explained through their purpose — what they receive, what they protect — not their implementation." },
+          { n: "03", label: "CONSISTENCY BUILDS CONFIDENCE", text: "Although every platform connects differently, using one consistent setup pattern reduces learning time and user errors." },
         ]}
       />
 

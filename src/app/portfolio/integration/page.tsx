@@ -66,20 +66,19 @@ export default function IntegrationCaseStudy() {
 
       <CaseHero
         caseNumber="CASE STUDY · 04 / 04"
-        eyebrow="Case study 04 — CRM × Automation"
+        eyebrow="AI CRM · Enterprise integration"
         title={
           <>
             Connect an AI CRM to <span className="text-port-accent">18 platforms</span> through one guided integration experience.
           </>
         }
         subtitle="Integration module inside an AI CRM — letting administrators connect an AI chatbot with 18 external platforms across four categories: Social Platform, Communication, Website, and External System."
-        tags={["GUIDED SETUP", "18 PLATFORMS · 4 CATEGORIES", "ENTERPRISE UX", "AI CRM"]}
+        tags={["GUIDED SETUP", "PLATFORM CONNECTORS", "ENTERPRISE UX", "AI CRM"]}
         heroTint="peach"
         decoVariant="connect"
         decoColor="#F37B23"
         keyFacts={[
-          { label: "ROLE", value: "Sole UX/UI designer" },
-          { label: "DOMAIN", value: "AI CRM · Enterprise" },
+          { label: "ROLE", value: "Sole UX/UI Designer" },
           { label: "PLATFORMS", value: "18 · 4 categories" },
           { label: "PATTERNS", value: "Guided setup · Consistent flow" },
           { label: "OUTPUT", value: "Flows, UI, design specs" },
@@ -113,7 +112,7 @@ export default function IntegrationCaseStudy() {
               <div className="rounded-2xl bg-port-accent-soft p-8 space-y-6">
                 {[
                   { icon: <ShoppingBag className="h-4 w-4" />, label: "PRODUCT", value: "AI CRM platform — Integration module" },
-                  { icon: <Sparkles className="h-4 w-4" />, label: "ROLE", value: "Sole UX/UI designer for the Integration module" },
+                  { icon: <Sparkles className="h-4 w-4" />, label: "ROLE", value: "Sole UX/UI — research, UX, UI, dev handoff" },
                   { icon: <Compass className="h-4 w-4" />, label: "SCOPE", value: "End-to-end — flow, wireframes, UI, design system, handoff" },
                   { icon: <Layers className="h-4 w-4" />, label: "PLATFORMS", value: "18 platforms — Social · Communication · Website · External System" },
                   { icon: <ShieldCheck className="h-4 w-4" />, label: "KEY PATTERNS", value: "Guided setup · Platform categorization · Consistent flow" },

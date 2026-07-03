@@ -68,7 +68,7 @@ export default function EWACaseStudy() {
 
       <CaseHero
         caseNumber="CASE STUDY · 02 / 04"
-        eyebrow="Case study 02 — Fintech × HR"
+        eyebrow="Fintech · Payroll on demand"
         title={<><span className="text-port-blue">Earned Wage Access</span> — pay workers 24/7, on the wages they already earned.</>}
         subtitle="Designed the two touchpoints I owned in this B2B2C payroll workflow — the worker mobile app and the HR admin portal — letting employees withdraw earned wages anytime without payday loans."
         tags={["MOBILE + ADMIN PORTAL", "USER TESTING", "PAYROLL WORKFLOW", "B2B2C"]}
@@ -78,8 +78,7 @@ export default function EWACaseStudy() {
         decoVariant="wave"
         decoColor={INDIGO}
         keyFacts={[
-          { label: "ROLE", value: "Solo UX Designer" },
-          { label: "DOMAIN", value: "Fintech · Payroll / HR" },
+          { label: "ROLE", value: "Sole UX/UI Designer" },
           { label: "PLATFORMS", value: "2 · mobile + web admin" },
           { label: "METHOD", value: "3 rounds of usability tests" },
           { label: "OUTCOME", value: "Flow 6 → 3 perceived steps" },
@@ -119,7 +118,7 @@ export default function EWACaseStudy() {
               <div className="rounded-2xl border border-port-border bg-white p-8 space-y-6 shadow-[0_10px_28px_-18px_rgba(21,21,21,0.15)]">
                 {[
                   { icon: <Briefcase className="h-4 w-4" />, label: "DOMAIN", value: "Fintech · Payroll / HR" },
-                  { icon: <Users className="h-4 w-4" />, label: "ROLE", value: "Solo UX Designer — Research, UX, UI, handoff" },
+                  { icon: <Users className="h-4 w-4" />, label: "ROLE", value: "Sole UX/UI — research, UX, UI, dev handoff" },
                   { icon: <Layers className="h-4 w-4" />, label: "PLATFORMS", value: "2 — worker mobile app · HR admin portal" },
                   { icon: <HeartHandshake className="h-4 w-4" />, label: "TEAM", value: "Product owner + engineering" },
                   { icon: <Search className="h-4 w-4" />, label: "METHOD", value: "User interviews + in-company usability testing" },

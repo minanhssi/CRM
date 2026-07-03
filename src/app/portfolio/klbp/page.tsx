@@ -64,7 +64,7 @@ export default function KLBPCaseStudy() {
 
       <CaseHero
         caseNumber="CASE STUDY · 01 / 04"
-        eyebrow="Case study 01 — Fintech · Banking back-office"
+        eyebrow="Fintech · Banking back-office"
         title={<>KienlongBank Pay — <span className="text-port-blue">back-office</span> for a payment gateway.</>}
         subtitle="Multi-module enterprise CMS: partner approval, employee management, transaction tracking, and configurable cash-flow workflows for a fintech product at scale."
         tags={["ENTERPRISE CMS", "MULTI-ROLE WORKFLOW", "DESIGN SYSTEM", "BANKING"]}
@@ -74,8 +74,7 @@ export default function KLBPCaseStudy() {
         decoVariant="connect"
         decoColor={BLUE}
         keyFacts={[
-          { label: "ROLE", value: "Lead UX designer" },
-          { label: "DOMAIN", value: "Fintech · Back-office" },
+          { label: "ROLE", value: "Lead UX/UI Designer" },
           { label: "MODULES", value: "6 · one shared record" },
           { label: "METHOD", value: "Research + personas + tests" },
           { label: "OUTPUT", value: "25+ specs · design system" },
@@ -118,7 +117,7 @@ export default function KLBPCaseStudy() {
                 {[
                   { icon: <Building2 className="h-4 w-4" />, label: "DOMAIN", value: "Fintech · Banking back-office" },
                   { icon: <LayoutTemplate className="h-4 w-4" />, label: "PRODUCT", value: "Payment gateway CMS — multi-module enterprise" },
-                  { icon: <Users className="h-4 w-4" />, label: "ROLE", value: "Lead UX designer — research, UX, UI, handoff" },
+                  { icon: <Users className="h-4 w-4" />, label: "ROLE", value: "Lead UX/UI — research, UX, UI, dev handoff" },
                   { icon: <Layers className="h-4 w-4" />, label: "MODULES", value: "6 — partner, employees, fees, transactions, cash flow, PayPOS" },
                   { icon: <Search className="h-4 w-4" />, label: "METHOD", value: "User research · empathy map · personas · usability test" },
                   { icon: <ScrollText className="h-4 w-4" />, label: "OUTPUT", value: "Wireframes, prototype, design system, 25+ specs" },
@@ -176,12 +175,12 @@ export default function KLBPCaseStudy() {
             <div className={SOFT_BLUE}><SectionDeco variant="layers" /></div>
             <Eyebrow>Approach</Eyebrow>
             <h2 className="font-serif mt-4 max-w-4xl text-4xl leading-[1.1] tracking-tight md:text-6xl">
-              Three design pillars that made six modules feel like one product.
+              Kept six modules coherent through shared record, shared library, and research-led IA.
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-10 max-w-3xl text-lg leading-[1.65] text-port-body">
-              I organized the design around <Highlight variant="blue">three pillars</Highlight> each addressing a real bottleneck. <Highlight variant="strong">Every screen in the back-office</Highlight> traces back to one of them.
+              Six independently-scoped modules would drift the moment engineering split them across sprints. I anchored the design to <Highlight variant="blue">three shared substrates</Highlight> that stay honest under scale — one <Highlight variant="strong">canonical partner record</Highlight>, one component library, and an information architecture grounded in observed operator behavior rather than the org chart.
             </p>
           </Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -194,7 +193,7 @@ export default function KLBPCaseStudy() {
                 "Handoff between modules preserves state — no lost approvals mid-flow",
                 "Every action is journaled with actor, timestamp, and reason",
               ]} /></Reveal>
-            <Reveal delay={0.08}><PillarCard n="02" label="PILLAR — DESIGN SYSTEM" title="One component library, six-module consistency"
+            <Reveal delay={0.08}><PillarCard n="02" label="PILLAR — DESIGN SYSTEM" title="Component library tuned for cross-module reuse"
               icon={<LayoutTemplate className="h-5 w-5" />}
               accent={SOFT_BLUE} bg="bg-white" iconBg="bg-port-blue"
               bullets={[

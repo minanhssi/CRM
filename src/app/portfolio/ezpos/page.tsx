@@ -53,18 +53,17 @@ export default function EzPOSCaseStudy() {
 
       <CaseHero
         caseNumber="CASE STUDY · 03 / 04"
-        eyebrow="Case study 03 — B2B Retail · Mobile POS"
+        eyebrow="B2B Retail · Mobile POS"
         title={<>EzPOS — fast card &amp; QR payments, designed for the <span className="text-[#109C84]">merchant in motion</span>.</>}
         subtitle="Mobile point-of-sale app for retail merchants — quick card & QR payments, transaction history, and a simplified end-of-day reconciliation flow that fits in 3 minutes."
-        tags={["MOBILE POS", "PAYMENT", "MERCHANT TOOLS", "FULL UX PROCESS"]}
+        tags={["MOBILE POS", "MERCHANT TOOLS", "DESIGN SYSTEM", "FULL UX PROCESS"]}
         eyebrowColor="cream"
         accentClass="text-[#109C84]"
         heroTint="mint"
         decoVariant="grid"
         decoColor={TEAL}
         keyFacts={[
-          { label: "ROLE", value: "End-to-end UX / UI" },
-          { label: "DOMAIN", value: "Retail · Mobile POS" },
+          { label: "ROLE", value: "Sole UX/UI Designer" },
           { label: "PLATFORM", value: "iOS · Android" },
           { label: "PROCESS", value: "7-step full UX cycle" },
           { label: "OUTPUT", value: "30+ screens · design system" },
@@ -104,7 +103,7 @@ export default function EzPOSCaseStudy() {
                 {[
                   { icon: <Briefcase className="h-4 w-4" />, label: "DOMAIN", value: "Retail · Mobile POS" },
                   { icon: <ShoppingBag className="h-4 w-4" />, label: "PRODUCT", value: "Mobile payment app for merchants" },
-                  { icon: <Users className="h-4 w-4" />, label: "ROLE", value: "End-to-end UX / UI designer" },
+                  { icon: <Users className="h-4 w-4" />, label: "ROLE", value: "Sole UX/UI — research, UX, UI, dev handoff" },
                   { icon: <Smartphone className="h-4 w-4" />, label: "PLATFORM", value: "Mobile (iOS / Android)" },
                   { icon: <ClipboardList className="h-4 w-4" />, label: "PROCESS", value: "7 steps — competitor analysis → high-fi UI" },
                   { icon: <LayoutGrid className="h-4 w-4" />, label: "OUTPUT", value: "30+ screen mobile app + design system" },

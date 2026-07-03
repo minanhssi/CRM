@@ -21,6 +21,23 @@ export function Footer() {
             <Field label="BASED IN" value="Ho Chi Minh City, VN" />
           </div>
         </div>
+
+        <div className="mt-12 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-port-yellow/25 bg-port-yellow/5 px-6 py-5 md:px-8">
+          <div>
+            <p className="text-[11px] font-semibold tracking-[1.8px] text-port-yellow">DOWNLOAD RESUME</p>
+            <p className="mt-1 text-[15px] font-medium text-white">
+              Prefer the offline copy? Grab the PDF for your ATS.
+            </p>
+          </div>
+          <a
+            href="/resume.pdf"
+            download="Duong-Ngoc-Minh-Anh-CV.pdf"
+            className="group inline-flex items-center gap-2 rounded-full bg-port-yellow px-5 py-3 text-[13px] font-semibold text-port-blue-dark transition-all hover:gap-3 hover:bg-white"
+          >
+            <span aria-hidden>↓</span>
+            Download PDF
+          </a>
+        </div>
         <div className="mt-16 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-6 text-[12px] text-[#F5F0E3]/55">
           <span>© 2026 Duong Ngoc Minh Anh — Portfolio for UX Design Specialist role</span>
           <span>Designed in Figma · Built with Next.js + Framer Motion</span>

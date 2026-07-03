@@ -121,7 +121,26 @@ export default function PortfolioOverview() {
                   for fintech, payment, and CRM products.
                 </p>
               </Reveal>
-              <Reveal direction="up" delay={0.3}>
+              <Reveal direction="up" delay={0.28}>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <Link
+                    href="#work"
+                    className="group inline-flex items-center gap-2 rounded-full bg-port-blue px-5 py-3 text-[13px] font-semibold text-white transition-all hover:gap-3 hover:bg-port-blue-dark"
+                  >
+                    View projects
+                    <span aria-hidden className="transition-transform group-hover:translate-x-0.5">→</span>
+                  </Link>
+                  <a
+                    href="/resume.pdf"
+                    download="Duong-Ngoc-Minh-Anh-CV.pdf"
+                    className="group inline-flex items-center gap-2 rounded-full border border-port-ink/20 bg-white px-5 py-3 text-[13px] font-semibold text-port-ink transition-colors hover:border-port-ink"
+                  >
+                    <span aria-hidden>↓</span>
+                    Download CV
+                  </a>
+                </div>
+              </Reveal>
+              <Reveal direction="up" delay={0.35}>
                 <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-[14px]">
                   <a
                     href="mailto:minhanhdn9601@gmail.com"
@@ -179,6 +198,25 @@ export default function PortfolioOverview() {
                 Currently exploring{" "}
                 <Highlight variant="yellow">AI-assisted and guided-interaction patterns</Highlight> to enrich enterprise experiences.
               </p>
+              <div className="mt-8 flex flex-wrap items-center gap-3">
+                <p className="text-[14px] text-port-muted">Need the full résumé?</p>
+                <Link
+                  href="/portfolio/resume"
+                  className="inline-flex items-center gap-1.5 text-[14px] font-semibold text-port-blue underline decoration-port-blue/30 decoration-1 underline-offset-4 transition-colors hover:decoration-port-blue"
+                >
+                  Read online
+                  <span aria-hidden>→</span>
+                </Link>
+                <span className="text-port-muted">·</span>
+                <a
+                  href="/resume.pdf"
+                  download="Duong-Ngoc-Minh-Anh-CV.pdf"
+                  className="inline-flex items-center gap-1.5 text-[14px] font-semibold text-port-blue underline decoration-port-blue/30 decoration-1 underline-offset-4 transition-colors hover:decoration-port-blue"
+                >
+                  Download PDF
+                  <span aria-hidden>↓</span>
+                </a>
+              </div>
             </Reveal>
             <Reveal delay={0.2}>
               <div className="space-y-10">
@@ -221,20 +259,15 @@ export default function PortfolioOverview() {
                   className="group flex h-full flex-col overflow-hidden rounded-2xl border border-port-border bg-white transition-all duration-500 hover:-translate-y-1 hover:border-port-ink hover:shadow-[0_28px_60px_-16px_rgba(21,21,21,0.18)]"
                 >
                   <div className="relative aspect-[16/9] overflow-hidden bg-port-tint-gray">
-                    <div
-                      className="absolute inset-0"
-                      style={p.thumbZoom ? { transform: `scale(${p.thumbZoom})` } : undefined}
-                    >
-                      <Image
-                        src={p.thumb}
-                        alt={`${p.title} — hero banner`}
-                        width={p.thumbW}
-                        height={p.thumbH}
-                        quality={92}
-                        sizes="(min-width: 1280px) 320px, (min-width: 640px) 45vw, 90vw"
-                        className="absolute inset-0 h-full w-full object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.05]"
-                      />
-                    </div>
+                    <Image
+                      src={p.thumb}
+                      alt={`${p.title} — hero banner`}
+                      width={p.thumbW}
+                      height={p.thumbH}
+                      quality={92}
+                      sizes="(min-width: 1280px) 320px, (min-width: 640px) 45vw, 90vw"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.05]"
+                    />
                     <div className="absolute right-3 top-3">
                       <span className={`rounded-full px-2.5 py-1 text-[9px] font-semibold tracking-[1.4px] shadow-sm ${p.badgeColor}`}>{p.badge}</span>
                     </div>

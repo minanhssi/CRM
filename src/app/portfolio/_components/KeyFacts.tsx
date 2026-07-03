@@ -15,7 +15,7 @@ export function KeyFacts({
       initial={{ opacity: 0, y: 24 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-      className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-port-border bg-port-border sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
+      className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-port-border bg-port-border sm:grid-cols-2 md:grid-cols-4"
     >
       {items.map(item => (
         <div key={item.label} className="flex flex-col gap-2 bg-white px-5 py-4">

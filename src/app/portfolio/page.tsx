@@ -191,7 +191,7 @@ export default function PortfolioOverview() {
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <Eyebrow>01 — Intro</Eyebrow>
-            <h2 className="font-serif mt-4 text-5xl tracking-tight md:text-7xl">About</h2>
+            <h2 className="font-serif mt-4 text-4xl tracking-tight md:text-6xl">About</h2>
           </Reveal>
           <div className="mt-16 grid gap-16 md:grid-cols-[1fr_320px] md:gap-24">
             <Reveal delay={0.1}>
@@ -251,7 +251,7 @@ export default function PortfolioOverview() {
             <div className="flex flex-wrap items-end justify-between gap-4">
               <div>
                 <Eyebrow>02 — Case studies</Eyebrow>
-                <h2 className="font-serif mt-3 text-5xl tracking-tight md:text-6xl">Selected work</h2>
+                <h2 className="font-serif mt-3 text-4xl tracking-tight md:text-6xl">Selected work</h2>
               </div>
               <p className="max-w-md text-[15px] leading-[1.55] text-port-muted">
                 Four enterprise / B2B case studies — click any card to open the full write-up.
@@ -301,7 +301,7 @@ export default function PortfolioOverview() {
         <div className="relative mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <Eyebrow>03 — Approach</Eyebrow>
-            <h2 className="font-serif mt-4 text-5xl leading-tight tracking-tight md:text-7xl">
+            <h2 className="font-serif mt-4 text-4xl leading-tight tracking-tight md:text-6xl">
               Skills &amp; <span className="text-port-blue">approach</span>
               <span className="text-port-yellow">.</span>
             </h2>

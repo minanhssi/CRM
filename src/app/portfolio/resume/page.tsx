@@ -1,6 +1,6 @@
 import Link from "next/link";
 import {
-  Download, Mail, MapPin, Globe, ArrowUpRight, GraduationCap, Award, Languages, Clock, FileText,
+  Download, Mail, MapPin, Globe, ArrowUpRight, Clock, FileText,
 } from "lucide-react";
 
 function LinkedinIcon({ className }: { className?: string }) {
@@ -361,7 +361,7 @@ export default function ResumePage() {
               </ul>
 
               <div className="mt-6 rounded-xl border border-port-border bg-white p-5">
-                <p className="text-[11px] font-semibold tracking-[2px] text-port-accent">AI PRODUCT DESIGN</p>
+                <p className="text-[11px] font-semibold tracking-[2.5px] text-port-accent">AI PRODUCT DESIGN</p>
                 <ul className="mt-3 space-y-1.5 text-[13px] leading-[1.55] text-port-body">
                   {AI_PRODUCT_DESIGN.map(item => (
                     <li key={item} className="flex gap-2">
@@ -388,7 +388,7 @@ export default function ResumePage() {
               </div>
 
               <div className="mt-8 space-y-5">
-                <InfoBlock icon={<GraduationCap className="h-4 w-4" />} label="EDUCATION">
+                <InfoBlock label="EDUCATION">
                   <p className="text-[14px] font-semibold text-port-ink">University of Economics and Law</p>
                   <p className="mt-0.5 text-[13px] text-port-body">
                     Bachelor of Management Information Systems
@@ -396,13 +396,13 @@ export default function ResumePage() {
                   <p className="mt-0.5 text-[12px] tracking-[1.2px] text-port-muted">2018 — 2022</p>
                 </InfoBlock>
 
-                <InfoBlock icon={<Award className="h-4 w-4" />} label="CREDENTIALS">
+                <InfoBlock label="CREDENTIALS">
                   <p className="text-[13px] font-medium text-port-ink">
                     Google UX Design Professional Certificate
                   </p>
                 </InfoBlock>
 
-                <InfoBlock icon={<Languages className="h-4 w-4" />} label="LANGUAGES">
+                <InfoBlock label="LANGUAGES">
                   <ul className="grid gap-1 text-[13px] leading-[1.5]">
                     <li className="flex items-baseline justify-between gap-3">
                       <span className="font-semibold text-port-ink">Vietnamese</span>
@@ -466,13 +466,10 @@ function ContactItem({ icon, label, href }: { icon: React.ReactNode; label: stri
   );
 }
 
-function InfoBlock({ icon, label, children }: { icon: React.ReactNode; label: string; children: React.ReactNode }) {
+function InfoBlock({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div>
-      <p className="flex items-center gap-2 text-[11px] font-semibold tracking-[2px] text-port-blue">
-        <span>{icon}</span>
-        {label}
-      </p>
+      <p className="text-[11px] font-semibold tracking-[2.5px] text-port-blue">{label}</p>
       <div className="mt-2">{children}</div>
     </div>
   );

@@ -139,75 +139,111 @@ export default function ResumePage() {
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-port-border-soft bg-white">
         <div className="mx-auto max-w-[1080px] px-6 pb-16 pt-20 md:px-12 md:pb-24 md:pt-28">
-          <Reveal>
-            <Eyebrow>Resume</Eyebrow>
-            <h1 className="font-serif mt-4 text-4xl leading-[1.05] tracking-tight md:text-6xl">
-              Duong Ngoc Minh Anh<span className="text-port-blue">.</span>
-            </h1>
-            <p className="mt-3 text-[15px] font-semibold tracking-[2px] uppercase text-port-blue">
-              User Experience Designer
-            </p>
-            <p className="mt-4 text-[15px] text-port-muted">
-              Enterprise SaaS · B2B · Fintech · Banking · Workflow Systems
-            </p>
+          <div className="grid gap-10 md:grid-cols-[1fr_280px] md:items-start md:gap-12">
+            {/* LEFT — text column */}
+            <div>
+              <Reveal>
+                <Eyebrow>Resume</Eyebrow>
+                <h1 className="font-serif mt-4 text-4xl leading-[1.05] tracking-tight md:text-6xl">
+                  Duong Ngoc Minh Anh<span className="text-port-blue">.</span>
+                </h1>
+                <p className="mt-3 text-[15px] font-semibold tracking-[2px] uppercase text-port-blue">
+                  User Experience Designer
+                </p>
+                <p className="mt-4 text-[15px] text-port-muted">
+                  Enterprise SaaS · B2B · Fintech · Banking · Workflow Systems
+                </p>
 
-            {/* Meta strip — last updated + reading time */}
-            <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-[12px] text-port-muted">
-              <span className="inline-flex items-center gap-1.5">
-                <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#31C48D]" />
-                <span className="font-medium">Last updated · July 2026</span>
-              </span>
-              <span className="inline-flex items-center gap-1.5">
-                <Clock className="h-3.5 w-3.5" />
-                <span className="font-medium">Estimated reading time · 2 min</span>
-              </span>
-              <span className="inline-flex items-center gap-1.5">
-                <FileText className="h-3.5 w-3.5" />
-                <span className="font-medium">PDF · 2 pages</span>
-              </span>
-            </div>
-          </Reveal>
+                {/* Meta strip — last updated + reading time */}
+                <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-[12px] text-port-muted">
+                  <span className="inline-flex items-center gap-1.5">
+                    <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#31C48D]" />
+                    <span className="font-medium">Last updated · July 2026</span>
+                  </span>
+                  <span className="inline-flex items-center gap-1.5">
+                    <Clock className="h-3.5 w-3.5" />
+                    <span className="font-medium">Estimated reading time · 2 min</span>
+                  </span>
+                  <span className="inline-flex items-center gap-1.5">
+                    <FileText className="h-3.5 w-3.5" />
+                    <span className="font-medium">PDF · 2 pages</span>
+                  </span>
+                </div>
+              </Reveal>
 
-          <Reveal delay={0.1}>
-            <div className="mt-8 grid gap-2 text-[14px] text-port-body md:grid-cols-2">
-              <ContactItem icon={<MapPin className="h-4 w-4" />} label="Ho Chi Minh City, Vietnam" />
-              <ContactItem
-                icon={<Mail className="h-4 w-4" />}
-                label="minhanhdn9601@gmail.com"
-                href="mailto:minhanhdn9601@gmail.com"
-              />
-              <ContactItem
-                icon={<LinkedinIcon className="h-4 w-4" />}
-                label="linkedin.com/in/duongngocminhanh"
-                href="https://www.linkedin.com/in/duongngocminhanh/"
-              />
-              <ContactItem
-                icon={<Globe className="h-4 w-4" />}
-                label="duongngocminhanh.com"
-                href="/portfolio"
-              />
-            </div>
-          </Reveal>
+              <Reveal delay={0.1}>
+                <div className="mt-8 grid gap-2 text-[14px] text-port-body sm:grid-cols-2">
+                  <ContactItem icon={<MapPin className="h-4 w-4" />} label="Ho Chi Minh City, Vietnam" />
+                  <ContactItem
+                    icon={<Mail className="h-4 w-4" />}
+                    label="minhanhdn9601@gmail.com"
+                    href="mailto:minhanhdn9601@gmail.com"
+                  />
+                  <ContactItem
+                    icon={<LinkedinIcon className="h-4 w-4" />}
+                    label="linkedin.com/in/duongngocminhanh"
+                    href="https://www.linkedin.com/in/duongngocminhanh/"
+                  />
+                  <ContactItem
+                    icon={<Globe className="h-4 w-4" />}
+                    label="duongngocminhanh.com"
+                    href="/portfolio"
+                  />
+                </div>
+              </Reveal>
 
-          <Reveal delay={0.2}>
-            <div className="mt-10 flex flex-wrap gap-3">
-              <a
-                href="/resume.pdf"
-                download="Duong-Ngoc-Minh-Anh-CV.pdf"
-                className="group inline-flex items-center gap-2 rounded-full bg-port-blue px-5 py-3 text-[13px] font-semibold text-white transition-all hover:gap-3 hover:bg-port-blue-dark"
-              >
-                <Download className="h-4 w-4" />
-                Download PDF
-              </a>
-              <Link
-                href="/portfolio#work"
-                className="group inline-flex items-center gap-2 rounded-full border border-port-border bg-white px-5 py-3 text-[13px] font-semibold text-port-ink transition-colors hover:border-port-ink"
-              >
-                View projects
-                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </Link>
+              <Reveal delay={0.2}>
+                <div className="mt-10 flex flex-wrap gap-3">
+                  <a
+                    href="/resume.pdf"
+                    download="Duong-Ngoc-Minh-Anh-CV.pdf"
+                    className="group inline-flex items-center gap-2 rounded-full bg-port-blue px-5 py-3 text-[13px] font-semibold text-white transition-all hover:gap-3 hover:bg-port-blue-dark"
+                  >
+                    <Download className="h-4 w-4" />
+                    Download PDF
+                  </a>
+                  <Link
+                    href="/portfolio#work"
+                    className="group inline-flex items-center gap-2 rounded-full border border-port-border bg-white px-5 py-3 text-[13px] font-semibold text-port-ink transition-colors hover:border-port-ink"
+                  >
+                    View projects
+                    <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </Link>
+                </div>
+              </Reveal>
             </div>
-          </Reveal>
+
+            {/* RIGHT — portrait */}
+            <Reveal direction="up" delay={0.15}>
+              <div className="relative mx-auto w-[220px] md:w-[280px]">
+                {/* Circular tint plate that anchors the illustration */}
+                <div
+                  aria-hidden
+                  className="absolute inset-0 rounded-full bg-port-tint-blue/70"
+                />
+                <div
+                  aria-hidden
+                  className="absolute -inset-2 rounded-full ring-1 ring-port-blue/15"
+                />
+                {/* Yellow accent dot echoing the About hero */}
+                <span
+                  aria-hidden
+                  className="absolute -right-2 -top-2 h-4 w-4 rounded-full bg-port-yellow shadow-[0_4px_10px_-2px_rgba(0,0,0,0.15)]"
+                />
+                <div className="relative aspect-square overflow-hidden rounded-full">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/portfolio/hero-avatar.svg"
+                    alt="Duong Ngoc Minh Anh portrait"
+                    width={669}
+                    height={503}
+                    className="absolute left-1/2 top-1/2 h-auto w-[145%] max-w-none -translate-x-[52%] -translate-y-[46%]"
+                    style={{ imageRendering: "-webkit-optimize-contrast" }}
+                  />
+                </div>
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 

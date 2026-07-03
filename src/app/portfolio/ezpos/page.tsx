@@ -70,9 +70,9 @@ export default function EzPOSCaseStudy() {
           { label: "OUTPUT", value: "30+ screens · design system" },
         ]}
         cover={{
-          src: "/portfolio/ezpos/hero.png",
-          width: 1480,
-          height: 1062,
+          src: "/portfolio/Thumbnail-EzPOS.png",
+          width: 1440,
+          height: 810,
           alt: "EzPOS — dual phone mockup with checkout and payment UI",
         }}
       />

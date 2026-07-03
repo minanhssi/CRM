@@ -2,10 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 
 const ORDER = [
-  { slug: "klbp", title: "KienlongBank Pay", thumb: "/portfolio/klbp/hero.png", w: 1440, h: 1096 },
-  { slug: "ewa", title: "Earned Wage Access", thumb: "/portfolio/ewa/hero.png", w: 2064, h: 1440 },
-  { slug: "ezpos", title: "EzPOS", thumb: "/portfolio/ezpos/hero.png", w: 1440, h: 1062 },
-  { slug: "integration", title: "Integration feature", thumb: "/portfolio/integration/hero.png", w: 1920, h: 762 },
+  { slug: "klbp", title: "KienlongBank Pay", thumb: "/portfolio/Thumbnail-KLBP.svg", w: 1440, h: 810 },
+  { slug: "ewa", title: "Earned Wage Access", thumb: "/portfolio/Thumbnail-EWA-PNG.png", w: 1584, h: 954 },
+  { slug: "ezpos", title: "EzPOS", thumb: "/portfolio/Thumbnail-EzPOS.png", w: 1440, h: 810 },
+  { slug: "integration", title: "Integration feature", thumb: "/portfolio/Thumbnail-Integration.png", w: 1440, h: 810 },
 ];
 
 export function CaseNav({ currentSlug }: { currentSlug: string }) {

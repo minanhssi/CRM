@@ -55,8 +55,8 @@ const PROJECTS = [
     summary:
       "Guided integration flow letting CRM admins connect FB Messenger, Zalo OA, Instagram, WhatsApp, Shopify, and public APIs — for data sync, auto-messaging, and lead capture.",
     tags: ["Guided interaction", "Multi-platform", "Automation UX", "CRM"],
-    thumb: "/portfolio/integration/hero.png",
-    thumbW: 1440, thumbH: 1096,
+    thumb: "/portfolio/Thumbnail-Integration.png",
+    thumbW: 1440, thumbH: 810,
   },
 ];
 

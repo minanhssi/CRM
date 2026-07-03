@@ -91,10 +91,10 @@ export default function IntegrationCaseStudy() {
           { label: "OUTPUT", value: "Flows, UI, design specs" },
         ]}
         cover={{
-          src: "/portfolio/integration/hero.png",
+          src: "/portfolio/Thumbnail-Integration.png",
           width: 1440,
-          height: 1096,
-          alt: "Integration — browser mockup showing the CRM channel selection drawer",
+          height: 810,
+          alt: "Integration — CRM connecting to 8+ social + commerce channels",
         }}
       />
 

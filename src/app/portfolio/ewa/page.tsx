@@ -96,9 +96,9 @@ export default function EWACaseStudy() {
           { label: "OUTCOME", value: "Flow 6 → 3 perceived steps" },
         ]}
         cover={{
-          src: "/portfolio/ewa/hero.png",
-          width: 2064,
-          height: 1440,
+          src: "/portfolio/Thumbnail-EWA-PNG.png",
+          width: 1584,
+          height: 954,
           alt: "Earned Wage Access — mobile app mockup with balance, calendar, and transaction cards",
         }}
       />

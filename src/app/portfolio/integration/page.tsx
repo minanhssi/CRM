@@ -256,7 +256,7 @@ export default function IntegrationCaseStudy() {
           </Reveal>
           <div className="mt-20 space-y-24 md:space-y-32">
             {STEPS.map((s, i) => (
-              <div key={s.n} className="grid items-center gap-10 md:grid-cols-[1.4fr_1fr] md:gap-20">
+              <div key={s.n} className="grid items-center gap-10 md:grid-cols-2 md:gap-20">
                 <div className={i % 2 === 1 ? "md:order-2" : ""}>
                   <MockFrame src={s.img} alt={s.title} width={1792} height={1092} />
                 </div>

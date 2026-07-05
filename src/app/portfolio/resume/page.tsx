@@ -21,13 +21,34 @@ export const metadata = {
     "Enterprise UX Designer with 3+ years designing workflow applications, SaaS products, and digital banking platforms. Download the PDF or read online.",
 };
 
-const CORE_SKILLS = [
-  "Enterprise UX", "Product Design", "User-centered Design", "Interaction Design",
-  "Information Architecture", "User Flow", "Customer Journey", "Wireframing",
-  "Prototyping", "Usability Testing", "Accessibility", "Design System",
-  "Dashboard Design", "Complex Forms", "Responsive UI", "Developer Handoff",
-  "Design QA", "Cross-functional Collaboration", "Workflow Design",
-  "Interaction Models", "Enterprise Systems", "Qualitative Research", "Design Thinking",
+const CORE_SKILLS: { name: string; accent?: boolean }[] = [
+  // Enterprise & Product
+  { name: "Enterprise UX", accent: true },
+  { name: "Product Design" },
+  { name: "User-centered Design" },
+  { name: "Workflow Design", accent: true },
+  { name: "Enterprise Systems" },
+  // UX Research & Strategy
+  { name: "User Flow" },
+  { name: "Customer Journey" },
+  { name: "Information Architecture", accent: true },
+  { name: "Interaction Design" },
+  { name: "Interaction Models", accent: true },
+  { name: "Qualitative Research", accent: true },
+  { name: "Usability Testing" },
+  { name: "Accessibility" },
+  // UI Craft
+  { name: "Design System", accent: true },
+  { name: "Dashboard Design" },
+  { name: "Responsive UI" },
+  { name: "Complex Forms" },
+  { name: "Wireframing" },
+  { name: "Prototyping" },
+  // Delivery
+  { name: "Cross-functional Collaboration" },
+  { name: "Developer Handoff" },
+  { name: "Design QA" },
+  { name: "Design Thinking" },
 ];
 
 const EXPERIENCE: {
@@ -267,10 +288,14 @@ export default function ResumePage() {
             <div className="mt-6 flex flex-wrap gap-2">
               {CORE_SKILLS.map(s => (
                 <span
-                  key={s}
-                  className="rounded-full border border-port-border bg-port-tint-blue/60 px-3 py-1.5 text-[12px] font-medium text-port-ink"
+                  key={s.name}
+                  className={
+                    s.accent
+                      ? "rounded-full border border-[#D8E6FF] bg-[#EEF4FF] px-3 py-1.5 text-[12px] font-medium text-[#0F5BFF]"
+                      : "rounded-full border border-port-border bg-[#F5F7FA] px-3 py-1.5 text-[12px] font-medium text-port-ink"
+                  }
                 >
-                  {s}
+                  {s.name}
                 </span>
               ))}
             </div>
@@ -303,7 +328,9 @@ export default function ResumePage() {
                         </span>
                       )}
                     </div>
-                    <p className="text-[12px] font-medium tracking-[1.2px] text-port-muted">{exp.period}</p>
+                    {!exp.freelance && (
+                      <p className="text-[12px] font-medium tracking-[1.2px] text-port-muted">{exp.period}</p>
+                    )}
                   </div>
 
                   {exp.headline && (
@@ -360,7 +387,7 @@ export default function ResumePage() {
                 ))}
               </ul>
 
-              <div className="mt-6 rounded-xl border border-port-border bg-white p-5">
+              <div className="mt-8">
                 <p className="text-[11px] font-semibold tracking-[2.5px] text-port-accent">AI PRODUCT DESIGN</p>
                 <ul className="mt-3 space-y-1.5 text-[13px] leading-[1.55] text-port-body">
                   {AI_PRODUCT_DESIGN.map(item => (

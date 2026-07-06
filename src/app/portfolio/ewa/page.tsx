@@ -186,7 +186,7 @@ export default function EWACaseStudy() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-10 max-w-3xl text-lg leading-[1.65] text-port-body">
-              An Earned Wage Access product sits inside a live payroll system — every screen has to respect the underlying financial and operational rules. These constraints weren&apos;t obstacles to design around; they were the shape of the product itself.
+              An Earned Wage Access product sits inside a <Highlight variant="blue">live payroll system</Highlight> — every screen has to respect the underlying financial and operational rules. These constraints weren&apos;t obstacles to design around; they were <Highlight variant="strong">the shape of the product itself</Highlight>.
             </p>
           </Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -274,7 +274,7 @@ export default function EWACaseStudy() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-10 max-w-3xl text-lg leading-[1.65] text-port-body">
-              A withdrawal starts as a tap in the worker&apos;s hand and ends as a settled transfer in their bank account — with five intermediate states each owned by a different team. The UI has to make the current position on this path visible on both surfaces at all times.
+              A withdrawal starts as a <Highlight variant="blue">tap in the worker&apos;s hand</Highlight> and ends as a <Highlight variant="blue">settled transfer in their bank account</Highlight> — with five intermediate states each owned by a different team. The UI has to make the <Highlight variant="strong">current position on this path</Highlight> visible on both surfaces at all times.
             </p>
           </Reveal>
           <div className="mt-14 grid gap-4 md:grid-cols-7">
@@ -349,19 +349,45 @@ export default function EWACaseStudy() {
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
           <Reveal>
             <div className={INDIGO_TEXT}><SectionDeco variant="arrow" /></div>
-            <Eyebrow>Mockups</Eyebrow>
+            <Eyebrow>High-fidelity mockups</Eyebrow>
             <h2 className="font-serif mt-4 max-w-4xl text-4xl leading-[1.1] tracking-tight md:text-6xl">
-              Two surfaces, one shared workflow.
+              How the two surfaces render the shared workflow.
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <div className="mt-14">
+            <p className="mt-10 max-w-3xl text-lg leading-[1.65] text-port-body">
+              The <Highlight variant="blue">HR admin portal</Highlight> holds the configuration, approval queues, and reporting — the surface where policy is set and requests are managed. The <Highlight variant="blue">employee mobile app</Highlight> is where the worker checks their earned balance, submits a request, and tracks status. Both read from the same record, so state on one side is always truthful on the other.
+            </p>
+          </Reveal>
+
+          {/* Sub-label row for the two surfaces */}
+          <Reveal delay={0.15}>
+            <div className="mt-10 grid gap-4 md:grid-cols-2">
+              <div className="rounded-xl border border-port-border bg-white p-5">
+                <p className={`text-[10px] font-semibold tracking-[2px] ${INDIGO_TEXT}`}>01 · WEB · HR / ADMIN</p>
+                <h3 className="mt-2 text-[18px] font-semibold text-port-ink">Admin portal</h3>
+                <p className="mt-2 text-[13px] leading-[1.55] text-port-body">
+                  Configure withdrawal policy · Review approval queue · Manage employees + limits · Export reconciliation reports.
+                </p>
+              </div>
+              <div className="rounded-xl border border-port-border bg-white p-5">
+                <p className={`text-[10px] font-semibold tracking-[2px] ${INDIGO_TEXT}`}>02 · MOBILE · WORKER</p>
+                <h3 className="mt-2 text-[18px] font-semibold text-port-ink">Employee app</h3>
+                <p className="mt-2 text-[13px] leading-[1.55] text-port-body">
+                  Check earned + available balance · Submit a withdrawal request · Track request status · Receive notifications after approval.
+                </p>
+              </div>
+            </div>
+          </Reveal>
+
+          <Reveal delay={0.2}>
+            <div className="mt-10">
               <ImageBanner
                 src="/portfolio/ewa/mockups.png"
-                alt="EWA mockups across mobile app and admin portal"
+                alt="EWA mockups across HR admin portal and employee mobile app"
                 width={1920}
                 height={2138}
-                caption="Mockups — worker mobile app and HR admin portal"
+                caption="High-fidelity mockups — HR admin portal (top) and employee mobile app (bottom)"
               />
             </div>
           </Reveal>
@@ -391,7 +417,7 @@ export default function EWACaseStudy() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-10 max-w-3xl text-lg leading-[1.65] text-port-body">
-              To keep the two surfaces from drifting into different products, I designed the visual + interaction patterns once and reused them across both. The same request card, the same status vocabulary, the same empty state — read the same way on a phone in a worker&apos;s hand and a browser on an HR desk.
+              To keep the two surfaces from drifting into different products, I designed the visual + interaction patterns <Highlight variant="blue">once and reused them across both</Highlight>. The same request card, the same status vocabulary, the same empty state — read the <Highlight variant="strong">same way</Highlight> on a phone in a worker&apos;s hand and a browser on an HR desk.
             </p>
           </Reveal>
           <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">

@@ -182,7 +182,7 @@ export default function KLBPCaseStudy() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-10 max-w-3xl text-lg leading-[1.65] text-port-body">
-              The first phase was a structured review of the existing screens, flows, and stakeholder interviews — with a heuristic pass against Nielsen&apos;s ten and a competitor benchmark against comparable payment back-offices. The findings clustered into four themes that the redesign later addressed.
+              The first phase was a <Highlight variant="blue">structured review</Highlight> of the existing screens, flows, and stakeholder interviews — with a <Highlight variant="strong">heuristic pass against Nielsen&apos;s ten</Highlight> and a competitor benchmark against comparable payment back-offices. The findings clustered into <Highlight>four themes</Highlight> that the redesign later addressed.
             </p>
           </Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-2">
@@ -382,7 +382,7 @@ export default function KLBPCaseStudy() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-10 max-w-3xl text-lg leading-[1.65] text-port-body">
-              There was no formal usability study on this project — banking back-offices sit behind an internal-user wall, and the timeline didn&apos;t allow one. Validation happened through structured stakeholder reviews across the phases the design touched, and accessibility was enforced at the component-library layer so every module inherited the same baseline.
+              There was <Highlight variant="strong">no formal usability study</Highlight> on this project — banking back-offices sit behind an internal-user wall, and the timeline didn&apos;t allow one. Validation happened through <Highlight variant="blue">structured stakeholder reviews</Highlight> across the phases the design touched, and accessibility was enforced at the <Highlight variant="blue">component-library layer</Highlight> so every module inherited the same baseline.
             </p>
           </Reveal>
           <div className="mt-14 grid gap-8 md:grid-cols-2">

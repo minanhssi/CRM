@@ -1,6 +1,7 @@
 import {
   Smartphone, LayoutDashboard, Wallet, ClipboardList, Building2,
   Zap, MessageSquareText, Layers, Users, Search, ScrollText, HeartHandshake, Briefcase,
+  Calendar, Calculator, ShieldCheck, Landmark, UserCog, Cog, FileCheck2, MessagesSquare,
 } from "lucide-react";
 import { Header } from "../_components/Header";
 import { Footer } from "../_components/Footer";
@@ -59,6 +60,9 @@ export default function EWACaseStudy() {
         sections={[
           { id: "overview", label: "Overview" },
           { id: "problem", label: "Problem" },
+          { id: "constraints", label: "Constraints" },
+          { id: "stakeholders", label: "Stakeholders" },
+          { id: "workflow", label: "Workflow" },
           { id: "approach", label: "Platforms" },
           { id: "mockups", label: "Mockups" },
           { id: "validation", label: "Validation" },
@@ -71,7 +75,7 @@ export default function EWACaseStudy() {
         eyebrow="Fintech · Payroll on demand"
         title={<><span className="text-port-blue">Earned Wage Access</span> — pay workers 24/7, on the wages they already earned.</>}
         subtitle="Designed the two touchpoints I owned in this B2B2C payroll workflow — the worker mobile app and the HR admin portal — letting employees withdraw earned wages anytime without payday loans."
-        tags={["MOBILE + ADMIN PORTAL", "USER TESTING", "PAYROLL WORKFLOW", "B2B2C"]}
+        tags={["MOBILE + ADMIN PORTAL", "CONNECTED WORKFLOW", "PAYROLL / FINTECH", "B2B2C"]}
         eyebrowColor="cream"
         accentClass="text-port-blue"
         heroTint="lavender"
@@ -80,8 +84,8 @@ export default function EWACaseStudy() {
         keyFacts={[
           { label: "ROLE", value: "Sole UX/UI Designer" },
           { label: "PLATFORMS", value: "2 · mobile + web admin" },
-          { label: "METHOD", value: "3 rounds of usability tests" },
-          { label: "OUTCOME", value: "Flow 6 → 3 perceived steps" },
+          { label: "METHOD", value: "Stakeholder validation · flow reviews · design critiques" },
+          { label: "FOCUS", value: "Connected workflow across worker + admin" },
         ]}
         cover={{
           src: "/portfolio/Thumbnail-EWA-PNG.png",
@@ -121,7 +125,7 @@ export default function EWACaseStudy() {
                   { icon: <Users className="h-4 w-4" />, label: "ROLE", value: "Sole UX/UI — research, UX, UI, dev handoff" },
                   { icon: <Layers className="h-4 w-4" />, label: "PLATFORMS", value: "2 — worker mobile app · HR admin portal" },
                   { icon: <HeartHandshake className="h-4 w-4" />, label: "TEAM", value: "Product owner + engineering" },
-                  { icon: <Search className="h-4 w-4" />, label: "METHOD", value: "User interviews + in-company usability testing" },
+                  { icon: <Search className="h-4 w-4" />, label: "METHOD", value: "Stakeholder walkthroughs · prototype reviews · flow reviews" },
                   { icon: <ScrollText className="h-4 w-4" />, label: "DELIVERABLES", value: "Flows, wireframes, prototype, design specs" },
                 ].map(m => (
                   <div key={m.label} className="flex gap-3">
@@ -166,6 +170,134 @@ export default function EWACaseStudy() {
               icon={<Building2 className="h-5 w-5" />}
               iconBg="bg-[#4F5BD5]/10" iconColor={INDIGO_TEXT} accent={INDIGO_TEXT}
               body="No standardized B2B2C workflow to deliver earned-wage services at scale across multiple partner companies." /></Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* PRODUCT CONSTRAINTS */}
+      <section id="constraints" className="bg-white">
+        <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
+          <Reveal>
+            <div className={INDIGO_TEXT}><SectionDeco variant="layers" /></div>
+            <Eyebrow>Product constraints</Eyebrow>
+            <h2 className="font-serif mt-4 max-w-4xl text-4xl leading-[1.1] tracking-tight md:text-6xl">
+              The rules that shaped every design decision.
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="mt-10 max-w-3xl text-lg leading-[1.65] text-port-body">
+              An Earned Wage Access product sits inside a live payroll system — every screen has to respect the underlying financial and operational rules. These constraints weren&apos;t obstacles to design around; they were the shape of the product itself.
+            </p>
+          </Reveal>
+          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              { icon: <Calendar className="h-5 w-5" />, title: "Payroll cycle", body: "Withdrawal windows had to align with the company's payroll close date. Requests during cutoff windows behave differently than requests early in the month." },
+              { icon: <Calculator className="h-5 w-5" />, title: "Salary calculation", body: "Earned wage is a computed value — accrued days × daily rate, minus prior withdrawals, minus deductions, capped at a company-defined percentage. The UI never invents a number." },
+              { icon: <ClipboardList className="h-5 w-5" />, title: "Employer approval", body: "Some companies auto-approve; others require HR review. The same request UI has to render both flows without confusing the worker about what happens next." },
+              { icon: <Wallet className="h-5 w-5" />, title: "Available balance", body: "'Earned' is what you've worked for. 'Available' is what you can withdraw right now. These are two different numbers and the copy has to keep them apart." },
+              { icon: <FileCheck2 className="h-5 w-5" />, title: "Transaction status", body: "Pending, approved, rejected, processing, sent, received, failed — every state maps to a specific place in the payroll + banking pipeline and needs its own label." },
+              { icon: <Landmark className="h-5 w-5" />, title: "Banking transfer", body: "The actual money move is on third-party bank rails with their own SLAs. The UX has to hold the worker's trust across a gap the design doesn't fully control." },
+              { icon: <UserCog className="h-5 w-5" />, title: "Permission & role control", body: "Worker sees their own record only. HR sees their company. Admin sees the platform. The same schema, three visibility layers — enforced in the UI, not just the API." },
+              { icon: <ShieldCheck className="h-5 w-5" />, title: "Audit trail", body: "Every state change carries actor, timestamp, and reason. This isn't decorative — it's what makes the product usable by compliance and finance teams downstream." },
+              { icon: <Layers className="h-5 w-5" />, title: "Data consistency across surfaces", body: "The worker's request and the HR's queue item are the same record seen from two angles. State on one side must be truthful on the other — always." },
+            ].map((c, i) => (
+              <Reveal key={c.title} delay={i * 0.04}>
+                <div className="h-full rounded-2xl border border-port-border bg-white p-6">
+                  <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#4F5BD5]/10 text-[#4F5BD5]">{c.icon}</div>
+                  <h3 className="text-[16px] font-semibold text-port-ink">{c.title}</h3>
+                  <p className="mt-2 text-[13px] leading-[1.55] text-port-body">{c.body}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* STAKEHOLDERS */}
+      <section id="stakeholders" className="border-y border-port-border-soft bg-port-tint-blue">
+        <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
+          <Reveal>
+            <div className={INDIGO_TEXT}><SectionDeco variant="dots" /></div>
+            <Eyebrow>Stakeholder map</Eyebrow>
+            <h2 className="font-serif mt-4 max-w-4xl text-4xl leading-[1.1] tracking-tight md:text-6xl">
+              A connected workflow, not a mobile app.
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="mt-10 max-w-3xl text-lg leading-[1.65] text-port-body">
+              Every withdrawal touches at least five parties in sequence. Understanding what each party needs, owns, and cares about is what turned "design a mobile app" into <Highlight variant="blue">design a payroll workflow that has a mobile face</Highlight>.
+            </p>
+          </Reveal>
+          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              { icon: <Users className="h-5 w-5" />, who: "Worker / employee", needs: "A trustworthy way to check what they've earned and request part of it before payday.", owns: "Their own withdrawal history and request state.", cares: "Balance clarity, request status, expected arrival time." },
+              { icon: <Briefcase className="h-5 w-5" />, who: "Employer / HR admin", needs: "A control surface to configure policy and process requests without spreadsheets.", owns: "Company withdrawal policy, employee eligibility, request approvals.", cares: "Volume of requests, exceptions, monthly reconciliation." },
+              { icon: <Calculator className="h-5 w-5" />, who: "Payroll / finance team", needs: "Reliable per-employee deduction records that flow back into the monthly payroll run.", owns: "Deductions, reconciliation, month-end close.", cares: "Data integrity, timing against payroll cutoff, no manual patches." },
+              { icon: <Landmark className="h-5 w-5" />, who: "Banking / payment provider", needs: "Valid transfer instructions and a callback to confirm settlement.", owns: "The actual money movement on bank rails.", cares: "Correct amount, valid account, retry / failure handling." },
+              { icon: <Cog className="h-5 w-5" />, who: "Product / operations team", needs: "Visibility into what's happening across the system so edge cases don't reach the worker as silent failures.", owns: "Monitoring, exception handling, support paths.", cares: "Failed transfers, stuck approvals, disputed requests." },
+              { icon: <ShieldCheck className="h-5 w-5" />, who: "Compliance & audit", needs: "A journal of who did what, when, and why — accessible without engineering support.", owns: "Regulatory posture on wage advances.", cares: "Auditability, actor + timestamp + reason on every state change." },
+            ].map((s, i) => (
+              <Reveal key={s.who} delay={i * 0.05}>
+                <div className="h-full rounded-2xl border border-port-border bg-white p-7">
+                  <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[#4F5BD5] text-white">{s.icon}</div>
+                  <h3 className="text-[17px] font-semibold text-port-ink">{s.who}</h3>
+                  <dl className="mt-4 space-y-3 text-[13px] leading-[1.5]">
+                    <div>
+                      <dt className={`text-[10px] font-semibold tracking-[1.5px] ${INDIGO_TEXT}`}>NEEDS</dt>
+                      <dd className="mt-1 text-port-body">{s.needs}</dd>
+                    </div>
+                    <div>
+                      <dt className={`text-[10px] font-semibold tracking-[1.5px] ${INDIGO_TEXT}`}>OWNS</dt>
+                      <dd className="mt-1 text-port-body">{s.owns}</dd>
+                    </div>
+                    <div>
+                      <dt className={`text-[10px] font-semibold tracking-[1.5px] ${INDIGO_TEXT}`}>CARES ABOUT</dt>
+                      <dd className="mt-1 text-port-body">{s.cares}</dd>
+                    </div>
+                  </dl>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WORKFLOW */}
+      <section id="workflow" className="bg-white">
+        <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
+          <Reveal>
+            <div className={INDIGO_TEXT}><SectionDeco variant="flow" /></div>
+            <Eyebrow>End-to-end workflow</Eyebrow>
+            <h2 className="font-serif mt-4 max-w-4xl text-4xl leading-[1.1] tracking-tight md:text-6xl">
+              One request travels through seven checkpoints.
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="mt-10 max-w-3xl text-lg leading-[1.65] text-port-body">
+              A withdrawal starts as a tap in the worker&apos;s hand and ends as a settled transfer in their bank account — with five intermediate states each owned by a different team. The UI has to make the current position on this path visible on both surfaces at all times.
+            </p>
+          </Reveal>
+          <div className="mt-14 grid gap-4 md:grid-cols-7">
+            {[
+              { n: "01", title: "Check available wage", who: "WORKER" },
+              { n: "02", title: "Submit request", who: "WORKER" },
+              { n: "03", title: "System / HR validation", who: "HR ADMIN" },
+              { n: "04", title: "Payroll record check", who: "FINANCE" },
+              { n: "05", title: "Payment processed", who: "BANK" },
+              { n: "06", title: "Worker receives money", who: "WORKER" },
+              { n: "07", title: "Status updated across surfaces", who: "SYSTEM" },
+            ].map((step, i) => (
+              <Reveal key={step.n} delay={i * 0.04}>
+                <div className="relative flex h-full flex-col rounded-xl border border-port-border bg-white p-5">
+                  <p className={`font-bold text-2xl ${INDIGO_TEXT}`}>{step.n}</p>
+                  <p className={`mt-2 text-[9px] font-semibold tracking-[1.4px] ${INDIGO_TEXT}`}>{step.who}</p>
+                  <p className="mt-2 text-[13px] font-medium leading-[1.4] text-port-ink">{step.title}</p>
+                  {i < 6 && (
+                    <span aria-hidden className={`absolute -right-3 top-1/2 hidden -translate-y-1/2 md:block ${INDIGO_TEXT}`}>→</span>
+                  )}
+                </div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
@@ -247,6 +379,41 @@ export default function EWACaseStudy() {
         </div>
       </section>
 
+      {/* COMPONENT / SYSTEM THINKING */}
+      <section className="bg-white">
+        <div className="mx-auto max-w-[1320px] px-6 pb-28 md:px-12 md:pb-40">
+          <Reveal>
+            <div className={INDIGO_TEXT}><SectionDeco variant="layers" /></div>
+            <Eyebrow>Component thinking</Eyebrow>
+            <h2 className="font-serif mt-4 max-w-4xl text-4xl leading-[1.1] tracking-tight md:text-6xl">
+              A shared pattern library across worker and admin.
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="mt-10 max-w-3xl text-lg leading-[1.65] text-port-body">
+              To keep the two surfaces from drifting into different products, I designed the visual + interaction patterns once and reused them across both. The same request card, the same status vocabulary, the same empty state — read the same way on a phone in a worker&apos;s hand and a browser on an HR desk.
+            </p>
+          </Reveal>
+          <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {[
+              { title: "Request status component", body: "One badge design, one color-shape-label mapping, one set of states — pending, approved, rejected, processing, sent, received, failed. Reused unchanged on both surfaces." },
+              { title: "Tables + filters", body: "Admin queue tables use one table primitive with a shared filter model. Adding a new column or filter type doesn't force a re-design." },
+              { title: "Form structures", body: "Same field groups, same validation copy, same helper-text pattern across worker request form and admin policy form. Field labels stay above the input at every breakpoint." },
+              { title: "Timeline / history", body: "A single event-log primitive renders the worker's request history and the admin's audit trail — both read as the same story from different angles." },
+              { title: "Balance & summary cards", body: "One card family for money-related values with strict rules for label + amount + unit + secondary context, so 'earned' and 'available' can never render the same way by accident." },
+              { title: "State vocabulary", body: "Empty, loading, pending, success, failure, and rejected states each have a design + copy pattern. New screens compose from these instead of inventing per-screen states." },
+            ].map((p, i) => (
+              <Reveal key={p.title} delay={i * 0.04}>
+                <div className="h-full rounded-2xl border border-port-border bg-white p-6">
+                  <h3 className="text-[15px] font-semibold text-port-ink">{p.title}</h3>
+                  <p className="mt-2 text-[13px] leading-[1.55] text-port-body">{p.body}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* VALIDATION */}
       <section id="validation" className="border-y border-port-border-soft bg-port-tint-blue">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
@@ -254,29 +421,30 @@ export default function EWACaseStudy() {
             <div className={INDIGO_TEXT}><SectionDeco variant="flow" /></div>
             <Eyebrow>Validation</Eyebrow>
             <h2 className="font-serif mt-4 max-w-4xl text-4xl leading-[1.1] tracking-tight md:text-6xl">
-              Tested the worker app and admin portal with proxy users.
+              How the design was validated without formal user testing.
             </h2>
           </Reveal>
           <div className="mt-14 grid gap-16 md:grid-cols-[1fr_420px] md:gap-20">
             <Reveal delay={0.1}>
               <p className="text-lg leading-[1.7] text-port-body">
-                Direct access to KienlongBank&apos;s end customers was limited during the early design phase. I ran moderated usability tests with <Highlight variant="blue">internal-company employees</Highlight> — whose monthly-salary pattern closely matches the target audience — across <Highlight variant="strong">three iterative rounds</Highlight>.
+                A B2B2C payroll product sits behind an NDA wall — direct access to end workers wasn&apos;t feasible in the design phase, and the timeline didn&apos;t support a formal usability study. Validation happened through the review paths that were available: <Highlight variant="blue">stakeholder walkthroughs, prototype critiques, and flow reviews</Highlight> with the people who owned the business rules and the code.
               </p>
               <p className="mt-5 text-lg leading-[1.7] text-port-body">
-                We evaluated the <Highlight variant="blue">worker mobile app</Highlight> and the <Highlight variant="blue">HR admin portal</Highlight> side by side, surfacing friction in the withdrawal flow, the consent step, balance terminology, and the approval workflow. I <Highlight variant="yellow">reduced perceived steps in the withdrawal flow</Highlight> and clarified language around &apos;earned&apos; versus &apos;available&apos; balance.
+                Each review focused on a different lens — Product Owner and BA on business rules, engineering on feasibility, payroll and finance on record integrity, operations on edge cases. Feedback from these sessions <Highlight variant="strong">refined the design</Highlight> before the first line of production code shipped.
               </p>
             </Reveal>
             <Reveal delay={0.2}>
               <div className="space-y-4">
                 {[
-                  { icon: <Zap className="h-5 w-5" />, text: "Withdrawal flow simplified — from 6 perceived steps to 3." },
-                  { icon: <MessageSquareText className="h-5 w-5" />, text: "Balance copy rewritten — testers no longer confused 'earned' vs 'available'." },
-                  { icon: <LayoutDashboard className="h-5 w-5" />, text: "Admin approval queue shipped with bulk actions after HR feedback." },
+                  { icon: <MessagesSquare className="h-5 w-5" />, label: "REFINED AFTER FEEDBACK", text: "Simplified request form — trimmed optional fields flagged by the product owner as adding friction without adding audit value." },
+                  { icon: <FileCheck2 className="h-5 w-5" />, label: "REFINED AFTER FEEDBACK", text: "Clearer status naming — 'processing' vs 'sent' vs 'received' surfaced after payment-ops walked through the actual bank-callback flow." },
+                  { icon: <LayoutDashboard className="h-5 w-5" />, label: "REFINED AFTER FEEDBACK", text: "Improved admin filtering — HR flagged that batch approval across many workers needed status + date + department filters together." },
+                  { icon: <Wallet className="h-5 w-5" />, label: "REFINED AFTER FEEDBACK", text: "Clearer balance explanation — payroll team highlighted the risk of confusing 'earned' with 'available'; the balance card rewrote to keep both visible together." },
                 ].map((o, i) => (
                   <div key={i} className="flex gap-4 rounded-xl border border-port-border bg-white p-6">
                     <div className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#4F5BD5] text-white">{o.icon}</div>
                     <div>
-                      <p className={`text-[11px] font-semibold tracking-[1.8px] ${INDIGO_TEXT}`}>{`OUTCOME 0${i + 1}`}</p>
+                      <p className={`text-[11px] font-semibold tracking-[1.8px] ${INDIGO_TEXT}`}>{o.label}</p>
                       <p className="mt-2 text-[15px] leading-[1.5] font-medium text-port-ink">{o.text}</p>
                     </div>
                   </div>
@@ -284,20 +452,33 @@ export default function EWACaseStudy() {
               </div>
             </Reveal>
           </div>
+
+          {/* Collaboration note */}
+          <Reveal delay={0.3}>
+            <div className="mt-10 rounded-2xl border border-port-blue/20 bg-white/60 p-8">
+              <p className={`text-[11px] font-semibold tracking-[2px] ${INDIGO_TEXT}`}>
+                <Users className="mr-1 inline h-4 w-4 align-[-3px]" />
+                COLLABORATION · WHO SHAPED THE DESIGN
+              </p>
+              <p className="mt-3 text-[15px] leading-[1.65] text-port-body">
+                Design decisions were reviewed against three lenses at every checkpoint: <strong className="font-semibold text-port-ink">business rules</strong> with the Product Owner, Product Manager, and Business Analyst; <strong className="font-semibold text-port-ink">technical feasibility</strong> with engineering — including which states the payroll + banking APIs could actually surface; and <strong className="font-semibold text-port-ink">operational reality</strong> with the payroll / finance team, operations, and QA. Each conversation shifted the design closer to a workflow the whole system could sustain, not just a UI that looked right.
+              </p>
+            </div>
+          </Reveal>
         </div>
       </section>
 
       <div id="reflection" />
       <OutcomeSection
-        title="What this taught me about designing across connected surfaces."
+        title="What designing a payroll product taught me about enterprise UX."
         paragraphs={[
-          "Designing an Earned Wage Access product required thinking beyond individual screens. Even though my scope covered the worker mobile app and the HR admin portal, both products shared the same business rules and data model. Establishing the information architecture before designing the UI ensured a consistent experience between employees and HR throughout the withdrawal process.",
-          "Running usability tests with proxy users (internal-company employees on monthly salary) turned out to be the most cost-effective research move of the project. It surfaced language issues in the balance copy that would have been invisible in a solo design review.",
+          "Payroll-related products are less about isolated screens and more about preserving data integrity across connected systems. One worker action can affect HR, payroll, finance, and payment operations in sequence, so the UX has to make every state clear and traceable — on both the worker's phone and the HR admin's browser, at the same time, with the same meaning.",
+          "The design work that mattered most on this project was the work that happened before any high-fidelity screen: mapping constraints, drawing the workflow, naming stakeholders and what they owned, deciding the vocabulary for status. When those foundations were honest, the two surfaces almost designed themselves. When they were fuzzy, no amount of visual polish covered it up.",
         ]}
         takeaways={[
-          { n: "01", label: "ONE DATA MODEL, TWO EXPERIENCES", text: "Design the data model before the UI. When employees and HR interact with the same request from different perspectives, a shared structure keeps the experience consistent across products." },
-          { n: "02", label: "PROXY USERS ARE STILL USERS", text: "When target users are behind an NDA wall, proxy users with similar context surface 80% of the copy and flow issues." },
-          { n: "03", label: "COPY IS UX", text: "'Earned' vs. 'available' is a 2-word decision that determines whether every future support ticket exists." },
+          { n: "01", label: "CONNECTED SYSTEMS, NOT SCREENS", text: "Enterprise UX in payroll is about maintaining workflow consistency across worker, HR, payroll, banking, and operations — not about designing individual screens in isolation." },
+          { n: "02", label: "TRUST IS BUILT ON STATUS CLARITY", text: "In a financial product, worker trust lives in the status field. If they can't tell what happened to their request, no amount of visual polish makes up for it." },
+          { n: "03", label: "DATA INTEGRITY IS THE UX", text: "The worker's request and the HR's queue item are the same record seen from two angles. Designing that record honestly is 80% of the work — the two surfaces are what falls out of that decision." },
         ]}
         accentClass="text-[#8CB8FF]"
       />

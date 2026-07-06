@@ -74,7 +74,7 @@ export default function IntegrationCaseStudy() {
       />
 
       <CaseHero
-        caseNumber="CASE STUDY · 04 / 04"
+        caseNumber="CASE STUDY · 03 / 04"
         eyebrow="Enterprise CRM · Guided integration"
         title={
           <>

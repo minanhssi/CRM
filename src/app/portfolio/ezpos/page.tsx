@@ -59,7 +59,7 @@ export default function EzPOSCaseStudy() {
       />
 
       <CaseHero
-        caseNumber="CASE STUDY · 03 / 04"
+        caseNumber="CASE STUDY · 04 / 04"
         eyebrow="B2B Retail · Mobile POS"
         title={<>EzPOS — fast card &amp; QR payments, designed for the <span className="text-[#109C84]">merchant in motion</span>.</>}
         subtitle="Mobile point-of-sale app for retail merchants — quick card & QR payments, transaction history, and a simplified end-of-day reconciliation flow that fits in 3 minutes."

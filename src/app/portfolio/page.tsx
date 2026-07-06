@@ -35,18 +35,6 @@ const PROJECTS = [
   },
   {
     n: "03",
-    slug: "ezpos",
-    badge: "B2B RETAIL",
-    badgeColor: "bg-[#109C84] text-white",
-    title: "EzPOS",
-    summary:
-      "Mobile POS app for merchants — quick card & QR payments, transaction history, and simplified daily reconciliation.",
-    tags: ["Mobile", "POS", "Payment", "Merchant tools", "Full UX process"],
-    thumb: "/portfolio/Thumbnail-EzPOS.png",
-    thumbW: 1440, thumbH: 810,
-  },
-  {
-    n: "04",
     slug: "integration",
     badge: "CRM × AUTOMATION",
     badgeColor: "bg-port-accent text-white",
@@ -55,6 +43,18 @@ const PROJECTS = [
       "Guided integration flow letting CRM admins connect FB Messenger, Zalo OA, Instagram, WhatsApp, Shopify, and public APIs — for data sync, auto-messaging, and lead capture.",
     tags: ["Guided interaction", "Multi-platform", "Automation UX", "CRM"],
     thumb: "/portfolio/Thumbnail-Integration.png",
+    thumbW: 1440, thumbH: 810,
+  },
+  {
+    n: "04",
+    slug: "ezpos",
+    badge: "B2B RETAIL",
+    badgeColor: "bg-[#109C84] text-white",
+    title: "EzPOS",
+    summary:
+      "Mobile POS app for merchants — quick card & QR payments, transaction history, and simplified daily reconciliation.",
+    tags: ["Mobile", "POS", "Payment", "Merchant tools", "Full UX process"],
+    thumb: "/portfolio/Thumbnail-EzPOS.png",
     thumbW: 1440, thumbH: 810,
   },
 ];

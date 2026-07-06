@@ -13,8 +13,8 @@ const NAV_ITEMS = [
 const WORK_ITEMS = [
   { href: "/portfolio/klbp", label: "KienlongBank Pay", meta: "Flagship — B2C banking" },
   { href: "/portfolio/ewa", label: "Earned Wage Access", meta: "Fintech · B2B2C" },
-  { href: "/portfolio/ezpos", label: "EzPOS", meta: "SaaS POS · SMB" },
   { href: "/portfolio/integration", label: "Integration feature", meta: "Enterprise workflow" },
+  { href: "/portfolio/ezpos", label: "EzPOS", meta: "SaaS POS · SMB" },
 ];
 
 export function Header() {

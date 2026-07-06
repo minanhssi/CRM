@@ -1,6 +1,7 @@
 import {
   Building2, Users, Calculator, Receipt, TrendingUp, Smartphone,
   ClipboardList, Layers, ScrollText, Database, LayoutTemplate, Search,
+  AlertTriangle, GitCompareArrows, Puzzle, Compass, ShieldCheck, MessagesSquare,
 } from "lucide-react";
 import { Header } from "../_components/Header";
 import { Footer } from "../_components/Footer";
@@ -26,7 +27,7 @@ import { Highlight } from "../_components/Highlight";
 import { PullQuote } from "../_components/PullQuote";
 
 export const metadata = {
-  title: "KienlongBank Pay — Payment gateway back-office | Duong Ngoc Minh Anh",
+  title: "KienlongBank Pay — Enterprise back-office audit & redesign | Duong Ngoc Minh Anh",
 };
 
 const BLUE = "#2D39CF";
@@ -54,10 +55,12 @@ export default function KLBPCaseStudy() {
         sections={[
           { id: "overview", label: "Overview" },
           { id: "problem", label: "Problem" },
+          { id: "audit", label: "Audit" },
           { id: "approach", label: "Approach" },
           { id: "process", label: "Process" },
           { id: "modules", label: "Modules" },
           { id: "system", label: "System" },
+          { id: "validation", label: "Validation" },
           { id: "reflection", label: "Reflection" },
         ]}
       />
@@ -100,12 +103,11 @@ export default function KLBPCaseStudy() {
             <Reveal delay={0.1}>
               <p className="text-xl leading-[1.75] text-port-body md:text-[22px]">
                 KienlongBank Pay is an{" "}
-                <Highlight variant="blue">integrated payment-gateway product</Highlight>. The back-office side is where the bank&apos;s partner businesses, employees, and transaction operators do their work — approving merchants, configuring fee tiers, tracking transactions, and reconciling cash flow across multiple parties.
+                <Highlight variant="blue">integrated payment-gateway product</Highlight> connecting the bank&apos;s partner businesses to card, QR, and payment-link rails. The back-office side is where partner-facing staff, employees, and transaction operators handle merchant approval, fee configuration, transaction tracking, and cash-flow reconciliation across multiple parties.
               </p>
               <p className="mt-6 text-lg leading-[1.7] text-port-muted">
-                I led the UX for the entire back-office system —{" "}
-                <Highlight variant="strong">six core modules</Highlight>, each shipping to a{" "}
-                <Highlight variant="blue">different internal role</Highlight>, all sharing <em>one workflow engine</em>. Module-by-module breakdown lives further down the page.
+                I <Highlight variant="strong">took over the back-office system</Highlight> from another team already in-flight. The scope was to review the existing product direction, run a{" "}
+                <Highlight variant="blue">UX audit</Highlight> across the six modules that had already been built or scoped, benchmark against comparable payment back-offices, and rework the experience for <em>consistency, clarity, and scale</em> — rather than starting from a blank sheet.
               </p>
               <p className="mt-4 text-lg leading-[1.7] text-port-muted">
                 The flagship challenge was making a{" "}
@@ -119,7 +121,7 @@ export default function KLBPCaseStudy() {
                   { icon: <LayoutTemplate className="h-4 w-4" />, label: "PRODUCT", value: "Payment gateway CMS — multi-module enterprise" },
                   { icon: <Users className="h-4 w-4" />, label: "ROLE", value: "Lead UX/UI — research, UX, UI, dev handoff" },
                   { icon: <Layers className="h-4 w-4" />, label: "MODULES", value: "6 — partner, employees, fees, transactions, cash flow, PayPOS" },
-                  { icon: <Search className="h-4 w-4" />, label: "METHOD", value: "User research · empathy map · personas · usability test" },
+                  { icon: <Search className="h-4 w-4" />, label: "METHOD", value: "Product audit · competitor research · IA rework · design system" },
                   { icon: <ScrollText className="h-4 w-4" />, label: "OUTPUT", value: "Wireframes, prototype, design system, 25+ specs" },
                 ].map(m => (
                   <div key={m.label} className="flex gap-3">
@@ -148,7 +150,7 @@ export default function KLBPCaseStudy() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-10 max-w-4xl text-xl leading-[1.65] text-port-body">
-              Before this rebuild, KienlongBank&apos;s payment operations sat across <Highlight variant="blue">scattered internal tools and spreadsheets</Highlight>. Partners, employees, and transaction operators each needed different data views but the <Highlight variant="strong">same underlying record</Highlight>. Approval steps got lost between teams; reconciliation was a monthly fire drill.
+              Before this pass, the six back-office modules had each grown their own patterns. Partner-facing staff, employees, and transaction operators each needed different data views, but they were reading and writing to the <Highlight variant="strong">same underlying record</Highlight> — with <Highlight variant="blue">inconsistent forms, ad-hoc status labels, and navigation</Highlight> that assumed the operator already knew where each module started and ended. Approval steps got lost between teams; reconciliation was a recurring firefight.
             </p>
           </Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -168,6 +170,82 @@ export default function KLBPCaseStudy() {
         </div>
       </section>
 
+      {/* PRODUCT AUDIT */}
+      <section id="audit" className="bg-white">
+        <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
+          <Reveal>
+            <div className={SOFT_BLUE}><SectionDeco variant="dots" /></div>
+            <Eyebrow>Product audit</Eyebrow>
+            <h2 className="font-serif mt-4 max-w-4xl text-4xl leading-[1.1] tracking-tight md:text-6xl">
+              What the audit surfaced — four buckets of UX debt.
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="mt-10 max-w-3xl text-lg leading-[1.65] text-port-body">
+              The first phase was a structured review of the existing screens, flows, and stakeholder interviews — with a heuristic pass against Nielsen&apos;s ten and a competitor benchmark against comparable payment back-offices. The findings clustered into four themes that the redesign later addressed.
+            </p>
+          </Reveal>
+          <div className="mt-14 grid gap-6 md:grid-cols-2">
+            {[
+              {
+                icon: <Puzzle className="h-5 w-5" />,
+                title: "Inconsistent component patterns",
+                body: "Forms, tables, and status displays had drifted per module. A partner-intake form and a fee-configuration form used two different date pickers, two different validation styles, and three different button hierarchies — the same visual vocabulary answered differently on each screen.",
+              },
+              {
+                icon: <Compass className="h-5 w-5" />,
+                title: "Weak module hierarchy",
+                body: "Modules were sequenced in the navigation by build order rather than by operator workflow. First-time users hit Fee Configuration before they had a partner to configure fees for — the mental model didn't match the task order.",
+              },
+              {
+                icon: <AlertTriangle className="h-5 w-5" />,
+                title: "Ambiguous transaction states",
+                body: "Pending, processing, in-review, awaiting-settlement, and settled were all treated visually the same way, forcing operators to read the exact state name to differentiate. Status was carried by text alone, not by shape or icon.",
+              },
+              {
+                icon: <Database className="h-5 w-5" />,
+                title: "Duplicated data entry",
+                body: "Partner records touched by three teams often ended up with three slightly different phone numbers or contact emails, because there was no single record of truth — each module wrote its own copy of the same fields.",
+              },
+            ].map((f, i) => (
+              <Reveal key={f.title} delay={i * 0.06}>
+                <div className="h-full rounded-2xl border border-port-border bg-white p-8 shadow-[0_10px_28px_-18px_rgba(21,21,21,0.15)]">
+                  <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-port-blue/10 text-port-blue">{f.icon}</div>
+                  <h3 className="text-xl font-semibold text-port-ink">{f.title}</h3>
+                  <p className="mt-3 text-[14px] leading-[1.6] text-port-body">{f.body}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+
+          {/* Competitor insight callout */}
+          <Reveal delay={0.24}>
+            <div className="mt-10 rounded-2xl border border-port-blue/20 bg-port-tint-blue/40 p-8">
+              <p className={`text-[11px] font-semibold tracking-[2px] ${SOFT_BLUE}`}>
+                <GitCompareArrows className="mr-1 inline h-4 w-4 align-[-3px]" />
+                COMPETITOR REVIEW · WHAT MATURE BACK-OFFICES DO
+              </p>
+              <p className="mt-3 text-[15px] leading-[1.65] text-port-body">
+                Reviewed several comparable payment back-offices to understand how mature platforms handle transaction visibility, partner onboarding, and multi-role workflows. Four patterns surfaced as worth adopting:
+              </p>
+              <ul className="mt-4 grid gap-2 text-[14px] leading-[1.55] text-port-body md:grid-cols-2">
+                {[
+                  "Transaction state uses color + shape + label together — never color alone",
+                  "Partner and employee roles are surfaced in the UI, not just enforced in the backend",
+                  "Auditability is treated as a first-class UX concern, not a support-team afterthought",
+                  "Dashboards reward daily monitoring rather than executive reporting — operators live here",
+                ].map(pt => (
+                  <li key={pt} className="flex gap-2">
+                    <span className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-port-blue" />
+                    <span>{pt}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* APPROACH */}
       <section id="approach" className="bg-port-tint-blue">
         <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
@@ -180,7 +258,7 @@ export default function KLBPCaseStudy() {
           </Reveal>
           <Reveal delay={0.1}>
             <p className="mt-10 max-w-3xl text-lg leading-[1.65] text-port-body">
-              Six independently-scoped modules would drift the moment engineering split them across sprints. I anchored the design to <Highlight variant="blue">three shared substrates</Highlight> that stay honest under scale — one <Highlight variant="strong">canonical partner record</Highlight>, one component library, and an information architecture grounded in observed operator behavior rather than the org chart.
+              The audit surfaced the same root cause in three different symptoms — six modules had each answered the same design question differently. I anchored the redesign around <Highlight variant="blue">three shared substrates</Highlight> that stay honest as engineering ships modules in parallel: one <Highlight variant="strong">canonical partner record</Highlight>, one component library reused across every surface, and an information architecture organized by operational task rather than by org chart.
             </p>
           </Reveal>
           <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -292,17 +370,99 @@ export default function KLBPCaseStudy() {
         </div>
       </section>
 
+      {/* VALIDATION & ACCESSIBILITY */}
+      <section id="validation" className="bg-white">
+        <div className="mx-auto max-w-[1320px] px-6 py-28 md:px-12 md:py-40">
+          <Reveal>
+            <div className={SOFT_BLUE}><SectionDeco variant="pulse" /></div>
+            <Eyebrow>Validation &amp; accessibility</Eyebrow>
+            <h2 className="font-serif mt-4 max-w-4xl text-4xl leading-[1.1] tracking-tight md:text-6xl">
+              How the redesign was validated — and how it stayed accessible.
+            </h2>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <p className="mt-10 max-w-3xl text-lg leading-[1.65] text-port-body">
+              There was no formal usability study on this project — banking back-offices sit behind an internal-user wall, and the timeline didn&apos;t allow one. Validation happened through structured stakeholder reviews across the phases the design touched, and accessibility was enforced at the component-library layer so every module inherited the same baseline.
+            </p>
+          </Reveal>
+          <div className="mt-14 grid gap-8 md:grid-cols-2">
+            <Reveal delay={0.05}>
+              <div className="h-full rounded-2xl border border-port-border bg-white p-8 shadow-[0_10px_28px_-18px_rgba(21,21,21,0.15)]">
+                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-port-blue/10 text-port-blue">
+                  <MessagesSquare className="h-5 w-5" />
+                </div>
+                <h3 className="text-xl font-semibold text-port-ink">How the redesign was validated</h3>
+                <ul className="mt-4 space-y-2 text-[14px] leading-[1.55] text-port-body">
+                  {[
+                    "Walkthroughs with Product Owner, BA, and engineering — checking every flow against the business rules and technical constraints they'd flagged during audit",
+                    "Design reviews against the bank's compliance requirements — every state that carries legal weight was reviewed with the compliance stakeholder before shipping",
+                    "Cross-module consistency audits — checking that every button, badge, and form pattern resolved back to the same design-system token",
+                    "Business-rule alignment sessions with payment-ops and fraud teams to close gaps between the intended workflow and the shipped UI",
+                  ].map(pt => (
+                    <li key={pt} className="flex gap-2">
+                      <span className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-port-blue" />
+                      <span>{pt}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-5 border-t border-port-border/70 pt-4 text-[13px] leading-[1.55] italic text-port-muted">
+                  Feedback from these sessions led to simpler navigation labels, clearer status labels, tighter form grouping, and a refined dashboard hierarchy.
+                </p>
+              </div>
+            </Reveal>
+            <Reveal delay={0.12}>
+              <div className="h-full rounded-2xl border border-port-border bg-white p-8 shadow-[0_10px_28px_-18px_rgba(21,21,21,0.15)]">
+                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-xl bg-port-blue/10 text-port-blue">
+                  <ShieldCheck className="h-5 w-5" />
+                </div>
+                <h3 className="text-xl font-semibold text-port-ink">Accessibility baked into the system</h3>
+                <ul className="mt-4 space-y-2 text-[14px] leading-[1.55] text-port-body">
+                  {[
+                    "Type ramp meeting readable minimums across data-dense tables and dashboards",
+                    "Status labels always icon + text — never color alone — so colorblind operators read the same thing",
+                    "Form labels visible above every field at every input width — no floating-label collapse on small viewports",
+                    "Focus + interactive states standardized in the component library so keyboard operators see the same feedback everywhere",
+                    "Predictable navigation patterns — the same shell across modules so operators build muscle memory once",
+                  ].map(pt => (
+                    <li key={pt} className="flex gap-2">
+                      <span className="mt-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-port-blue" />
+                      <span>{pt}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-5 border-t border-port-border/70 pt-4 text-[13px] leading-[1.55] italic text-port-muted">
+                  Because these rules were enforced at the library layer, every module inherited the same baseline without designers re-checking each screen.
+                </p>
+              </div>
+            </Reveal>
+          </div>
+
+          {/* Collaboration note */}
+          <Reveal delay={0.2}>
+            <div className="mt-10 rounded-2xl border border-port-blue/20 bg-port-tint-blue/40 p-8">
+              <p className={`text-[11px] font-semibold tracking-[2px] ${SOFT_BLUE}`}>
+                <Users className="mr-1 inline h-4 w-4 align-[-3px]" />
+                COLLABORATION · WHO SHAPED THE DESIGN
+              </p>
+              <p className="mt-3 text-[15px] leading-[1.65] text-port-body">
+                Every design decision was aligned with the people who owned the business rules, the code, and the operational reality: <strong className="font-semibold text-port-ink">Product Owner and Product Manager</strong> for scope and priority, <strong className="font-semibold text-port-ink">Business Analysts</strong> for the compliance and workflow rules, <strong className="font-semibold text-port-ink">Engineering</strong> for feasibility and the shared component contract, <strong className="font-semibold text-port-ink">QA</strong> for edge cases the audit had missed, and <strong className="font-semibold text-port-ink">banking + payment-ops stakeholders</strong> for the operational context the earlier team hadn&apos;t had time to surface.
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       <div id="reflection" />
       <OutcomeSection
-        title="What this taught me about designing at enterprise scale."
+        title="What this taught me about designing an inherited enterprise product."
         paragraphs={[
-          "The hardest part of enterprise back-office design isn't the individual screen — it's making six independently-scoped modules feel like one coherent product to the person switching between them all day. That coherence comes from three levers: shared data model, shared component library, and shared vocabulary in the UI copy.",
-          "The banking-compliance requirements pushed me to design for auditability first — every action journaled, every state change visible, every reason field required. Ironically, that constraint made the UX clearer for the operator, not slower: when the interface always shows why something is in a given state, the operator spends less time investigating and more time deciding.",
+          "Taking over an inherited enterprise product taught me that most of the design work happens before you draw a new screen. The first weeks were almost entirely product audit — mapping how each module actually behaved, where patterns had diverged, and which parts of the workflow the earlier team had chosen not to invest in. That audit is what let the redesign focus on shared substrates rather than surface polish.",
+          "Enterprise UX is often about improving an existing system rather than starting from zero. The redesign aimed to make six modules feel like one coherent product for the operator switching between them all day. That coherence came from three levers I'd hit again next time — shared data model, shared component library, and shared vocabulary in the UI copy — and from treating auditability as a UX concern rather than a compliance checkbox.",
         ]}
         takeaways={[
-          { n: "01", label: "SHARED RECORD, ROLE-SCOPED VIEWS", text: "One data schema across modules beats six local schemas. Views are cheap; canonical records are what keep the system honest." },
-          { n: "02", label: "AUDITABILITY AS UX", text: "'Why is this pending?' should never require a support ticket. The interface itself should answer that in-place." },
-          { n: "03", label: "DESIGN SYSTEM = TIME COMPRESSION", text: "Six modules would have taken six times as long without a shared component library. The system paid for itself on module 2." },
+          { n: "01", label: "AUDIT BEFORE ARTIFACT", text: "Understanding what already exists and where it drifts is where most of the value lives. New pixels come after the map is drawn." },
+          { n: "02", label: "CONSISTENCY IS A UX LEVER", text: "In multi-module products, small pattern inconsistencies compound into big cognitive load. A shared library isn't decoration — it's the operator's memory." },
+          { n: "03", label: "DESIGN FOR THE HAND-OFF", text: "Enterprise design isn't finished in Figma. It's finished when engineering can ship a new module in the same shell without asking a designer to define every state." },
         ]}
         accentClass="text-[#8CB8FF]"
       />

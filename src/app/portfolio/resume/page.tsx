@@ -220,7 +220,7 @@ export default function ResumePage() {
                 <div className="mt-10 flex flex-wrap gap-3">
                   <a
                     href="/resume.pdf"
-                    download="Duong-Ngoc-Minh-Anh-CV.pdf"
+                    download="Duong Ngoc Minh Anh - Resume.pdf"
                     className="group inline-flex items-center gap-2 rounded-full bg-port-blue px-5 py-3 text-[13px] font-semibold text-white transition-all hover:gap-3 hover:bg-port-blue-dark"
                   >
                     <Download className="h-4 w-4" />
@@ -465,7 +465,7 @@ export default function ResumePage() {
             </div>
             <a
               href="/resume.pdf"
-              download="Duong-Ngoc-Minh-Anh-CV.pdf"
+              download="Duong Ngoc Minh Anh - Resume.pdf"
               className="group inline-flex items-center gap-3 rounded-full bg-port-yellow px-6 py-4 text-[14px] font-semibold text-port-blue-dark transition-all hover:gap-4 hover:bg-white"
             >
               <Download className="h-4 w-4" />

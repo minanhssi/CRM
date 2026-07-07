@@ -31,7 +31,7 @@ export function Footer() {
           </div>
           <a
             href="/resume.pdf"
-            download="Duong-Ngoc-Minh-Anh-CV.pdf"
+            download="Duong Ngoc Minh Anh - Resume.pdf"
             className="group inline-flex items-center gap-2 rounded-full bg-port-yellow px-5 py-3 text-[13px] font-semibold text-port-blue-dark transition-all hover:gap-3 hover:bg-white"
           >
             <span aria-hidden>↓</span>

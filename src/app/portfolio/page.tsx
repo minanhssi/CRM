@@ -139,7 +139,7 @@ export default function PortfolioOverview() {
                   </Link>
                   <a
                     href="/resume.pdf"
-                    download="Duong-Ngoc-Minh-Anh-CV.pdf"
+                    download="Duong Ngoc Minh Anh - Resume.pdf"
                     className="group inline-flex items-center gap-1.5 py-3 text-[13px] font-semibold text-port-muted underline decoration-port-muted/30 decoration-1 underline-offset-4 transition-colors hover:text-port-blue hover:decoration-port-blue"
                   >
                     <span aria-hidden>↓</span>
@@ -217,7 +217,7 @@ export default function PortfolioOverview() {
                 <span className="text-port-muted">·</span>
                 <a
                   href="/resume.pdf"
-                  download="Duong-Ngoc-Minh-Anh-CV.pdf"
+                  download="Duong Ngoc Minh Anh - Resume.pdf"
                   className="inline-flex items-center gap-1.5 text-[14px] font-semibold text-port-blue underline decoration-port-blue/30 decoration-1 underline-offset-4 transition-colors hover:decoration-port-blue"
                 >
                   Download PDF

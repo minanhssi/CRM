@@ -108,7 +108,7 @@ export function Header() {
         <div className="flex items-center gap-2 md:gap-3">
           <a
             href="/resume.pdf"
-            download="Duong-Ngoc-Minh-Anh-CV.pdf"
+            download="Duong Ngoc Minh Anh - Resume.pdf"
             className="hidden text-[12px] font-medium tracking-[1.5px] text-white/70 underline decoration-white/25 decoration-1 underline-offset-4 transition-colors hover:text-port-yellow hover:decoration-port-yellow md:inline"
             aria-label="Download résumé as PDF"
           >

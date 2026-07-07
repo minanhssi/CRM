@@ -1,6 +1,6 @@
 import Link from "next/link";
 import {
-  Download, Mail, MapPin, Globe, ArrowUpRight, Clock, FileText,
+  Download, Mail, Phone, Globe, ArrowUpRight, Clock, FileText,
 } from "lucide-react";
 
 function LinkedinIcon({ className }: { className?: string }) {
@@ -194,7 +194,11 @@ export default function ResumePage() {
 
               <Reveal delay={0.1}>
                 <div className="mt-8 grid gap-2 text-[14px] text-port-body sm:grid-cols-2">
-                  <ContactItem icon={<MapPin className="h-4 w-4" />} label="Ho Chi Minh City, Vietnam" />
+                  <ContactItem
+                    icon={<Phone className="h-4 w-4" />}
+                    label="+84 33 276 8796"
+                    href="tel:+84332768796"
+                  />
                   <ContactItem
                     icon={<Mail className="h-4 w-4" />}
                     label="minhanhdn9601@gmail.com"

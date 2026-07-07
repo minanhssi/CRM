@@ -34,7 +34,7 @@ const CORE_SKILLS: { name: string; accent?: boolean }[] = [
   { name: "Information Architecture", accent: true },
   { name: "Interaction Design" },
   { name: "Interaction Models", accent: true },
-  { name: "Qualitative Research", accent: true },
+  { name: "User Research", accent: true },
   { name: "Usability Testing" },
   { name: "Accessibility" },
   // UI Craft
@@ -65,7 +65,7 @@ const EXPERIENCE: {
     company: "MAYTRIX",
     period: "07/2025 — Present",
     headline:
-      "Leading UX/UI for a test-prep ed-tech ecosystem — building learning platforms, internal operations tools, and marketing sites.",
+      "Leading UX design for an enterprise education ecosystem serving internal operations and online learning platforms.",
     bullets: [
       { title: "Exam Prep & Online Course Platform", body: "Web app for practice tests, mock exams, and self-paced courses." },
       { title: "Internal Operations CRM", body: "Role-based system for accounting, academic affairs, and teaching staff." },
@@ -95,7 +95,7 @@ const EXPERIENCE: {
     period: "2022 — 2023",
     headline: "Designed fintech and enterprise banking products for KienlongBank and internal business platforms.",
     bullets: [
-      { title: "KienlongBank Pay", body: "Mobile banking & payment app for retail customers." },
+      { title: "KienlongBank Pay", body: "Payment management platform for retail customers." },
       { title: "UniPOS", body: "POS system for merchant sales and store management." },
       { title: "Pay Gate Core", body: "Payment gateway processing transactions across channels." },
       { title: "eKYC", body: "Electronic identity verification (Know-Your-Customer) onboarding." },
@@ -120,7 +120,7 @@ const EXPERIENCE: {
     freelance: true,
     headline: "Integrations and workforce operations tools.",
     bullets: [
-      { title: "Integration Module", body: "Chat bot, eTag & time-attendance flows built into the platform." },
+      { title: "AI CRM Integration Platform", body: "Chat bot, eTag & time-attendance flows built into the platform." },
       { title: "Workforce Management Suite", body: "Manage staff, work locations, and projects on the web." },
       { title: "Project Management Tool", body: "Project tracking connected to the integration services above." },
     ],
@@ -139,11 +139,10 @@ const FEATURED_PROJECTS = [
 ];
 
 const AI_PRODUCT_DESIGN = [
-  "AI-assisted enterprise workflows",
-  "Conversational interaction design",
-  "Prompt-driven UX",
-  "Recommendation systems",
-  "Human-centered AI interfaces",
+  "AI-assisted Enterprise Workflows",
+  "AI-enhanced User Experience",
+  "Prompt-driven Interaction Design",
+  "Human-centered AI Experiences",
 ];
 
 const TOOLS = [
@@ -424,7 +423,7 @@ export default function ResumePage() {
                   <p className="mt-0.5 text-[13px] text-port-body">
                     Bachelor of Management Information Systems
                   </p>
-                  <p className="mt-0.5 text-[12px] tracking-[1.2px] text-port-muted">2018 — 2022</p>
+                  <p className="mt-0.5 text-[12px] tracking-[1.2px] text-port-muted">2019 — 2023</p>
                 </InfoBlock>
 
                 <InfoBlock label="CREDENTIALS">

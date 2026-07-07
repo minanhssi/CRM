@@ -211,8 +211,8 @@ export default function ResumePage() {
                   />
                   <ContactItem
                     icon={<Globe className="h-4 w-4" />}
-                    label="duongngocminhanh.com"
-                    href="/portfolio"
+                    label="duongngocminhanh.site"
+                    href="https://duongngocminhanh.site/portfolio"
                   />
                 </div>
               </Reveal>

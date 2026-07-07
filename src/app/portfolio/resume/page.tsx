@@ -75,7 +75,7 @@ const EXPERIENCE: {
   {
     role: "UX/UI Designer",
     company: "KIENLONGBANK",
-    period: "2023 — 2024",
+    period: "08/2023 — 08/2024",
     headline: "Designed enterprise banking solutions focused on digital lending, employee financial services, and workflow-oriented banking operations.",
     bullets: [],
     projects: [
@@ -92,7 +92,7 @@ const EXPERIENCE: {
   {
     role: "UX/UI Designer",
     company: "UNICLOUD GROUP",
-    period: "2022 — 2023",
+    period: "09/2022 — 08/2023",
     headline: "Designed fintech and enterprise banking products for KienlongBank and internal business platforms.",
     bullets: [
       { title: "KienlongBank Pay", body: "Payment management platform for retail customers." },
@@ -105,7 +105,7 @@ const EXPERIENCE: {
   {
     role: "UX/UI Designer",
     company: "PITO",
-    period: "Freelance",
+    period: "04/2024 — 04/2025",
     freelance: true,
     headline: "Restaurant-tech design across web and mobile.",
     bullets: [
@@ -116,7 +116,7 @@ const EXPERIENCE: {
   {
     role: "UX/UI Designer",
     company: "EVOL",
-    period: "Freelance",
+    period: "03/2026 — Present",
     freelance: true,
     headline: "Integrations and workforce operations tools.",
     bullets: [
@@ -331,9 +331,7 @@ export default function ResumePage() {
                         </span>
                       )}
                     </div>
-                    {!exp.freelance && (
-                      <p className="text-[12px] font-medium tracking-[1.2px] text-port-muted">{exp.period}</p>
-                    )}
+                    <p className="text-[12px] font-medium tracking-[1.2px] text-port-muted">{exp.period}</p>
                   </div>
 
                   {exp.headline && (

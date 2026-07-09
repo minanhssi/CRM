@@ -127,11 +127,10 @@ const FEATURED_PROJECTS = [
   { name: "KienlongBank Pay", domain: "Payment Platform" },
   { name: "Earned Wage Access", domain: "HR Fintech" },
   { name: "AI CRM Integration", domain: "Enterprise CRM" },
-  { name: "Loan Origination System", domain: "Digital Lending" },
+  { name: "EzPOS", domain: "Merchant POS" },
   { name: "Payment Gateway", domain: "Payments" },
   { name: "Enterprise Workforce Management Platform", domain: "Enterprise SaaS" },
   { name: "Education CRM", domain: "CRM Platform" },
-  { name: "UniPOS", domain: "Merchant POS" },
   { name: "VTest Learning Platform", domain: "EdTech" },
 ];
 

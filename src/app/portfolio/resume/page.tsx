@@ -18,37 +18,33 @@ import { Reveal } from "../_components/Reveal";
 export const metadata = {
   title: "Resume — Duong Ngoc Minh Anh · UX Designer",
   description:
-    "Enterprise UX Designer with 3+ years designing workflow applications, SaaS products, and digital banking platforms. Download the PDF or read online.",
+    "UX Designer with 3+ years across enterprise SaaS, workflow-oriented products, and digital banking. Download the PDF or read online.",
 };
 
 const CORE_SKILLS: { name: string; accent?: boolean }[] = [
-  // Enterprise & Product
+  // Row 1
   { name: "Enterprise UX", accent: true },
   { name: "Product Design" },
-  { name: "User-centered Design" },
   { name: "Workflow Design", accent: true },
   { name: "Enterprise Systems" },
-  // UX Research & Strategy
-  { name: "User Flow" },
-  { name: "Customer Journey" },
   { name: "Information Architecture", accent: true },
+  // Row 2
+  { name: "User Flow" },
   { name: "Interaction Design" },
-  { name: "Interaction Models", accent: true },
   { name: "User Research", accent: true },
   { name: "Usability Testing" },
+  { name: "Cross-functional Collaboration" },
+  // Row 3
   { name: "Accessibility" },
-  // UI Craft
+  { name: "Inclusive Design" },
+  { name: "Research Synthesis" },
+  { name: "Developer Handoff" },
+  { name: "Design Documentation" },
+  // Row 4
   { name: "Design System", accent: true },
-  { name: "Dashboard Design" },
-  { name: "Responsive UI" },
-  { name: "Complex Forms" },
   { name: "Wireframing" },
   { name: "Prototyping" },
-  // Delivery
-  { name: "Cross-functional Collaboration" },
-  { name: "Developer Handoff" },
-  { name: "Design QA" },
-  { name: "Design Thinking" },
+  { name: "Figma" },
 ];
 
 const EXPERIENCE: {
@@ -65,11 +61,11 @@ const EXPERIENCE: {
     company: "MAYTRIX",
     period: "07/2025 — Present",
     headline:
-      "Leading UX design for an enterprise education ecosystem serving internal operations and online learning platforms.",
+      "Contributed UX design across an enterprise education ecosystem covering internal operations and online learning platforms.",
     bullets: [
-      { title: "Exam Prep & Online Course Platform", body: "Web app for practice tests, mock exams, and self-paced courses." },
-      { title: "Internal Operations CRM", body: "Role-based system for accounting, academic affairs, and teaching staff." },
-      { title: "Test-Center Landing Pages", body: "Marketing landing pages for the exam-prep center." },
+      { title: "Exam Prep & Online Course Platform", body: "Learning platform for practice tests, mock exams, and self-paced courses." },
+      { title: "Enterprise Operations Platform", body: "Role-based CRM supporting workflow across accounting, academic affairs, and teaching staff." },
+      { title: "Test-Center Landing Pages", body: "Web experience for the exam-prep center, aligned with shared UI patterns." },
     ],
   },
   {
@@ -81,11 +77,11 @@ const EXPERIENCE: {
     projects: [
       {
         name: "Project: Earned Wage Access",
-        body: "Designed a flexible salary access platform enabling employees to access earned wages before payday. Created user flows, information architecture, wireframes, prototypes, and high-fidelity UI. Facilitated usability validation sessions with internal users and synthesized findings into workflow improvements. Ensured UI consistency and accessibility (WCAG-aligned) across web and mobile experiences.",
+        body: "Designed a flexible salary-access platform enabling employees to receive earned wages before payday. Produced user flows, IA, wireframes, and low-fi/hi-fi prototypes for employee and HR admin views. Conducted internal usability reviews; captured notes and synthesized findings into workflow improvements. Ensured UI consistency and WCAG-aligned accessibility across web and mobile, per design system standards.",
       },
       {
         name: "Project: Loan Origination System",
-        body: "Designed an enterprise loan origination platform that streamlined multi-step approval workflows for banking operations. Optimized complex forms, dashboard views, and multi-step approval workflows to improve task completion. Built reusable UI components following design system standards. Collaborated with Product Managers, Business Analysts, Engineers, and QA throughout product delivery.",
+        body: "Designed an enterprise loan origination platform that streamlined multi-step approval workflows for banking operations. Structured complex forms, dashboards, and multi-step approval flows for workflow efficiency. Built reusable UI components aligned with the design system and enterprise workflow standards. Partnered with PMs, BAs, engineers, and QA — from research synthesis to design documentation and handoff.",
       },
     ],
   },
@@ -93,13 +89,13 @@ const EXPERIENCE: {
     role: "UX/UI Designer",
     company: "UNICLOUD GROUP",
     period: "09/2022 — 08/2023",
-    headline: "Designed fintech and enterprise banking products for KienlongBank and internal business platforms.",
+    headline: "Designed fintech and enterprise banking products spanning consumer payments, merchant tools, and internal back-office platforms.",
     bullets: [
-      { title: "KienlongBank Pay", body: "Payment management platform for retail customers." },
-      { title: "UniPOS", body: "POS system for merchant sales and store management." },
-      { title: "Pay Gate Core", body: "Payment gateway processing transactions across channels." },
-      { title: "eKYC", body: "Electronic identity verification (Know-Your-Customer) onboarding." },
-      { title: "UnicloudCA", body: "Digital signature & e-contract certificate authority." },
+      { title: "KienlongBank Pay", body: "Payment management platform for retail customers; focused on transaction flows and mobile UI patterns." },
+      { title: "UniPOS", body: "Merchant POS experience covering sales, inventory, and store management, with reusable back-office UI patterns." },
+      { title: "Pay Gate Core", body: "Payment gateway dashboard for processing and reconciling transactions across channels." },
+      { title: "eKYC", body: "Electronic identity verification (Know-Your-Customer) onboarding flow with accessibility guidance." },
+      { title: "UnicloudCA", body: "Digital signature & e-contract certificate authority, aligned with the shared design system." },
     ],
   },
   {
@@ -128,21 +124,22 @@ const EXPERIENCE: {
 ];
 
 const FEATURED_PROJECTS = [
-  { name: "Enterprise Workforce Management Platform", domain: "Enterprise SaaS" },
-  { name: "Education CRM", domain: "CRM Platform" },
-  { name: "VTest Learning Platform", domain: "EdTech" },
+  { name: "KienlongBank Pay", domain: "Payment Platform" },
   { name: "Earned Wage Access", domain: "HR Fintech" },
+  { name: "AI CRM Integration", domain: "Enterprise CRM" },
   { name: "Loan Origination System", domain: "Digital Lending" },
   { name: "Payment Gateway", domain: "Payments" },
+  { name: "Enterprise Workforce Management Platform", domain: "Enterprise SaaS" },
+  { name: "Education CRM", domain: "CRM Platform" },
   { name: "UniPOS", domain: "Merchant POS" },
-  { name: "KienlongBank Pay", domain: "Payment Platform" },
+  { name: "VTest Learning Platform", domain: "EdTech" },
 ];
 
 const AI_PRODUCT_DESIGN = [
-  "AI-assisted Enterprise Workflows",
-  "AI-enhanced User Experience",
-  "Prompt-driven Interaction Design",
-  "Human-centered AI Experiences",
+  "AI-assisted UX Fundamentals",
+  "Prompt Design Fundamentals",
+  "Conversational UX Basics",
+  "Human-centered AI Principles",
 ];
 
 const TOOLS = [
@@ -277,7 +274,7 @@ export default function ResumePage() {
           <Reveal>
             <p className="text-[11px] font-semibold tracking-[2.5px] text-port-blue">PROFESSIONAL SUMMARY</p>
             <p className="mt-4 max-w-3xl text-[18px] leading-[1.65] text-port-ink md:text-[20px]">
-              UX Designer with <strong className="font-semibold">3+ years of experience</strong> designing enterprise workflow applications, SaaS products, and digital banking platforms. Experienced in translating user research, business requirements, and operational complexity into <strong className="font-semibold">scalable interaction models</strong>, information architecture, and design systems. Passionate about improving usability, accessibility, and workflow efficiency through <strong className="font-semibold">evidence-driven design</strong> and close collaboration with product, engineering, and research teams.
+              UX Designer with <strong className="font-semibold">3+ years of experience</strong> across enterprise SaaS, workflow-oriented products, and digital banking platforms. I enjoy turning business requirements and operational complexity into clear <strong className="font-semibold">user flows, information architecture, wireframes, prototypes, and reusable UI patterns</strong>. Comfortable collaborating with PMs, engineers, and researchers — with attention to accessibility, usability, and design documentation. Currently learning how <strong className="font-semibold">AI-assisted design</strong> fits into enterprise product work.
             </p>
           </Reveal>
         </div>
